@@ -17,7 +17,6 @@ struct FeedbackView: View {
             VStack {
                 HStack {
                     Text("피드백 화면")
-                    
                 }
                 Spacer()
                 
@@ -27,7 +26,7 @@ struct FeedbackView: View {
                     } label: {
                         Text(voiceStarted ? "일시정지" : "시작")
                             .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(Color.yellow)
+                            .background(.yellow)
                             .foregroundColor(.black)
                             .cornerRadius(10)
                             .padding(.horizontal, 40)
@@ -37,11 +36,12 @@ struct FeedbackView: View {
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
+                    Button {
                         dismiss()
-                    }) {
+                    } label: {
                         Text("종료")
                     }
+
                 }
             }
         }
