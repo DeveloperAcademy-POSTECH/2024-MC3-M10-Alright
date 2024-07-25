@@ -12,6 +12,10 @@ xcuserdata/
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
 DerivedData/
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
 *.moved-aside
 *.pbxuser
 !default.pbxuser
