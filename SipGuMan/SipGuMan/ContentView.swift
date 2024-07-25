@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isNavigating = false // Navigation Bool
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -18,6 +21,7 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
+                    isNavigating.toggle()
                     print("피드백 시각화화면으로 이동")
                 } label: {
                     Text("1:1 상황")
@@ -26,6 +30,9 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .cornerRadius(10)
                         .padding(.horizontal, 40)
+                }
+                .navigationDestination(isPresented: $isNavigating) {
+                    FeedbackView()
                 }
                 
                 Spacer()
