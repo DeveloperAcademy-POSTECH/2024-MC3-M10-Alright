@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  SipGuMan
-//
-//  Created by 윤동주 on 7/25/24.
-//
 
 import SwiftUI
 
@@ -11,24 +5,26 @@ struct ContentView: View {
     
     @State private var isNavigating = false // Navigation Bool
     
-    @State var situation: [String] = ["1:1대화", "원탁 회의", "회의실 발표", "강당 발표"]
+    @State var situation: [String] = ["1:1 대화", "원탁 회의", "회의실 발표", "강당 발표"]
+    @State private var selectedIndex: Int? = nil
     
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer()
-                Text("지금 어떤 상황에 있나요?")
-                    .font(.system(size: 24, weight: .bold))
-                
-                Text("말하는 상황에 대해 알려주세요.")
-                    .font(.system(size: 16))
-                    .foregroundColor(.gray)
-                
+                VStack(spacing: 10) {
+                    Text("지금 어떤 상황에 있나요?")
+                        .font(.system(size: 24, weight: .bold))
+                    
+                    Text("말하는 상황에 대해 알려주세요.")
+                        .font(.system(size: 16))
+                        .foregroundColor(.gray)
+                }
                 Spacer()
                 
                 HStack(spacing: 10) {
                     ZStack {
-                        CustomRectangle()
+                        CustomRectangle(selected: selectedIndex == 0)
                         VStack {
                             HStack {
                                 Text("\(situation[0])")
@@ -42,9 +38,12 @@ struct ContentView: View {
                                 .padding(.leading, 50)
                         }
                     }
+                    .onTapGesture {
+                        selectedIndex = 0
+                    }
                     
                     ZStack {
-                        CustomRectangle()
+                        CustomRectangle(selected: selectedIndex == 1)
                         VStack {
                             HStack {
                                 Text("\(situation[1])")
@@ -52,18 +51,21 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "house")
+                            Image(systemName: "heart.fill")
                                 .resizable()
                                 .frame(width: 64, height: 64)
                                 .padding(.leading, 50)
                         }
+                    }
+                    .onTapGesture {
+                        selectedIndex = 1
                     }
                 }
                 .padding(.horizontal, 20)
                 
                 HStack(spacing: 10) {
                     ZStack {
-                        CustomRectangle()
+                        CustomRectangle(selected: selectedIndex == 2)
                         VStack {
                             HStack {
                                 Text("\(situation[2])")
@@ -71,15 +73,18 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "house")
+                            Image(systemName: "heart")
                                 .resizable()
                                 .frame(width: 64, height: 64)
                                 .padding(.leading, 50)
                         }
                     }
+                    .onTapGesture {
+                        selectedIndex = 2
+                    }
                     
                     ZStack {
-                        CustomRectangle()
+                        CustomRectangle(selected: selectedIndex == 3)
                         VStack {
                             HStack {
                                 Text("\(situation[3])")
@@ -87,11 +92,14 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "house")
+                            Image(systemName: "rays")
                                 .resizable()
                                 .frame(width: 64, height: 64)
                                 .padding(.leading, 50)
                         }
+                    }
+                    .onTapGesture {
+                        selectedIndex = 3
                     }
                 }
                 .padding(.horizontal, 20)
@@ -122,15 +130,17 @@ struct ContentView: View {
 // Rectangle View
 struct CustomRectangle: View {
     
+    var selected: Bool
+    
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.white)
+                .foregroundColor(selected ? .blue : .white)
                 .frame(maxWidth: .infinity, maxHeight: 160)
                 .cornerRadius(24)
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
-                        .stroke(Color.black, lineWidth: 1)
+                        .stroke(selected ? .blue : .black, lineWidth: 1)
                 )
         }
     }
