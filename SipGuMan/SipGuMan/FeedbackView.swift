@@ -1,9 +1,3 @@
-//
-//  FeedbackView.swift
-//  SipGuMan
-//
-//  Created by 이상도 on 7/25/24.
-//
 
 import SwiftUI
 
@@ -11,6 +5,9 @@ struct FeedbackView: View {
     
     @Environment(\.dismiss) private var dismiss
     @State private var voiceStarted = false
+    
+    @Binding var currentIndex: Int? // 현재 선택한 상황 index
+    @Binding var currentSituation: String // 현재 선택한 상황
     
     var body: some View {
         NavigationStack {
@@ -26,13 +23,14 @@ struct FeedbackView: View {
                     } label: {
                         Text(voiceStarted ? "일시정지" : "시작")
                             .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(.yellow)
+                            .background(.blue)
                             .foregroundColor(.black)
                             .cornerRadius(10)
                             .padding(.horizontal, 40)
                     }
                 }
             }
+            .navigationBarTitle("\(currentSituation)", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -41,13 +39,13 @@ struct FeedbackView: View {
                     } label: {
                         Text("종료")
                     }
-
+                    
                 }
             }
         }
     }
 }
 
-#Preview {
-    FeedbackView()
-}
+//#Preview {
+//    FeedbackView()
+//}

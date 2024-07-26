@@ -6,7 +6,8 @@ struct ContentView: View {
     @State private var isNavigating = false // Navigation Bool
     
     @State var situation: [String] = ["1:1 대화", "원탁 회의", "회의실 발표", "강당 발표"]
-    @State private var selectedIndex: Int? = nil
+    @State private var selectedIndex: Int? = nil // 상황4개중 선택 index
+    @State private var selectedSituation: String = ""
     
     var body: some View {
         NavigationStack {
@@ -40,6 +41,7 @@ struct ContentView: View {
                     }
                     .onTapGesture {
                         selectedIndex = 0
+                        selectedSituation = situation[0]
                     }
                     
                     ZStack {
@@ -59,6 +61,7 @@ struct ContentView: View {
                     }
                     .onTapGesture {
                         selectedIndex = 1
+                        selectedSituation = situation[1]
                     }
                 }
                 .padding(.horizontal, 20)
@@ -81,6 +84,7 @@ struct ContentView: View {
                     }
                     .onTapGesture {
                         selectedIndex = 2
+                        selectedSituation = situation[2]
                     }
                     
                     ZStack {
@@ -100,6 +104,7 @@ struct ContentView: View {
                     }
                     .onTapGesture {
                         selectedIndex = 3
+                        selectedSituation = situation[3]
                     }
                 }
                 .padding(.horizontal, 20)
@@ -119,7 +124,7 @@ struct ContentView: View {
                         .padding(.horizontal, 20)
                 }
                 .navigationDestination(isPresented: $isNavigating) {
-                    FeedbackView()
+                    FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
                 }
                 Spacer()
             }
@@ -135,7 +140,7 @@ struct CustomRectangle: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(selected ? .blue : .white)
+                .foregroundColor(selected ? .yellow : .white)
                 .frame(maxWidth: .infinity, maxHeight: 160)
                 .cornerRadius(24)
                 .overlay(
