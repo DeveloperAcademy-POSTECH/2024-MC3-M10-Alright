@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct ContentView: View {
@@ -7,7 +6,7 @@ struct ContentView: View {
     
     @State var situation: [String] = ["1:1 대화", "원탁 회의", "회의실 발표", "강당 발표"]
     @State private var selectedIndex: Int? = nil // 상황4개중 선택 index
-    @State private var selectedSituation: String = ""
+    @State private var selectedSituation: String = "" // 선택한 상황
     
     var body: some View {
         NavigationStack {
@@ -33,10 +32,13 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "house")
-                                .resizable()
-                                .frame(width: 64, height: 64)
-                                .padding(.leading, 50)
+                            HStack {
+                                Spacer()
+                                Image(systemName: "house")
+                                    .resizable()
+                                    .frame(width: 64, height: 64)
+                                    .padding(.trailing)
+                            }
                         }
                     }
                     .onTapGesture {
@@ -52,10 +54,13 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "heart.fill")
-                                .resizable()
-                                .frame(width: 64, height: 64)
-                                .padding(.leading, 50)
+                            HStack{
+                                Spacer()
+                                Image(systemName: "heart.fill")
+                                    .resizable()
+                                    .frame(width: 64, height: 64)
+                                    .padding(.trailing)
+                            }
                         }
                     }
                     .onTapGesture {
@@ -74,10 +79,13 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "heart")
-                                .resizable()
-                                .frame(width: 64, height: 64)
-                                .padding(.leading, 50)
+                            HStack {
+                                Spacer()
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 64, height: 64)
+                                    .padding(.trailing)
+                            }
                         }
                     }
                     .onTapGesture {
@@ -93,10 +101,13 @@ struct ContentView: View {
                                     .padding(.leading)
                                 Spacer()
                             }
-                            Image(systemName: "rays")
-                                .resizable()
-                                .frame(width: 64, height: 64)
-                                .padding(.leading, 50)
+                            HStack {
+                                Spacer()
+                                Image(systemName: "rays")
+                                    .resizable()
+                                    .frame(width: 64, height: 64)
+                                    .padding(.trailing)
+                            }
                         }
                     }
                     .onTapGesture {
@@ -104,31 +115,28 @@ struct ContentView: View {
                     }
                 }
                 .padding(.horizontal, 20)
-                
                 Spacer()
                 
-                if selectedIndex != nil {
-                    Button {
-                        isNavigating.toggle()
-                        print("피드백 시각화화면으로 이동")
-                    } label: {
-                        Text("말하기시작")
-                            .font(.system(size: 17, weight: .semibold))
-                            .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                            .padding(.horizontal, 20)
-                    }
-                    .navigationDestination(isPresented: $isNavigating) {
-                        FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
-                    }
+                Button {
+                    isNavigating.toggle()
+                    print("피드백 시각화화면으로 이동")
+                } label: {
+                    Text("말하기시작")
+                        .font(.system(size: 17, weight: .semibold))
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                        .padding(.horizontal, 20)
+                }
+                .opacity(selectedIndex != nil ? 1 : 0) // 상황 고르면 실제로 보이도록
+                .navigationDestination(isPresented: $isNavigating) {
+                    FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
                 }
                 Spacer()
             }
         }
     }
-    
     private func handleSelection(index: Int) {
         if selectedIndex == nil { // 현재 상황을 선택한게 없다면
             selectedIndex = index

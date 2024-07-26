@@ -13,21 +13,7 @@ struct FeedbackView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    Text("피드백 화면")
-                }
-                Spacer()
-                
-                HStack {
-                    Button {
-                        voiceStarted.toggle()
-                    } label: {
-                        Text(voiceStarted ? "일시정지" : "시작")
-                            .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(.blue)
-                            .foregroundColor(.black)
-                            .cornerRadius(10)
-                            .padding(.horizontal, 40)
-                    }
+                    Text("피드백 화면이 들어가는 곳입니다.")
                 }
             }
             .navigationBarTitle("\(currentSituation)", displayMode: .inline)
@@ -46,6 +32,9 @@ struct FeedbackView: View {
     }
 }
 
-//#Preview {
-//    FeedbackView()
-//}
+#Preview {
+    FeedbackView(
+        currentIndex: .constant(0),
+        currentSituation: .constant("원탁 회의")
+    )
+}
