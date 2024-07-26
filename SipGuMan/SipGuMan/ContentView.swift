@@ -40,8 +40,7 @@ struct ContentView: View {
                         }
                     }
                     .onTapGesture {
-                        selectedIndex = 0
-                        selectedSituation = situation[0]
+                        handleSelection(index: 0)
                     }
                     
                     ZStack {
@@ -60,8 +59,7 @@ struct ContentView: View {
                         }
                     }
                     .onTapGesture {
-                        selectedIndex = 1
-                        selectedSituation = situation[1]
+                        handleSelection(index: 1)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -83,8 +81,7 @@ struct ContentView: View {
                         }
                     }
                     .onTapGesture {
-                        selectedIndex = 2
-                        selectedSituation = situation[2]
+                        handleSelection(index: 2)
                     }
                     
                     ZStack {
@@ -103,31 +100,46 @@ struct ContentView: View {
                         }
                     }
                     .onTapGesture {
-                        selectedIndex = 3
-                        selectedSituation = situation[3]
+                        handleSelection(index: 3)
                     }
                 }
                 .padding(.horizontal, 20)
                 
                 Spacer()
                 
-                Button {
-                    isNavigating.toggle()
-                    print("피드백 시각화화면으로 이동")
-                } label: {
-                    Text("말하기시작")
-                        .font(.system(size: 17, weight: .semibold))
-                        .frame(maxWidth: .infinity, maxHeight: 50)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                        .padding(.horizontal, 20)
-                }
-                .navigationDestination(isPresented: $isNavigating) {
-                    FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
+                if selectedIndex != nil {
+                    Button {
+                        isNavigating.toggle()
+                        print("피드백 시각화화면으로 이동")
+                    } label: {
+                        Text("말하기시작")
+                            .font(.system(size: 17, weight: .semibold))
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                            .padding(.horizontal, 20)
+                    }
+                    .navigationDestination(isPresented: $isNavigating) {
+                        FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
+                    }
                 }
                 Spacer()
             }
+        }
+    }
+    
+    private func handleSelection(index: Int) {
+        if selectedIndex == nil { // 현재 상황을 선택한게 없다면
+            selectedIndex = index
+            selectedSituation = situation[index]
+        } else { // 상황을 선택한게 있다면
+            if selectedIndex == index { // 같은 상황 또 선택시
+                selectedIndex = nil // 선택 취소
+            } else {
+                selectedIndex = index // 다른 상황으로 선택으로
+            }
+            selectedSituation = ""
         }
     }
 }
