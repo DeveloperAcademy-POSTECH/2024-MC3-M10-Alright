@@ -20,7 +20,7 @@ struct ContentView: View {
                         Text("지금 어떤 상황에 있나요?")
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.white)
-                    
+                        
                         
                         Text("말하는 상황에 대해 알려주세요.")
                             .font(.system(size: 16))
@@ -31,7 +31,7 @@ struct ContentView: View {
                     HStack(spacing: 10) {
                         ZStack {
                             CustomRectangle(selected: selectedIndex == 0)
-                            VStack {
+                            VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[0])")
                                         .foregroundColor(.white)
@@ -50,11 +50,12 @@ struct ContentView: View {
                         }
                         .onTapGesture {
                             handleSelection(index: 0)
+                            
                         }
                         
                         ZStack {
                             CustomRectangle(selected: selectedIndex == 1)
-                            VStack {
+                            VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[1])")
                                         .foregroundColor(.white)
@@ -80,7 +81,7 @@ struct ContentView: View {
                     HStack(spacing: 10) {
                         ZStack {
                             CustomRectangle(selected: selectedIndex == 2)
-                            VStack {
+                            VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[2])")
                                         .foregroundColor(.white)
@@ -103,7 +104,7 @@ struct ContentView: View {
                         
                         ZStack {
                             CustomRectangle(selected: selectedIndex == 3)
-                            VStack {
+                            VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[3])")
                                         .foregroundColor(.white)
@@ -134,7 +135,12 @@ struct ContentView: View {
                         Text("말하기시작")
                             .font(.system(size: 17, weight: .semibold))
                             .frame(maxWidth: .infinity, maxHeight: 50)
-                            .background(.blue)
+                            .background(
+                                LinearGradient(
+                                    gradient: .init(colors: [.pointColor2, .pointColor1]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                ))
                             .foregroundColor(.white)
                             .cornerRadius(12)
                             .padding(.horizontal, 20)
@@ -171,12 +177,15 @@ struct CustomRectangle: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(selected ? .yellow : .basicBackgroundColor)
+                .fill(selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [Color(hex:"#444444"), Color(hex:"#222222")]), startPoint: .topTrailing, endPoint: .bottomLeading)) : AnyShapeStyle(Color.basicBackgroundColor))
                 .frame(maxWidth: .infinity, maxHeight: 160)
                 .cornerRadius(24)
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
-                        .stroke(selected ? .blue : .white, lineWidth: 1)
+                        .strokeBorder(
+                            selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.pointColor2, .pointColor1]), startPoint: .bottomLeading, endPoint: .topTrailing)) : AnyShapeStyle(Color.white),
+                            lineWidth: 1
+                        )
                 )
         }
     }
