@@ -12,6 +12,7 @@
 		08C737E52C51ED3400FA93A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E42C51ED3400FA93A4 /* Assets.xcassets */; };
 		08C737E82C51ED3400FA93A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */; };
 		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
+		1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB2ED82C554F7200FD6510 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		08C737E42C51ED3400FA93A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		1FBB2ED82C554F7200FD6510 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		08C737DF2C51ED3000FA93A4 /* SipGuMan */ = {
 			isa = PBXGroup;
 			children = (
+				1FBB2ED72C554F5400FD6510 /* extension */,
 				08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */,
 				08C737E22C51ED3000FA93A4 /* ContentView.swift */,
 				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
@@ -68,6 +71,14 @@
 				08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1FBB2ED72C554F5400FD6510 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				1FBB2ED82C554F7200FD6510 /* Color.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C737E32C51ED3000FA93A4 /* ContentView.swift in Sources */,
+				1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */,
 				08C737E12C51ED3000FA93A4 /* SipGuManApp.swift in Sources */,
 				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
 			);
