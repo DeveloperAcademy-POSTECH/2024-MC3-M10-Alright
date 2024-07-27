@@ -10,130 +10,141 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Spacer()
-                VStack(spacing: 10) {
-                    Text("지금 어떤 상황에 있나요?")
-                        .font(.system(size: 24, weight: .bold))
-                    
-                    Text("말하는 상황에 대해 알려주세요.")
-                        .font(.system(size: 16))
-                        .foregroundColor(.gray)
-                }
-                Spacer()
+            ZStack {
+                Color.basicBackgroundColor
+                    .ignoresSafeArea()
                 
-                HStack(spacing: 10) {
-                    ZStack {
-                        CustomRectangle(selected: selectedIndex == 0)
-                        VStack {
-                            HStack {
-                                Text("\(situation[0])")
-                                    .font(.system(size: 22, weight: .semibold))
-                                    .padding(.leading)
-                                Spacer()
-                            }
-                            HStack {
-                                Spacer()
-                                Image(systemName: "house")
-                                    .resizable()
-                                    .frame(width: 64, height: 64)
-                                    .padding(.trailing)
-                            }
-                        }
-                    }
-                    .onTapGesture {
-                        handleSelection(index: 0)
-                    }
+                VStack {
+                    Spacer()
+                    VStack(spacing: 10) {
+                        Text("지금 어떤 상황에 있나요?")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
                     
-                    ZStack {
-                        CustomRectangle(selected: selectedIndex == 1)
-                        VStack {
-                            HStack {
-                                Text("\(situation[1])")
-                                    .font(.system(size: 22, weight: .semibold))
-                                    .padding(.leading)
-                                Spacer()
-                            }
-                            HStack{
-                                Spacer()
-                                Image(systemName: "heart.fill")
-                                    .resizable()
-                                    .frame(width: 64, height: 64)
-                                    .padding(.trailing)
-                            }
-                        }
+                        
+                        Text("말하는 상황에 대해 알려주세요.")
+                            .font(.system(size: 16))
+                            .foregroundColor(.gray)
                     }
-                    .onTapGesture {
-                        handleSelection(index: 1)
-                    }
-                }
-                .padding(.horizontal, 20)
-                
-                HStack(spacing: 10) {
-                    ZStack {
-                        CustomRectangle(selected: selectedIndex == 2)
-                        VStack {
-                            HStack {
-                                Text("\(situation[2])")
-                                    .font(.system(size: 22, weight: .semibold))
-                                    .padding(.leading)
-                                Spacer()
-                            }
-                            HStack {
-                                Spacer()
-                                Image(systemName: "heart")
-                                    .resizable()
-                                    .frame(width: 64, height: 64)
-                                    .padding(.trailing)
-                            }
-                        }
-                    }
-                    .onTapGesture {
-                        handleSelection(index: 2)
-                    }
+                    Spacer()
                     
-                    ZStack {
-                        CustomRectangle(selected: selectedIndex == 3)
-                        VStack {
-                            HStack {
-                                Text("\(situation[3])")
-                                    .font(.system(size: 22, weight: .semibold))
-                                    .padding(.leading)
-                                Spacer()
-                            }
-                            HStack {
-                                Spacer()
-                                Image(systemName: "rays")
-                                    .resizable()
-                                    .frame(width: 64, height: 64)
-                                    .padding(.trailing)
+                    HStack(spacing: 10) {
+                        ZStack {
+                            CustomRectangle(selected: selectedIndex == 0)
+                            VStack {
+                                HStack {
+                                    Text("\(situation[0])")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .padding(.leading)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Spacer()
+                                    Image("onebyone")
+                                        .resizable()
+                                        .frame(width: 64, height: 64)
+                                        .padding(.trailing)
+                                }
                             }
                         }
+                        .onTapGesture {
+                            handleSelection(index: 0)
+                        }
+                        
+                        ZStack {
+                            CustomRectangle(selected: selectedIndex == 1)
+                            VStack {
+                                HStack {
+                                    Text("\(situation[1])")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .padding(.leading)
+                                    Spacer()
+                                }
+                                HStack{
+                                    Spacer()
+                                    Image("roundTable")
+                                        .resizable()
+                                        .frame(width: 64, height: 64)
+                                        .padding(.trailing)
+                                }
+                            }
+                        }
+                        .onTapGesture {
+                            handleSelection(index: 1)
+                        }
                     }
-                    .onTapGesture {
-                        handleSelection(index: 3)
+                    .padding(.horizontal, 20)
+                    
+                    HStack(spacing: 10) {
+                        ZStack {
+                            CustomRectangle(selected: selectedIndex == 2)
+                            VStack {
+                                HStack {
+                                    Text("\(situation[2])")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .padding(.leading)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Spacer()
+                                    Image("conference")
+                                        .resizable()
+                                        .frame(width: 64, height: 64)
+                                        .padding(.trailing)
+                                }
+                            }
+                        }
+                        .onTapGesture {
+                            handleSelection(index: 2)
+                        }
+                        
+                        ZStack {
+                            CustomRectangle(selected: selectedIndex == 3)
+                            VStack {
+                                HStack {
+                                    Text("\(situation[3])")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .padding(.leading)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Spacer()
+                                    Image("presentation")
+                                        .resizable()
+                                        .frame(width: 64, height: 64)
+                                        .padding(.trailing)
+                                }
+                            }
+                        }
+                        .onTapGesture {
+                            handleSelection(index: 3)
+                        }
                     }
+                    .padding(.horizontal, 20)
+                    Spacer()
+                    
+                    Button {
+                        isNavigating.toggle()
+                        print("피드백 시각화화면으로 이동")
+                    } label: {
+                        Text("말하기시작")
+                            .font(.system(size: 17, weight: .semibold))
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                            .padding(.horizontal, 20)
+                    }
+                    .opacity(selectedIndex != nil ? 1 : 0) // 상황 고르면 실제로 보이도록
+                    .navigationDestination(isPresented: $isNavigating) {
+                        FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
+                    }
+                    Spacer()
                 }
-                .padding(.horizontal, 20)
-                Spacer()
-                
-                Button {
-                    isNavigating.toggle()
-                    print("피드백 시각화화면으로 이동")
-                } label: {
-                    Text("말하기시작")
-                        .font(.system(size: 17, weight: .semibold))
-                        .frame(maxWidth: .infinity, maxHeight: 50)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                        .padding(.horizontal, 20)
-                }
-                .opacity(selectedIndex != nil ? 1 : 0) // 상황 고르면 실제로 보이도록
-                .navigationDestination(isPresented: $isNavigating) {
-                    FeedbackView(currentIndex: $selectedIndex, currentSituation: $selectedSituation)
-                }
-                Spacer()
             }
         }
     }
@@ -160,12 +171,12 @@ struct CustomRectangle: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(selected ? .yellow : .white)
+                .foregroundColor(selected ? .yellow : .basicBackgroundColor)
                 .frame(maxWidth: .infinity, maxHeight: 160)
                 .cornerRadius(24)
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
-                        .stroke(selected ? .blue : .black, lineWidth: 1)
+                        .stroke(selected ? .blue : .white, lineWidth: 1)
                 )
         }
     }
