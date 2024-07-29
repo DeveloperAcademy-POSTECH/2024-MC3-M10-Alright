@@ -11,7 +11,7 @@ import SwiftUI
 struct SipGuManApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VoicePitchView()
         }
     }
 }
