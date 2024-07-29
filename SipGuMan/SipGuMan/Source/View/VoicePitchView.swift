@@ -14,8 +14,7 @@ struct VoicePitchView: View {
     @State private var circleHeight: CGFloat = 0
     
     var isMeasuring: Bool {
-        return noiseMeter.timer != nil
-        
+        self.noiseMeter.timer != nil
     }
     
     var body: some View {
@@ -82,7 +81,6 @@ enum NoiseLevel: String {
         }
     }
 }
-
 
 #Preview {
     VoicePitchView()
