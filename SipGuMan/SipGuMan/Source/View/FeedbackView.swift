@@ -15,11 +15,7 @@ struct FeedbackView: View {
                 Color.basicBackgroundColor
                     .ignoresSafeArea()
                 
-                VStack {
-                    HStack {
-                        Text("피드백 화면이 들어가는 곳입니다.")
-                    }
-                }
+                VoicePitchView()
                 .navigationBarBackButtonHidden()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

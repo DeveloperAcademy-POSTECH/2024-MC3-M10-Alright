@@ -21,33 +21,33 @@ struct GaugeView: View {
     private func getColor(decibels: Float, level: GaugeColorLevel) -> Color {
         let gaugeValue = gaugeHeight * Int(decibels) / 120
         
-        let topStandard = gaugeHeight * 2 / 3
-        let bottomStandard = gaugeHeight * 1 / 3
+        let topStandard = gaugeHeight * 7 / 12
+        let bottomStandard = gaugeHeight * 5 / 12
         
         switch level {
         case .top:
             if gaugeValue > topStandard {
-                return Color(hex: "F8EDFF")
+                return Color(hex: "FEBEC8")
             } else if gaugeValue > bottomStandard {
                 return Color(hex: "DDE2FF")
             } else {
-                return Color(hex: "E3E8FF")
+                return Color(hex: "FBFFCF")
             }
         case .middle:
             if gaugeValue > topStandard {
-                return Color(hex: "EDACFF")
+                return Color(hex: "E56075")
             } else if gaugeValue > bottomStandard {
                 return Color(hex: "91A3FF")
             } else {
-                return Color(hex: "D9DFFF")
+                return Color(hex: "F7FF9F")
             }
         case .bottom:
             if gaugeValue > topStandard {
-                return Color(hex: "CB75FF")
+                return Color(hex: "DE334E")
             } else if gaugeValue > bottomStandard {
                 return Color(hex: "3D5CFF")
             } else {
-                return Color(hex: "ADBAFF")
+                return Color(hex: "F2FF60")
             }
         }
     }
@@ -100,7 +100,7 @@ struct GaugeView: View {
                 }
                 Rectangle()
                     .stroke(lineWidth: 1)
-                    .frame(height:444/3)
+                    .frame(height: 444/6)
                     .padding(.horizontal, -1)
             }
             .frame(width: 185, height: 444)

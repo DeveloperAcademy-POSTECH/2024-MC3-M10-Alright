@@ -132,7 +132,7 @@ struct ContentView: View {
                         isNavigating.toggle()
                         print("피드백 시각화화면으로 이동")
                     } label: {
-                        Text("말하기시작")
+                        Text("말하기 시작")
                             .font(.system(size: 17, weight: .semibold))
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
@@ -163,8 +163,8 @@ struct ContentView: View {
                 selectedIndex = nil // 선택 취소
             } else {
                 selectedIndex = index // 다른 상황으로 선택으로
+                selectedSituation = situation[index]
             }
-            selectedSituation = ""
         }
     }
 }

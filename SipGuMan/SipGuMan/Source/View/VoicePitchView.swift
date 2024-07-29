@@ -43,6 +43,11 @@ struct VoicePitchView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .onAppear{
+            Task {
+                await measure(height: circleHeight)
+            }
+        }
     }
     
     private func measure(height: CGFloat) async {
@@ -68,9 +73,9 @@ enum NoiseLevel: String {
         let level = decibels / 120.0
         
         switch level {
-        case _ where level > 2.0 / 3.0:
+        case _ where level > /*2.0 / 3.0*/ 7.0 / 12.0:
             return high.rawValue
-        case _ where level > 1.0 / 3.0:
+        case _ where level > /*1.0 / 3.0*/ 5.0 / 12.0:
             return medium.rawValue
         default:
             return low.rawValue
