@@ -33,6 +33,7 @@
 		08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchView.swift; sourceTree = "<group>"; };
 		08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchButton.swift; sourceTree = "<group>"; };
+		1D9231C22C57ED0C00819BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		1FBB2ED82C554F7200FD6510 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +132,7 @@
 		08C737DF2C51ED3000FA93A4 /* SipGuMan */ = {
 			isa = PBXGroup;
 			children = (
+				1D9231C22C57ED0C00819BC7 /* Info.plist */,
 				1FBB2ED72C554F5400FD6510 /* extension */,
 				088DFC7C2C575BDF00469FD1 /* Source */,
 				088DFC7B2C575BD200469FD1 /* Resource */,
@@ -371,6 +373,7 @@
 				DEVELOPMENT_TEAM = MQR4AUJW5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SipGuMan/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -401,6 +404,7 @@
 				DEVELOPMENT_TEAM = MQR4AUJW5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SipGuMan/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
