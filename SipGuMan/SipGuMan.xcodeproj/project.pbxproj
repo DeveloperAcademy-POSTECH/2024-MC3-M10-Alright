@@ -14,6 +14,8 @@
 		08C737E12C51ED3000FA93A4 /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */; };
 		08C737E52C51ED3400FA93A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E42C51ED3400FA93A4 /* Assets.xcassets */; };
 		08C737E82C51ED3400FA93A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */; };
+		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
+		1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB2ED82C554F7200FD6510 /* Color.swift */; };
 		08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */; };
 		08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 		08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipGuManApp.swift; sourceTree = "<group>"; };
 		08C737E42C51ED3400FA93A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		1FBB2ED82C554F7200FD6510 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchView.swift; sourceTree = "<group>"; };
 		08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,11 @@
 		08C737DF2C51ED3000FA93A4 /* SipGuMan */ = {
 			isa = PBXGroup;
 			children = (
+				1FBB2ED72C554F5400FD6510 /* extension */,
+				08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */,
+				08C737E22C51ED3000FA93A4 /* ContentView.swift */,
+				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
+				08C737E42C51ED3400FA93A4 /* Assets.xcassets */,
 				088DFC7C2C575BDF00469FD1 /* Source */,
 				088DFC7B2C575BD200469FD1 /* Resource */,
 				08C737E62C51ED3400FA93A4 /* Preview Content */,
@@ -136,6 +145,14 @@
 				08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1FBB2ED72C554F5400FD6510 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				1FBB2ED82C554F7200FD6510 /* Color.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,10 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C737E32C51ED3000FA93A4 /* ContentView.swift in Sources */,
+				1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */,
 				088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */,
 				088DFC732C534D1A00469FD1 /* Color+.swift in Sources */,
 				08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */,
 				08C737E12C51ED3000FA93A4 /* SipGuManApp.swift in Sources */,
+				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
 				088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */,
 				088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */,
 				08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */,
