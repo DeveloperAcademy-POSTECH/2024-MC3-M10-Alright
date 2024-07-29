@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08C737E12C51ED3000FA93A4 /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */; };
-		08C737E32C51ED3000FA93A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737E22C51ED3000FA93A4 /* ContentView.swift */; };
-		08C737E52C51ED3400FA93A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E42C51ED3400FA93A4 /* Assets.xcassets */; };
+		08621D202C57638600E26998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08621D1F2C57638600E26998 /* Assets.xcassets */; };
+		08621D222C5763BA00E26998 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* ContentView.swift */; };
+		08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08808F5E2C57629300A6A8FA /* SipGuManApp.swift */; };
+		088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */; };
+		088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6E2C534AA800469FD1 /* GaugeView.swift */; };
+		088DFC732C534D1A00469FD1 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC722C534D1A00469FD1 /* Color+.swift */; };
+		088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC742C5394BC00469FD1 /* RoundedCorner.swift */; };
 		08C737E82C51ED3400FA93A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */; };
+		08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */; };
+		08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
 		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
 		1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB2ED82C554F7200FD6510 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08621D1F2C57638600E26998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08621D212C5763BA00E26998 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		08808F5E2C57629300A6A8FA /* SipGuManApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipGuManApp.swift; sourceTree = "<group>"; };
+		088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseMeter.swift; sourceTree = "<group>"; };
+		088DFC6E2C534AA800469FD1 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		088DFC722C534D1A00469FD1 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		088DFC742C5394BC00469FD1 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		08C737DD2C51ED3000FA93A4 /* SipGuMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipGuMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipGuManApp.swift; sourceTree = "<group>"; };
-		08C737E22C51ED3000FA93A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		08C737E42C51ED3400FA93A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchView.swift; sourceTree = "<group>"; };
+		08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchButton.swift; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		1FBB2ED82C554F7200FD6510 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +48,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088DFC702C534D0100469FD1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				088DFC722C534D1A00469FD1 /* Color+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		088DFC762C575B3D00469FD1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */,
+				088DFC742C5394BC00469FD1 /* RoundedCorner.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		088DFC782C575B5600469FD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
+				08621D212C5763BA00E26998 /* ContentView.swift */,
+				08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */,
+				088DFC6E2C534AA800469FD1 /* GaugeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		088DFC792C575B6C00469FD1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		088DFC7A2C575B9F00469FD1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				08808F5E2C57629300A6A8FA /* SipGuManApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		088DFC7B2C575BD200469FD1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				08621D1F2C57638600E26998 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		088DFC7C2C575BDF00469FD1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				088DFC702C534D0100469FD1 /* Extension */,
+				088DFC762C575B3D00469FD1 /* Helper */,
+				088DFC782C575B5600469FD1 /* View */,
+				088DFC792C575B6C00469FD1 /* Service */,
+				088DFC7A2C575B9F00469FD1 /* Application */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		08C737D42C51ED3000FA93A4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				1FBB2ED72C554F5400FD6510 /* extension */,
-				08C737E02C51ED3000FA93A4 /* SipGuManApp.swift */,
-				08C737E22C51ED3000FA93A4 /* ContentView.swift */,
-				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
-				08C737E42C51ED3400FA93A4 /* Assets.xcassets */,
+				088DFC7C2C575BDF00469FD1 /* Source */,
+				088DFC7B2C575BD200469FD1 /* Resource */,
 				08C737E62C51ED3400FA93A4 /* Preview Content */,
 			);
 			path = SipGuMan;
@@ -140,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C737E82C51ED3400FA93A4 /* Preview Assets.xcassets in Resources */,
-				08C737E52C51ED3400FA93A4 /* Assets.xcassets in Resources */,
+				08621D202C57638600E26998 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08C737E32C51ED3000FA93A4 /* ContentView.swift in Sources */,
 				1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */,
-				08C737E12C51ED3000FA93A4 /* SipGuManApp.swift in Sources */,
+				08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */,
+				088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */,
+				088DFC732C534D1A00469FD1 /* Color+.swift in Sources */,
+				08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */,
 				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
+				08621D222C5763BA00E26998 /* ContentView.swift in Sources */,
+				088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */,
+				088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */,
+				08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +371,7 @@
 				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +401,7 @@
 				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
