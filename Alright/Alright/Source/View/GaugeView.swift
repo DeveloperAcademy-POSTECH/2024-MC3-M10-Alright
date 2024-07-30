@@ -27,25 +27,25 @@ struct GaugeView: View {
         switch level {
         case .top:
             if gaugeValue > topStandard {
-                return Color(hex: "FEBEC8")
+                return Color.sgmDBlg1
             } else if gaugeValue > bottomStandard {
-                return Color(hex: "DDE2FF")
+                return Color.sgmDBm1
             } else {
-                return Color(hex: "FBFFCF")
+                return Color.sgmDBs1
             }
         case .middle:
             if gaugeValue > topStandard {
-                return Color(hex: "E56075")
+                return Color.sgmDBlg2
             } else if gaugeValue > bottomStandard {
-                return Color(hex: "91A3FF")
+                return Color.sgmDBm2
             } else {
-                return Color(hex: "F7FF9F")
+                return Color.sgmDBs2
             }
         case .bottom:
             if gaugeValue > topStandard {
-                return Color(hex: "DE334E")
+                return Color.sgmDBlg3
             } else if gaugeValue > bottomStandard {
-                return Color(hex: "3D5CFF")
+                return Color.sgmBlue2
             } else {
                 return Color(hex: "F2FF60")
             }

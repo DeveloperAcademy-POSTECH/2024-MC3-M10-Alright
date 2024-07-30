@@ -12,7 +12,7 @@ struct FeedbackView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.basicBackgroundColor
+                Color.sgmGray2
                     .ignoresSafeArea()
                 
                 VoicePitchView()
@@ -29,7 +29,7 @@ struct FeedbackView: View {
                             dismiss()
                         } label: {
                             Text("종료")
-                                .foregroundColor(.pointColor1) // 종료 버튼 색상 변경
+                                .foregroundColor(.sgmBlue1) // 종료 버튼 색상 변경
                         }
                     }
                 }

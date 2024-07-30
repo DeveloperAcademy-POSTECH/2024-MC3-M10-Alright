@@ -30,7 +30,7 @@ struct VoicePitchView: View {
                 
                 Text(NoiseLevel.message(for: noiseMeter.decibels,
                                         isMeasuring: noiseMeter.isMeasuring))
-                .foregroundStyle(Color(hex: "AAAAAA"))
+                .foregroundStyle(.sgmGrayA)
                 
                 Spacer()
                 

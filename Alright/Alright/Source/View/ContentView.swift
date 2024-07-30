@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.basicBackgroundColor
+                Color.sgmGray2
                     .ignoresSafeArea()
                 
                 VStack {
@@ -137,7 +137,7 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
                                 LinearGradient(
-                                    gradient: .init(colors: [.pointColor2, .pointColor1]),
+                                    gradient: .init(colors: [.sgmBlue2, .sgmBlue1]),
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 ))
@@ -177,13 +177,13 @@ struct CustomRectangle: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [Color(hex:"#444444"), Color(hex:"#222222")]), startPoint: .topTrailing, endPoint: .bottomLeading)) : AnyShapeStyle(Color.basicBackgroundColor))
+                .fill(selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]), startPoint: .topTrailing, endPoint: .bottomLeading)) : AnyShapeStyle(.sgmGray2))
                 .frame(maxWidth: .infinity, maxHeight: 160)
                 .cornerRadius(24)
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
                         .strokeBorder(
-                            selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.pointColor2, .pointColor1]), startPoint: .bottomLeading, endPoint: .topTrailing)) : AnyShapeStyle(Color.white),
+                            selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]), startPoint: .bottomLeading, endPoint: .topTrailing)) : AnyShapeStyle(Color.white),
                             lineWidth: 1
                         )
                 )
