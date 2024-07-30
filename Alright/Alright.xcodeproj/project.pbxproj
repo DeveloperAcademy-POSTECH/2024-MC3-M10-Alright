@@ -18,7 +18,6 @@
 		08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */; };
 		08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
 		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
-		1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB2ED82C554F7200FD6510 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +28,12 @@
 		088DFC6E2C534AA800469FD1 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		088DFC722C534D1A00469FD1 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		088DFC742C5394BC00469FD1 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
-		08C737DD2C51ED3000FA93A4 /* SipGuMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipGuMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08C737DD2C51ED3000FA93A4 /* Alright.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alright.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchView.swift; sourceTree = "<group>"; };
 		08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchButton.swift; sourceTree = "<group>"; };
 		1D9231C22C57ED0C00819BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
-		1FBB2ED82C554F7200FD6510 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,7 @@
 		08C737D42C51ED3000FA93A4 = {
 			isa = PBXGroup;
 			children = (
-				08C737DF2C51ED3000FA93A4 /* SipGuMan */,
+				08C737DF2C51ED3000FA93A4 /* Alright */,
 				08C737DE2C51ED3000FA93A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,21 +122,20 @@
 		08C737DE2C51ED3000FA93A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08C737DD2C51ED3000FA93A4 /* SipGuMan.app */,
+				08C737DD2C51ED3000FA93A4 /* Alright.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		08C737DF2C51ED3000FA93A4 /* SipGuMan */ = {
+		08C737DF2C51ED3000FA93A4 /* Alright */ = {
 			isa = PBXGroup;
 			children = (
 				1D9231C22C57ED0C00819BC7 /* Info.plist */,
-				1FBB2ED72C554F5400FD6510 /* extension */,
 				088DFC7C2C575BDF00469FD1 /* Source */,
 				088DFC7B2C575BD200469FD1 /* Resource */,
 				08C737E62C51ED3400FA93A4 /* Preview Content */,
 			);
-			path = SipGuMan;
+			path = Alright;
 			sourceTree = "<group>";
 		};
 		08C737E62C51ED3400FA93A4 /* Preview Content */ = {
@@ -149,20 +146,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1FBB2ED72C554F5400FD6510 /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				1FBB2ED82C554F7200FD6510 /* Color.swift */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		08C737DC2C51ED3000FA93A4 /* SipGuMan */ = {
+		08C737DC2C51ED3000FA93A4 /* Alright */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08C737EB2C51ED3400FA93A4 /* Build configuration list for PBXNativeTarget "SipGuMan" */;
+			buildConfigurationList = 08C737EB2C51ED3400FA93A4 /* Build configuration list for PBXNativeTarget "Alright" */;
 			buildPhases = (
 				08C737D92C51ED3000FA93A4 /* Sources */,
 				08C737DA2C51ED3000FA93A4 /* Frameworks */,
@@ -172,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = SipGuMan;
+			name = Alright;
 			productName = SipGuMan;
-			productReference = 08C737DD2C51ED3000FA93A4 /* SipGuMan.app */;
+			productReference = 08C737DD2C51ED3000FA93A4 /* Alright.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 08C737D82C51ED3000FA93A4 /* Build configuration list for PBXProject "SipGuMan" */;
+			buildConfigurationList = 08C737D82C51ED3000FA93A4 /* Build configuration list for PBXProject "Alright" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -205,7 +194,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08C737DC2C51ED3000FA93A4 /* SipGuMan */,
+				08C737DC2C51ED3000FA93A4 /* Alright */,
 			);
 		};
 /* End PBXProject section */
@@ -227,7 +216,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBB2ED92C554F7200FD6510 /* Color.swift in Sources */,
 				08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */,
 				088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */,
 				088DFC732C534D1A00469FD1 /* Color+.swift in Sources */,
@@ -369,11 +357,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SipGuMan/Preview Content\"";
-				DEVELOPMENT_TEAM = MQR4AUJW5C;
+				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SipGuMan/Info.plist;
+				INFOPLIST_FILE = Alright/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "올라잇 alright";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -385,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.SipGuMan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -400,11 +389,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SipGuMan/Preview Content\"";
-				DEVELOPMENT_TEAM = MQR4AUJW5C;
+				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SipGuMan/Info.plist;
+				INFOPLIST_FILE = Alright/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "올라잇 alright";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -416,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.SipGuMan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -427,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08C737D82C51ED3000FA93A4 /* Build configuration list for PBXProject "SipGuMan" */ = {
+		08C737D82C51ED3000FA93A4 /* Build configuration list for PBXProject "Alright" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08C737E92C51ED3400FA93A4 /* Debug */,
@@ -436,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08C737EB2C51ED3400FA93A4 /* Build configuration list for PBXNativeTarget "SipGuMan" */ = {
+		08C737EB2C51ED3400FA93A4 /* Build configuration list for PBXNativeTarget "Alright" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08C737EC2C51ED3400FA93A4 /* Debug */,
