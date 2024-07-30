@@ -8,10 +8,6 @@
 import SwiftUI
 
 extension Color {
-
-    static let basicBackgroundColor = Color("ColorBasicbackground") // 기본 background 색상 #222222
-    static let pointColor1 = Color("ColorPoint1") // #ADBAFF
-    static let pointColor2 = Color("ColorPoint2") // #3D5CFF
     
     init(hex: String) {
         let scanner = Scanner(string: hex)
