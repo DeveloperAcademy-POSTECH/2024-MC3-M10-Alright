@@ -5,11 +5,11 @@ import SwiftUI
 struct DynamicIslandWidgetAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        var emoji: String
+        var noiseLevel: NoiseLevel
         var progress: Double
         var message: String
     }
-
+    
     // Fixed non-changing properties about your activity go here!
     var name: String
 }
@@ -19,37 +19,41 @@ struct DynamicIslandWidgetLiveActivity: Widget {
         ActivityConfiguration(for: DynamicIslandWidgetAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("잠금화면 Screen입니다.")
+                Text(context.state.message)
+                ProgressView(value: context.state.progress, total: 1.0)
+                    .progressViewStyle(LinearProgressViewStyle())
+                    .frame(height: 10)
+                    .padding(.horizontal)
             }
-            //.activityBackgroundTint(Color.cyan)
-            //.activitySystemActionForegroundColor(Color.black)
-
+            .activityBackgroundTint(.sgmGray2)
+            
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
-                DynamicIslandExpandedRegion(.leading) {
-                    // Text("Leading")
-                }
-                DynamicIslandExpandedRegion(.trailing) {
-                    // Text("Trailing")
-                }
-                DynamicIslandExpandedRegion(.bottom) {
-                    Text(context.state.message) // Display the message based on noise level
-                    ProgressView(value: context.state.progress, total: 1.0) // Dynamic progress
-                                            .progressViewStyle(LinearProgressViewStyle())
-                                            .frame(height: 10)
-                                            .padding(.horizontal)
+                DynamicIslandExpandedRegion(.leading) {}
+                
+                DynamicIslandExpandedRegion(.trailing) {}
+                
+                DynamicIslandExpandedRegion(.bottom) {}
+                
+                DynamicIslandExpandedRegion(.center) {
+                    Text(context.state.message)
+                    ProgressView(value: context.state.progress, total: 1.0)
+                        .progressViewStyle(LinearProgressViewStyle())
+                        .tint(context.state.noiseLevel.noiseColor)
+                        .frame(height: 10)
+                        .padding(.horizontal)
                 }
             } compactLeading: {
-                Text("L")
+                Image(context.state.noiseLevel.imageString)
             } compactTrailing: {
-                Text("\(context.state.emoji)")
+                Text("\(context.state.noiseLevel.emoji)")
             } minimal: {
-                Text("\(context.state.emoji)")
+                Text("\(context.state.noiseLevel.emoji)")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
+            .keylineTint(Color.blue)
         }
     }
 }
@@ -61,18 +65,11 @@ extension DynamicIslandWidgetAttributes {
 }
 
 extension DynamicIslandWidgetAttributes.ContentState {
-    fileprivate static var smiley: DynamicIslandWidgetAttributes.ContentState {
-        DynamicIslandWidgetAttributes.ContentState(emoji: "😀", progress: 0.0, message: "잘하고있어요.")
-     }
-     
-     fileprivate static var starEyes: DynamicIslandWidgetAttributes.ContentState {
-         DynamicIslandWidgetAttributes.ContentState(emoji: "🤩", progress: 1.00, message: "작아요")
-     }
 }
 
-#Preview("Notification", as: .content, using: DynamicIslandWidgetAttributes.preview) {
-   DynamicIslandWidgetLiveActivity()
-} contentStates: {
-    DynamicIslandWidgetAttributes.ContentState.smiley
-    DynamicIslandWidgetAttributes.ContentState.starEyes
-}
+//#Preview("Notification", as: .content, using: DynamicIslandWidgetAttributes.preview) {
+//   DynamicIslandWidgetLiveActivity()
+//} contentStates: {
+//    DynamicIslandWidgetAttributes.ContentState.smiley
+//    DynamicIslandWidgetAttributes.ContentState.starEyes
+//}
