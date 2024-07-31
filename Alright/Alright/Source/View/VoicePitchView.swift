@@ -17,20 +17,31 @@ struct VoicePitchView: View {
         self.noiseMeter.timer != nil
     }
     
+    var noiseLevel: NoiseLevel {
+        NoiseLevel.level(for: noiseMeter.decibels,
+                              isMeasuring: isMeasuring)
+    }
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
             VStack {
                 Spacer()
-                
-                GaugeView(noiseMeter: $noiseMeter)
-                
+                Text("\(noiseLevel.emoji) \(noiseLevel.message)")
+                    .foregroundStyle(.sgmWhite)
+                    .fontWeight(.bold)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(noiseLevel.textBackgroundColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 30)
+                            .strokeBorder(.sgmWhite, lineWidth: 1)
+                    }
                 Spacer()
                 
-                Text(NoiseLevel.message(for: noiseMeter.decibels,
-                                        isMeasuring: noiseMeter.isMeasuring))
-                .foregroundStyle(.sgmGrayA)
+                GaugeView(noiseMeter: $noiseMeter)
                 
                 Spacer()
                 
@@ -91,8 +102,56 @@ enum NoiseLevel: String, Codable {
         }
     }
     
-    static func message(for decibels: Float, isMeasuring: Bool) -> String {
-        return level(for: decibels, isMeasuring: isMeasuring).rawValue
+    var emoji: String {
+        switch self {
+        case .low:
+            return "🤔"
+        case .medium:
+            return "👍🏻"
+        case .high:
+            return "😮"
+        case .notMeasuring:
+            return "🔇"
+        }
+    }
+    
+    var imageString: String {
+        switch self {
+        case .low:
+            return "yellowHalfCircle"
+        case .medium:
+            return "blueHalfCircle"
+        case .high:
+            return "redHalfCircle"
+        case .notMeasuring:
+            return "nothingHalfCircle"
+        }
+    }
+    
+    var noiseColor: Color {
+        switch self {
+        case .low:
+            return .sgmDBs2
+        case .medium:
+            return .sgmDBm2
+        case .high:
+            return .sgmDBlg2
+        case .notMeasuring:
+            return .black
+        }
+    }
+    
+    var textBackgroundColor: Color {
+        switch self {
+        case .low:
+            return .sgmYellow0
+        case .medium:
+            return .sgmBlue0
+        case .high:
+            return .sgmRed0
+        case .notMeasuring:
+            return .black
+        }
     }
 }
 
