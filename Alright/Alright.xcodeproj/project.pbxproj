@@ -18,7 +18,50 @@
 		08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */; };
 		08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
 		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
+		1F857FBC2C59E4810043F012 /* NoiseMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */; };
+		1FB5A4C02C59E1370029B181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* ContentView.swift */; };
+		1FB5A4C12C59E1560029B181 /* DyanmicIsland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEC2C59DDE700FE3D90 /* DyanmicIsland.swift */; };
+		1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEE2C59DDE700FE3D90 /* AppIntent.swift */; };
+		1FB5A4C32C59E1880029B181 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
+		1FD39F362C59E526005067DF /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
+		1FD39F372C59E537005067DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08621D1F2C57638600E26998 /* Assets.xcassets */; };
+		1FD39F382C59E53D005067DF /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6E2C534AA800469FD1 /* GaugeView.swift */; };
+		1FD39F392C59E557005067DF /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC742C5394BC00469FD1 /* RoundedCorner.swift */; };
+		1FF46DE42C59DDE700FE3D90 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF46DE32C59DDE700FE3D90 /* WidgetKit.framework */; };
+		1FF46DE62C59DDE700FE3D90 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF46DE52C59DDE700FE3D90 /* SwiftUI.framework */; };
+		1FF46DE92C59DDE700FE3D90 /* DyanmicIslandBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DE82C59DDE700FE3D90 /* DyanmicIslandBundle.swift */; };
+		1FF46DEB2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEA2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift */; };
+		1FF46DED2C59DDE700FE3D90 /* DyanmicIsland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEC2C59DDE700FE3D90 /* DyanmicIsland.swift */; };
+		1FF46DEF2C59DDE700FE3D90 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEE2C59DDE700FE3D90 /* AppIntent.swift */; };
+		1FF46DF12C59DDE800FE3D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF46DF02C59DDE800FE3D90 /* Assets.xcassets */; };
+		1FF46DF52C59DDE800FE3D90 /* DyanmicIslandExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1FF46DE12C59DDE700FE3D90 /* DyanmicIslandExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FF46DFA2C59DE1300FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEA2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift */; };
+		1FF46DFC2C59DE7100FE3D90 /* VoicePitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FF46DF32C59DDE800FE3D90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08C737D52C51ED3000FA93A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FF46DE02C59DDE700FE3D90;
+			remoteInfo = DyanmicIslandExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FF46DF62C59DDE800FE3D90 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1FF46DF52C59DDE800FE3D90 /* DyanmicIslandExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08621D1F2C57638600E26998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +77,15 @@
 		08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchButton.swift; sourceTree = "<group>"; };
 		1D9231C22C57ED0C00819BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		1FF46DE12C59DDE700FE3D90 /* DyanmicIslandExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DyanmicIslandExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF46DE32C59DDE700FE3D90 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1FF46DE52C59DDE700FE3D90 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1FF46DE82C59DDE700FE3D90 /* DyanmicIslandBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyanmicIslandBundle.swift; sourceTree = "<group>"; };
+		1FF46DEA2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyanmicIslandLiveActivity.swift; sourceTree = "<group>"; };
+		1FF46DEC2C59DDE700FE3D90 /* DyanmicIsland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyanmicIsland.swift; sourceTree = "<group>"; };
+		1FF46DEE2C59DDE700FE3D90 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		1FF46DF02C59DDE800FE3D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FF46DF22C59DDE800FE3D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +93,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF46DDE2C59DDE700FE3D90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF46DE62C59DDE700FE3D90 /* SwiftUI.framework in Frameworks */,
+				1FF46DE42C59DDE700FE3D90 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				08C737DF2C51ED3000FA93A4 /* Alright */,
+				1FF46DE72C59DDE700FE3D90 /* DyanmicIsland */,
+				1FF46DE22C59DDE700FE3D90 /* Frameworks */,
 				08C737DE2C51ED3000FA93A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				08C737DD2C51ED3000FA93A4 /* Alright.app */,
+				1FF46DE12C59DDE700FE3D90 /* DyanmicIslandExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +210,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1FF46DE22C59DDE700FE3D90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FF46DE32C59DDE700FE3D90 /* WidgetKit.framework */,
+				1FF46DE52C59DDE700FE3D90 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FF46DE72C59DDE700FE3D90 /* DyanmicIsland */ = {
+			isa = PBXGroup;
+			children = (
+				1FF46DE82C59DDE700FE3D90 /* DyanmicIslandBundle.swift */,
+				1FF46DEA2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift */,
+				1FF46DEC2C59DDE700FE3D90 /* DyanmicIsland.swift */,
+				1FF46DEE2C59DDE700FE3D90 /* AppIntent.swift */,
+				1FF46DF02C59DDE800FE3D90 /* Assets.xcassets */,
+				1FF46DF22C59DDE800FE3D90 /* Info.plist */,
+			);
+			path = DyanmicIsland;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,15 +242,34 @@
 				08C737D92C51ED3000FA93A4 /* Sources */,
 				08C737DA2C51ED3000FA93A4 /* Frameworks */,
 				08C737DB2C51ED3000FA93A4 /* Resources */,
+				1FF46DF62C59DDE800FE3D90 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1FF46DF42C59DDE800FE3D90 /* PBXTargetDependency */,
 			);
 			name = Alright;
 			productName = SipGuMan;
 			productReference = 08C737DD2C51ED3000FA93A4 /* Alright.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1FF46DE02C59DDE700FE3D90 /* DyanmicIslandExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF46DF92C59DDE800FE3D90 /* Build configuration list for PBXNativeTarget "DyanmicIslandExtension" */;
+			buildPhases = (
+				1FF46DDD2C59DDE700FE3D90 /* Sources */,
+				1FF46DDE2C59DDE700FE3D90 /* Frameworks */,
+				1FF46DDF2C59DDE700FE3D90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DyanmicIslandExtension;
+			productName = DyanmicIslandExtension;
+			productReference = 1FF46DE12C59DDE700FE3D90 /* DyanmicIslandExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -177,6 +282,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					08C737DC2C51ED3000FA93A4 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					1FF46DE02C59DDE700FE3D90 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -195,6 +303,7 @@
 			projectRoot = "";
 			targets = (
 				08C737DC2C51ED3000FA93A4 /* Alright */,
+				1FF46DE02C59DDE700FE3D90 /* DyanmicIslandExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +318,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FF46DDF2C59DDE700FE3D90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD39F372C59E537005067DF /* Assets.xcassets in Resources */,
+				1FF46DF12C59DDE800FE3D90 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -217,10 +335,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */,
+				1FF46DFA2C59DE1300FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */,
 				088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */,
 				088DFC732C534D1A00469FD1 /* Color+.swift in Sources */,
 				08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */,
+				1FB5A4C12C59E1560029B181 /* DyanmicIsland.swift in Sources */,
 				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
+				1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */,
 				08621D222C5763BA00E26998 /* ContentView.swift in Sources */,
 				088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */,
 				088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */,
@@ -228,7 +349,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FF46DDD2C59DDE700FE3D90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD39F392C59E557005067DF /* RoundedCorner.swift in Sources */,
+				1FD39F362C59E526005067DF /* FeedbackView.swift in Sources */,
+				1FF46DED2C59DDE700FE3D90 /* DyanmicIsland.swift in Sources */,
+				1FB5A4C02C59E1370029B181 /* ContentView.swift in Sources */,
+				1FB5A4C32C59E1880029B181 /* VoicePitchButton.swift in Sources */,
+				1FF46DFC2C59DE7100FE3D90 /* VoicePitchView.swift in Sources */,
+				1FF46DEF2C59DDE700FE3D90 /* AppIntent.swift in Sources */,
+				1FF46DE92C59DDE700FE3D90 /* DyanmicIslandBundle.swift in Sources */,
+				1FD39F382C59E53D005067DF /* GaugeView.swift in Sources */,
+				1F857FBC2C59E4810043F012 /* NoiseMeter.swift in Sources */,
+				1FF46DEB2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FF46DF42C59DDE800FE3D90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FF46DE02C59DDE700FE3D90 /* DyanmicIslandExtension */;
+			targetProxy = 1FF46DF32C59DDE800FE3D90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		08C737E92C51ED3400FA93A4 /* Debug */ = {
@@ -353,6 +500,7 @@
 		08C737EC2C51ED3400FA93A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -364,6 +512,7 @@
 				INFOPLIST_FILE = Alright/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "올라잇 alright";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -385,6 +534,7 @@
 		08C737ED2C51ED3400FA93A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +546,7 @@
 				INFOPLIST_FILE = Alright/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "올라잇 alright";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +559,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FF46DF72C59DDE800FE3D90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DyanmicIsland/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DyanmicIsland;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright.DyanmicIsland;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FF46DF82C59DDE800FE3D90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DyanmicIsland/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DyanmicIsland;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright.DyanmicIsland;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,6 +636,15 @@
 			buildConfigurations = (
 				08C737EC2C51ED3400FA93A4 /* Debug */,
 				08C737ED2C51ED3400FA93A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF46DF92C59DDE800FE3D90 /* Build configuration list for PBXNativeTarget "DyanmicIslandExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF46DF72C59DDE800FE3D90 /* Debug */,
+				1FF46DF82C59DDE800FE3D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

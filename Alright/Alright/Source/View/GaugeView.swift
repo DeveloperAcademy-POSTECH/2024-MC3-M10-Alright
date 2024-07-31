@@ -47,7 +47,7 @@ struct GaugeView: View {
             } else if gaugeValue > bottomStandard {
                 return Color.sgmBlue2
             } else {
-                return Color(hex: "F2FF60")
+                return Color.sgmDBs2
             }
         }
     }
