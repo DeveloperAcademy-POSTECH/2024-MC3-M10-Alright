@@ -58,22 +58,19 @@ struct VoicePitchView: View {
     }
 }
 
-enum NoiseLevel: String {
-    case low = "목소리를 조금 더 크게 내보세요!"
-    case medium = "적정한 목소리 크기로 말하고 계시네요!"
-    case high = "목소리를 조금 더 작게 내보는게 어떨까요?"
-    case notMeasuring = "다시 시작하려면 버튼을 탭하세요!"
+enum NoiseLevel: String, Codable {
+    case low, medium, high, notMeasuring
     
-    var emoji: String {
+    var message: String {
         switch self {
         case .low:
-            return "🫥"
+            return "목소리를 조금 더 크게 내보세요!"
         case .medium:
-            return "👍🏻"
+            return "적정한 목소리 크기로 말하고 계시네요!"
         case .high:
-            return "😖"
+            return "목소리를 조금 더 작게 내보는게 어떨까요?"
         case .notMeasuring:
-            return "🔇"
+            return "다시 시작하려면 버튼을 탭하세요!"
         }
     }
     
