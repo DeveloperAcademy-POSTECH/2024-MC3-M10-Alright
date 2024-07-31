@@ -64,23 +64,41 @@ enum NoiseLevel: String {
     case high = "목소리를 조금 더 작게 내보는게 어떨까요?"
     case notMeasuring = "다시 시작하려면 버튼을 탭하세요!"
     
-    static func message(for decibels: Float, isMeasuring: Bool) -> String {
+    var emoji: String {
+        switch self {
+        case .low:
+            return "🫥"
+        case .medium:
+            return "👍🏻"
+        case .high:
+            return "😖"
+        case .notMeasuring:
+            return "🔇"
+        }
+    }
+    
+    static func level(for decibels: Float, isMeasuring: Bool) -> NoiseLevel {
         guard isMeasuring else {
-            return notMeasuring.rawValue
+            return .notMeasuring
         }
         
         let level = decibels / 120.0
         
         switch level {
-        case _ where level > /*2.0 / 3.0*/ 7.0 / 12.0:
-            return high.rawValue
-        case _ where level > /*1.0 / 3.0*/ 5.0 / 12.0:
-            return medium.rawValue
+        case _ where level > 7.0 / 12.0:
+            return .high
+        case _ where level > 5.0 / 12.0:
+            return .medium
         default:
-            return low.rawValue
+            return .low
         }
     }
+    
+    static func message(for decibels: Float, isMeasuring: Bool) -> String {
+        return level(for: decibels, isMeasuring: isMeasuring).rawValue
+    }
 }
+
 
 #Preview {
     VoicePitchView()

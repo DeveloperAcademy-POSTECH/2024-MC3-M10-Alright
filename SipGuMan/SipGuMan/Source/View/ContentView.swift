@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     
@@ -152,6 +153,18 @@ struct ContentView: View {
                     Spacer()
                 }
             }
+        }
+        .onAppear {
+            let recordingSession = AVAudioSession.sharedInstance()
+                    do {
+                        try recordingSession.setCategory(AVAudioSession.Category.playAndRecord,
+                                                         mode: .default,
+                                                         policy: .default)
+                        
+                        try recordingSession.setActive(true)
+                    } catch {
+                        print("Cannot setup the Recording")
+               }
         }
     }
     private func handleSelection(index: Int) {
