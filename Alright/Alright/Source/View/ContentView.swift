@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     
@@ -153,7 +154,20 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear {
+            let recordingSession = AVAudioSession.sharedInstance()
+            do {
+                try recordingSession.setCategory(AVAudioSession.Category.playAndRecord,
+                                                 mode: .default,
+                                                 policy: .default)
+                
+                try recordingSession.setActive(true)
+            } catch {
+                print("Cannot setup the Recording")
+            }
+        }
     }
+    
     private func handleSelection(index: Int) {
         if selectedIndex == nil { // 현재 상황을 선택한게 없다면
             selectedIndex = index
@@ -168,29 +182,29 @@ struct ContentView: View {
         }
     }
 }
-
-// Rectangle View
-struct CustomRectangle: View {
     
-    var selected: Bool
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]), startPoint: .topTrailing, endPoint: .bottomLeading)) : AnyShapeStyle(.sgmGray2))
-                .frame(maxWidth: .infinity, maxHeight: 160)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .strokeBorder(
-                            selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]), startPoint: .bottomLeading, endPoint: .topTrailing)) : AnyShapeStyle(Color.white),
-                            lineWidth: 1
-                        )
-                )
+    // Rectangle View
+    struct CustomRectangle: View {
+        
+        var selected: Bool
+        
+        var body: some View {
+            ZStack {
+                Rectangle()
+                    .fill(selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]), startPoint: .topTrailing, endPoint: .bottomLeading)) : AnyShapeStyle(.sgmGray2))
+                    .frame(maxWidth: .infinity, maxHeight: 160)
+                    .cornerRadius(24)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .strokeBorder(
+                                selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]), startPoint: .bottomLeading, endPoint: .topTrailing)) : AnyShapeStyle(Color.white),
+                                lineWidth: 1
+                            )
+                    )
+            }
         }
     }
-}
-
-#Preview {
-    ContentView()
-}
+    
+    #Preview {
+        ContentView()
+    }
