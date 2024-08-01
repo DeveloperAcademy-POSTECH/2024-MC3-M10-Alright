@@ -22,6 +22,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                 Text(context.state.message)
                 ProgressView(value: context.state.progress, total: 1.0)
                     .progressViewStyle(LinearProgressViewStyle())
+                    .tint(context.state.noiseLevel.noiseColor)
                     .frame(height: 10)
                     .padding(.horizontal)
             }
