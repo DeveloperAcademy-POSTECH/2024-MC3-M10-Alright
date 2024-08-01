@@ -84,6 +84,7 @@ struct VoicePitchButton: View {
             print("Ending the Live Activity: \(currentActivity.id)")
             // Activity 객체를 nil로 설정
             self.activity = nil
+            self.noiseMeter.timer = nil
         }
     }
 }
