@@ -4,13 +4,12 @@ import ActivityKit
 struct VoicePitchButton: View {
     
     let action: () -> Void
-    
-    @Binding var height: CGFloat
+
     @Binding var noiseMeter: NoiseMeter
     
     // 상태 변화를 감지하기 위한 변수를 추가합니다.
     @State private var currentNoiseLevel: NoiseLevel = .notMeasuring
-    @State private var activity: Activity<DynamicIslandWidgetAttributes>? // Activity 객체를 관리하는 상태 변수 추가
+    @Binding var activity: Activity<DynamicIslandWidgetAttributes>? // Activity 객체를 관리하는 상태 변수 추가
     
     var body: some View {
         Button {
@@ -85,12 +84,16 @@ struct VoicePitchButton: View {
             print("Ending the Live Activity: \(currentActivity.id)")
             // Activity 객체를 nil로 설정
             self.activity = nil
+            self.noiseMeter.timer = nil
         }
     }
 }
 
 #Preview {
-    VoicePitchButton(action: { print("측정버튼을 클릭했습니다.")},
-                     height: .constant(200),
-                     noiseMeter: .constant(NoiseMeter()))
+    Group {
+        VoicePitchButton(action: { print("측정버튼을 클릭했습니다.")},
+                         noiseMeter: .constant(NoiseMeter()),
+                         activity: .constant(nil))
+        
+    }
 }
