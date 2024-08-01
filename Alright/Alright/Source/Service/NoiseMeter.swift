@@ -76,7 +76,7 @@ class NoiseMeter {
         
         let dbSPL = dbFS + referenceLevel
         
-        return min(max(dbSPL, 0.0), 120.0) - 10
+        return max(min(max(dbSPL, 0.0), 120.0) - 10, 0)
     }
 }
     

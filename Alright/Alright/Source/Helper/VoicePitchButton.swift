@@ -21,7 +21,7 @@ struct VoicePitchButton: View {
             Image(noiseMeter.isMeasuring ? "pause" : "record")
         }
         // noiseMeter의 decibels 값이 변경될 때마다 noiseLevel을 업데이트하고 출력합니다.
-        .onChange(of: noiseMeter.decibels) { newValue in
+        .onChange(of: noiseMeter.decibels) { _, _ in
             updateNoiseLevelAndPrint()
         }
     }
@@ -48,21 +48,22 @@ struct VoicePitchButton: View {
             print(noiseLevel)
             
             let dynamicIslandWidgetAttributes = DynamicIslandWidgetAttributes(name: "A")
-            let contentState = DynamicIslandWidgetAttributes.ContentState(
-                emoji: noiseLevel.emoji,
-                progress: progress, // Update progress
-                message: noiseLevel.rawValue // Update message
+            let initialState = DynamicIslandWidgetAttributes.ContentState(
+                noiseLevel: noiseLevel,
+                progress: progress,
+                message: noiseLevel.message
             )
-            
+            let activityContent = ActivityContent(state: initialState,
+                                                  staleDate: .now.advanced(by: 3600.0))
             if let activity = activity {
                 Task {
-                    await activity.update(using: contentState)
+                    await activity.update(activityContent)
                 }
             } else if noiseMeter.isMeasuring {
                 do {
                     let newActivity = try Activity<DynamicIslandWidgetAttributes>.request(
                         attributes: dynamicIslandWidgetAttributes,
-                        contentState: contentState
+                        content: activityContent
                     )
                     self.activity = newActivity
                     print(newActivity)
@@ -74,19 +75,16 @@ struct VoicePitchButton: View {
     }
     
     private func calculateProgress(for decibels: Float) -> Double {
-        // Assuming decibels range from 0 to 120 for this example.
         let normalizedDecibels = min(max(decibels / 120.0, 0.0), 1.0)
         return Double(normalizedDecibels)
     }
-
+    
     private func endLiveActivity() async {
-        if #available(iOS 16.2, *) {
-            if let currentActivity = activity {
-                await currentActivity.end(nil,dismissalPolicy: .immediate)
-                print("Ending the Live Activity: \(currentActivity.id)")
-                // Activity 객체를 nil로 설정
-                self.activity = nil
-            }
+        if let currentActivity = activity {
+            await currentActivity.end(nil,dismissalPolicy: .immediate)
+            print("Ending the Live Activity: \(currentActivity.id)")
+            // Activity 객체를 nil로 설정
+            self.activity = nil
         }
     }
 }
