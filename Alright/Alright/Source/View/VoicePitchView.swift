@@ -7,11 +7,13 @@
 
 import SwiftUI
 import AVFoundation
+import ActivityKit
 
 struct VoicePitchView: View {
     
-    @State private var noiseMeter = NoiseMeter()
-    @State private var circleHeight: CGFloat = 0
+    let measure: (() async -> ())
+    @Binding var activity: Activity<DynamicIslandWidgetAttributes>?
+    @Binding var noiseMeter: NoiseMeter
     
     var isMeasuring: Bool {
         self.noiseMeter.timer != nil
@@ -19,7 +21,7 @@ struct VoicePitchView: View {
     
     var noiseLevel: NoiseLevel {
         NoiseLevel.level(for: noiseMeter.decibels,
-                              isMeasuring: isMeasuring)
+                         isMeasuring: isMeasuring)
     }
     
     var body: some View {
@@ -47,24 +49,11 @@ struct VoicePitchView: View {
                 
                 Text("\(String(format: "%.2f", noiseMeter.decibels))dB")
                     .foregroundStyle(.white)
-                VoicePitchButton(action: { Task { await measure(height: circleHeight) } },
-                                 height: $circleHeight,
-                                 noiseMeter: $noiseMeter)
+                VoicePitchButton(action: { Task { await measure() } },
+                                 noiseMeter: $noiseMeter,
+                                 activity: $activity)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-        .onAppear{
-            Task {
-                await measure(height: circleHeight)
-            }
-        }
-    }
-    
-    private func measure(height: CGFloat) async {
-        if noiseMeter.timer == nil {
-            await noiseMeter.startMetering()
-        } else {
-            await noiseMeter.stopMetering()
         }
     }
 }
@@ -156,6 +145,10 @@ enum NoiseLevel: String, Codable {
 }
 
 
-#Preview {
-    VoicePitchView()
-}
+//#Preview {
+//    VoicePitchView(measure: {
+//        
+//    },
+//                   activity: .constant(nil),
+//                   noiseMeter: .constant(NoiseMeter()))
+//}
