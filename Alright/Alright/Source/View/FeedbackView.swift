@@ -19,59 +19,38 @@ struct FeedbackView: View {
                 Color.sgmGray2
                     .ignoresSafeArea()
                 
-                VoicePitchView(measure: measure, 
-                               activity: $activity,
-                               noiseMeter: $noiseMeter)
-                .navigationBarBackButtonHidden()
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text(currentSituation)
-                            .font(.headline)
-                            .foregroundColor(.white)
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            // 측정을 멈추고 라이브 액티비티 종료
-                            if noiseMeter.isMeasuring {
+                VoicePitchView(noiseMeter: $noiseMeter)
+                    .navigationBarBackButtonHidden()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            Text(currentSituation)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            // 종료 버튼
+                            Button {
                                 Task {
-                                    await endLiveActivity()
+                                    await noiseMeter.stopMetering()
+                                    await noiseMeter.endLiveActivity()
                                 }
+                                dismiss()
+                            } label: {
+                                Text("종료")
+                                    .foregroundColor(.sgmBlue1)
                             }
-                            dismiss()
-                        } label: {
-                            Text("종료")
-                                .foregroundColor(.sgmBlue1) // 종료 버튼 색상 변경
                         }
                     }
-                }
             }
-            .onAppear{
+            .onAppear { // FeedBackView 시작 시 소리 측정 시작
                 Task {
-                    await measure()
+                    await noiseMeter.measure()
+                    noiseMeter.startLiveActivity()
                 }
             }
         }
     }
-    
-    private func measure() async {
-        if noiseMeter.timer == nil {
-            await noiseMeter.startMetering()
-        } else {
-            await noiseMeter.stopMetering()
-        }
-    }
-    
-    private func endLiveActivity() async {
-        if let currentActivity = activity {
-            await currentActivity.end(nil,dismissalPolicy: .immediate)
-            print("Ending the Live Activity: \(currentActivity.id)")
-            // Activity 객체를 nil로 설정
-            self.activity = nil
-            self.noiseMeter.timer = nil
-        }
-    }
-    
 }
 
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08621D202C57638600E26998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08621D1F2C57638600E26998 /* Assets.xcassets */; };
-		08621D222C5763BA00E26998 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* ContentView.swift */; };
+		08621D222C5763BA00E26998 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* SelectionView.swift */; };
 		08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08808F5E2C57629300A6A8FA /* SipGuManApp.swift */; };
 		088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */; };
 		088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6E2C534AA800469FD1 /* GaugeView.swift */; };
@@ -17,9 +17,13 @@
 		08C737E82C51ED3400FA93A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */; };
 		08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */; };
 		08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
+		08F4F1D82C5D1A2100F89B2C /* NoiseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4F1D72C5D1A2100F89B2C /* NoiseLevel.swift */; };
+		08FE6DE62C5D1AB400A2E52B /* NoiseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4F1D72C5D1A2100F89B2C /* NoiseLevel.swift */; };
+		08FE6DE82C5D1C2E00A2E52B /* SelectionRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */; };
+		08FE6DE92C5D1D1E00A2E52B /* SelectionRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */; };
 		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
 		1F857FBC2C59E4810043F012 /* NoiseMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */; };
-		1FB5A4C02C59E1370029B181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* ContentView.swift */; };
+		1FB5A4C02C59E1370029B181 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* SelectionView.swift */; };
 		1FB5A4C12C59E1560029B181 /* DyanmicIsland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEC2C59DDE700FE3D90 /* DyanmicIsland.swift */; };
 		1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF46DEE2C59DDE700FE3D90 /* AppIntent.swift */; };
 		1FB5A4C32C59E1880029B181 /* VoicePitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */; };
@@ -65,7 +69,7 @@
 
 /* Begin PBXFileReference section */
 		08621D1F2C57638600E26998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08621D212C5763BA00E26998 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		08621D212C5763BA00E26998 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		08808F5E2C57629300A6A8FA /* SipGuManApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipGuManApp.swift; sourceTree = "<group>"; };
 		088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseMeter.swift; sourceTree = "<group>"; };
 		088DFC6E2C534AA800469FD1 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchView.swift; sourceTree = "<group>"; };
 		08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePitchButton.swift; sourceTree = "<group>"; };
+		08F4F1D72C5D1A2100F89B2C /* NoiseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseLevel.swift; sourceTree = "<group>"; };
+		08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRectangle.swift; sourceTree = "<group>"; };
 		1D9231C22C57ED0C00819BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		1FF46DE12C59DDE700FE3D90 /* DyanmicIslandExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DyanmicIslandExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,9 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
-				08621D212C5763BA00E26998 /* ContentView.swift */,
+				08621D212C5763BA00E26998 /* SelectionView.swift */,
 				08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */,
 				088DFC6E2C534AA800469FD1 /* GaugeView.swift */,
+				08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 		088DFC7C2C575BDF00469FD1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				08F4F1D62C5D1A1800F89B2C /* Model */,
 				088DFC702C534D0100469FD1 /* Extension */,
 				088DFC762C575B3D00469FD1 /* Helper */,
 				088DFC782C575B5600469FD1 /* View */,
@@ -208,6 +216,14 @@
 				08C737E72C51ED3400FA93A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08F4F1D62C5D1A1800F89B2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08F4F1D72C5D1A2100F89B2C /* NoiseLevel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1FF46DE22C59DDE700FE3D90 /* Frameworks */ = {
@@ -340,9 +356,11 @@
 				088DFC732C534D1A00469FD1 /* Color+.swift in Sources */,
 				08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */,
 				1FB5A4C12C59E1560029B181 /* DyanmicIsland.swift in Sources */,
+				08FE6DE82C5D1C2E00A2E52B /* SelectionRectangle.swift in Sources */,
 				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
 				1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */,
-				08621D222C5763BA00E26998 /* ContentView.swift in Sources */,
+				08F4F1D82C5D1A2100F89B2C /* NoiseLevel.swift in Sources */,
+				08621D222C5763BA00E26998 /* SelectionView.swift in Sources */,
 				088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */,
 				088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */,
 				08C737F32C51FE0D00FA93A4 /* VoicePitchButton.swift in Sources */,
@@ -354,12 +372,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FD39F392C59E557005067DF /* RoundedCorner.swift in Sources */,
+				08FE6DE62C5D1AB400A2E52B /* NoiseLevel.swift in Sources */,
 				1FD39F362C59E526005067DF /* FeedbackView.swift in Sources */,
 				1FF46DED2C59DDE700FE3D90 /* DyanmicIsland.swift in Sources */,
-				1FB5A4C02C59E1370029B181 /* ContentView.swift in Sources */,
+				1FB5A4C02C59E1370029B181 /* SelectionView.swift in Sources */,
 				1FB5A4C32C59E1880029B181 /* VoicePitchButton.swift in Sources */,
 				1FF46DFC2C59DE7100FE3D90 /* VoicePitchView.swift in Sources */,
 				1FF46DEF2C59DDE700FE3D90 /* AppIntent.swift in Sources */,
+				08FE6DE92C5D1D1E00A2E52B /* SelectionRectangle.swift in Sources */,
 				1FF46DE92C59DDE700FE3D90 /* DyanmicIslandBundle.swift in Sources */,
 				1FD39F382C59E53D005067DF /* GaugeView.swift in Sources */,
 				1F857FBC2C59E4810043F012 /* NoiseMeter.swift in Sources */,
@@ -503,10 +523,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
-				DEVELOPMENT_TEAM = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
@@ -528,6 +549,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -544,10 +566,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
-				DEVELOPMENT_TEAM = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
@@ -569,6 +592,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
