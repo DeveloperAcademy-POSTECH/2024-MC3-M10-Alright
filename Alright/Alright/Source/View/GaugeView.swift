@@ -59,7 +59,7 @@ struct GaugeView: View {
                     Color.white
                         .clipShape(RoundedCorner(radius: 0,
                                                  corners: .allCorners))
-                        .frame(width: 185, height: 444)
+                        .frame(width: 213, height: 444)
                     
                     GeometryReader { geometry in
                         VStack(spacing: 0) {
@@ -86,7 +86,7 @@ struct GaugeView: View {
                     }
                     .clipShape(RoundedCorner(radius: 0,
                                              corners: .allCorners))
-                    .frame(width: 185,
+                    .frame(width: 213,
                            height: CGFloat(gaugeHeight * Int(noiseMeter.decibels) / 120))
                     .background(
                         Color.white
@@ -103,9 +103,9 @@ struct GaugeView: View {
                     .frame(height: 444/6)
                     .padding(.horizontal, -1)
             }
-            .frame(width: 185, height: 444)
+            .frame(width: 213, height: 444)
             .background(Color.black)
-            .clipShape(RoundedCorner(radius: 24,
+            .clipShape(RoundedCorner(radius: 32,
                                      corners: .allCorners))
             .shadow(color: .white.opacity(0.25), radius: 8, x: 0, y: 0)
         }
