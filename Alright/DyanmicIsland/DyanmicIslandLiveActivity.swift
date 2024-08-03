@@ -27,11 +27,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     .padding(.horizontal)
             }
             .activityBackgroundTint(.sgmGray2)
-            
-        }
-        
-        
-    dynamicIsland: { context in
+        } dynamicIsland: { context in
         DynamicIsland {
             // Expanded Mode에서 나타날 View 구현
             
