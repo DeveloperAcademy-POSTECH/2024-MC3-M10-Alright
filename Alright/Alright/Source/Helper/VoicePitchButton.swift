@@ -6,27 +6,27 @@ struct VoicePitchButton: View {
     @Binding var noiseMeter: NoiseMeter
     var body: some View {
         Button {
-            // 측정 버튼이 눌릴 때 현재 noiseLevel을 계산하고 출력합니다.
-            handleButtonTap()
-            Task {
-                await noiseMeter.measure()
-            }
+            recordButtonTapped()
         } label: {
             Image(noiseMeter.isMeasuring ? "pause" : "record")
         }
-        // noiseMeter의 decibels 값이 변경될 때마다 noiseLevel을 업데이트하고 출력합니다.
     }
     
-    /// 버튼 클릭
-    private func handleButtonTap() {
+    /// 소리 측정 On/Off 버튼 클릭 함수
+    private func recordButtonTapped() {
+        
+        // 소리 측정 On/Off
+        Task {
+            await noiseMeter.measure()
+        }
+        
+        // 소리 측정 중 여부에 따라 Live Activity 활성화 여부 결정
         if !noiseMeter.isMeasuring {
-            // 측정을 시작하고 라이브 액티비티 시작
             noiseMeter.startLiveActivity()
         } else {
             // 측정을 멈추고 라이브 액티비티 종료
             Task {
                 await noiseMeter.endLiveActivity()
-                // 측정을 멈추는 작업을 여기에 추가
             }
         }
     }

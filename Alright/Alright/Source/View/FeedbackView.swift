@@ -29,6 +29,7 @@ struct FeedbackView: View {
                                 .foregroundColor(.white)
                         }
                         ToolbarItem(placement: .navigationBarTrailing) {
+                            // 종료 버튼
                             Button {
                                 Task {
                                     await noiseMeter.stopMetering()
@@ -37,12 +38,12 @@ struct FeedbackView: View {
                                 dismiss()
                             } label: {
                                 Text("종료")
-                                    .foregroundColor(.sgmBlue1) // 종료 버튼 색상 변경
+                                    .foregroundColor(.sgmBlue1)
                             }
                         }
                     }
             }
-            .onAppear{
+            .onAppear { // FeedBackView 시작 시 소리 측정 시작
                 Task {
                     await noiseMeter.measure()
                     noiseMeter.startLiveActivity()
