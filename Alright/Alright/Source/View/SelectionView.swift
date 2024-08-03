@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFoundation
 
-struct ContentView: View {
+struct SelectionView: View {
     
     @State private var isNavigating = false // Navigation Bool
     
@@ -31,7 +31,7 @@ struct ContentView: View {
                     
                     HStack(spacing: 10) {
                         ZStack {
-                            CustomRectangle(selected: selectedIndex == 0)
+                            SelectionRectangle(selected: selectedIndex == 0)
                             VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[0])")
@@ -55,7 +55,7 @@ struct ContentView: View {
                         }
                         
                         ZStack {
-                            CustomRectangle(selected: selectedIndex == 1)
+                            SelectionRectangle(selected: selectedIndex == 1)
                             VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[1])")
@@ -81,7 +81,7 @@ struct ContentView: View {
                     
                     HStack(spacing: 10) {
                         ZStack {
-                            CustomRectangle(selected: selectedIndex == 2)
+                            SelectionRectangle(selected: selectedIndex == 2)
                             VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[2])")
@@ -104,7 +104,7 @@ struct ContentView: View {
                         }
                         
                         ZStack {
-                            CustomRectangle(selected: selectedIndex == 3)
+                            SelectionRectangle(selected: selectedIndex == 3)
                             VStack(spacing: 20) {
                                 HStack {
                                     Text("\(situation[3])")
@@ -182,29 +182,7 @@ struct ContentView: View {
         }
     }
 }
-    
-    // Rectangle View
-    struct CustomRectangle: View {
-        
-        var selected: Bool
-        
-        var body: some View {
-            ZStack {
-                Rectangle()
-                    .fill(selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]), startPoint: .topTrailing, endPoint: .bottomLeading)) : AnyShapeStyle(.sgmGray2))
-                    .frame(maxWidth: .infinity, maxHeight: 160)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .strokeBorder(
-                                selected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]), startPoint: .bottomLeading, endPoint: .topTrailing)) : AnyShapeStyle(Color.white),
-                                lineWidth: 1
-                            )
-                    )
-            }
-        }
-    }
-    
-    #Preview {
-        ContentView()
-    }
+
+#Preview {
+    SelectionView()
+}
