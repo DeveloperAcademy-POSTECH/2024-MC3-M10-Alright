@@ -60,8 +60,6 @@ struct DynamicIslandWidgetLiveActivity: Widget {
             }
         } compactLeading: { // compact Mode에서 좌측에 나타나는 View
             Image(context.state.noiseLevel.imageString)
-                .resizable()
-                .frame(width: 10, height: 10)
         } compactTrailing: { // compact Mode에서 우측에 나타나는 View
             HStack(alignment: .bottom, spacing: 1) {
                 Text("\(context.state.decibels)")
