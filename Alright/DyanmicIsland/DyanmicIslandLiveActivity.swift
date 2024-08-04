@@ -8,6 +8,7 @@ struct DynamicIslandWidgetAttributes: ActivityAttributes {
         let noiseLevel: NoiseLevel
         let progress: Int
         let emoji: String
+        let title: String
     }
     // Fixed non-changing properties about your activity go here!
     var name: String
@@ -26,7 +27,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     
                     Spacer()
                     
-                    Text("1:1대화")
+                    Text("\(context.state.title)")
                         .foregroundStyle(.sgmGrayA)
                         .font(.system(size: 16, weight: .regular))
                         .padding(.trailing)
