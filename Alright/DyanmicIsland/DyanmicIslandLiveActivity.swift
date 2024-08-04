@@ -136,9 +136,11 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     Text("\(context.state.decibels)")
                         .foregroundStyle(.sgmWhite)
                         .font(.system(size: 16, weight: .semibold))
+                        .fixedSize()
                     Text("dB")
                         .foregroundStyle(.sgmWhite)
                         .font(.system(size: 10, weight: .regular))
+                        .fixedSize()
                 }
             }
             .widgetURL(URL(string: "http://www.apple.com"))
