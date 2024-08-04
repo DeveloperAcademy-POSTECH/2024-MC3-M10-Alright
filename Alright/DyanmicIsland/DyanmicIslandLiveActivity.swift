@@ -59,7 +59,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                 .frame(width: 200, height: 29)
                             
                             RoundedRectangle(cornerRadius: 14.5)
-                                .fill(context.state.noiseLevel.noiseColor)
+                                .fill(context.state.noiseLevel.noiseGradientColor)
                                 .frame(width: CGFloat(context.state.progress) / 100 * 200, height: 29)
                         }
                         .padding(.horizontal)
