@@ -20,14 +20,57 @@ struct DynamicIslandWidgetLiveActivity: Widget {
             
             // Lock Screen 혹은 Banner에서 사용하는 View
             VStack {
-                Text(context.state.noiseLevel.message)
-                ProgressView(value: Float(context.state.progress), total: 100.0)
-                    .progressViewStyle(LinearProgressViewStyle())
-                    .tint(context.state.noiseLevel.noiseColor)
-                    .frame(height: 10)
-                    .padding(.horizontal)
+                HStack {
+                    Text("Alight")
+                        .foregroundStyle(.sgmWhite)
+                        .font(.system(size: 24, weight: .semibold))
+                        .padding(.leading)
+                    
+                    Spacer()
+                    
+                    Text("1:1대화")
+                        .foregroundStyle(.sgmGrayA)
+                        .font(.system(size: 16, weight: .regular))
+                        .padding(.trailing)
+                }
+                .padding([.top, .horizontal])
+                
+                HStack(spacing: 10) {
+                    
+                    ZStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(Color.gray.opacity(0.3))
+                            .frame(width: .infinity, height: 48)
+                        
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(context.state.noiseLevel.noiseGradientColor)
+                            .frame(width: CGFloat(context.state.progress) / 100 * 200, height: 48)
+                    }
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(Color.clear)
+                            .frame(width: 95, height: 48)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 24)
+                                    .stroke(context.state.noiseLevel.noiseColor, lineWidth: 1)
+                            )
+                        HStack(spacing: 1) {
+                            Text("\(context.state.emoji)")
+                            Text("\(context.state.decibels)")
+                                .foregroundStyle(.sgmWhite)
+                                .font(.system(size: 22, weight: .semibold))
+                            Text("dB")
+                                .foregroundStyle(.sgmWhite)
+                                .font(.system(size: 16, weight: .regular))
+                        }
+                    }
+                    
+                }
+                .padding([.bottom, .horizontal])
             }
             .activityBackgroundTint(.sgmGray2)
+            
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded Mode에서 나타날 View 구현
@@ -54,11 +97,11 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.bottom) {
                     HStack(alignment: .bottom) {
                         ZStack(alignment: .leading) {
-                            RoundedRectangle(cornerRadius: 14.5)
+                            RoundedRectangle(cornerRadius: 24)
                                 .fill(Color.gray.opacity(0.3))
                                 .frame(width: 200, height: 29)
                             
-                            RoundedRectangle(cornerRadius: 14.5)
+                            RoundedRectangle(cornerRadius: 24)
                                 .fill(context.state.noiseLevel.noiseGradientColor)
                                 .frame(width: CGFloat(context.state.progress) / 100 * 200, height: 29)
                         }
