@@ -30,7 +30,10 @@ class NoiseMeter {
     
     /// NoiseMeter - Live Activity의 Activity 객체
     var activity: Activity<DynamicIslandWidgetAttributes>?
-
+    
+    /// NoiseMeter - LiveActivity의 LockScreen에서 사용자가 선택한 상황 title
+    var nowSituation: String = ""
+    
     init() {
         let audioFileURL = FileManager.default.urls(
             for: .documentDirectory,
@@ -81,8 +84,10 @@ class NoiseMeter {
         audioRecorder.stop()
         timer?.invalidate()
         timer = nil
-        withAnimation(.easeOut(duration: 1.0)) {
-            self.decibels = 0
+        DispatchQueue.main.async {
+            withAnimation(.easeOut(duration: 1.0)) {
+                self.decibels = 0
+            }
         }
     }
     
@@ -112,7 +117,8 @@ class NoiseMeter {
             let contentState = DynamicIslandWidgetAttributes.ContentState(
                 decibels: Int(self.decibels),
                 noiseLevel: noiseLevel,
-                progress: self.calculateProgress(for: decibels)
+                progress: self.calculateProgress(for: decibels),
+                title: self.nowSituation
             )
             let content = ActivityContent(state: contentState, staleDate: nil, relevanceScore: 1)
             
@@ -163,7 +169,8 @@ class NoiseMeter {
         let contentState = DynamicIslandWidgetAttributes.ContentState(
             decibels: Int(self.decibels),
             noiseLevel: noiseLevel,
-            progress: calculateProgress(for: decibels)
+            progress: calculateProgress(for: decibels),
+            title: self.nowSituation
         )
         await self.activity?.update(ActivityContent<DynamicIslandWidgetAttributes.ContentState>(
             state: contentState,

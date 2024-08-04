@@ -31,7 +31,7 @@ enum NoiseLevel: String, Codable {
         case .low:
             return "🤔"
         case .medium:
-            return "👍🏻"
+            return "👍"
         case .high:
             return "😮"
         case .notMeasuring:
@@ -75,6 +75,96 @@ enum NoiseLevel: String, Codable {
             return .sgmDBlg2
         case .notMeasuring:
             return .black
+        }
+    }
+    
+    var noiseGradientColor: LinearGradient {
+        switch self {
+        case .low:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .sgmDBs1, location: 0.0),
+                    .init(color: .sgmDBs2, location: 0.34),
+                    .init(color: .sgmDBs3, location: 1.0)
+                ]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+        case .medium:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .sgmDBm1, location: 0.0),
+                    .init(color: .sgmDBm2, location: 0.34),
+                    .init(color: .sgmDBm3, location: 1.0)
+                ]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+        case .high:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .sgmDBlg1, location: 0.0),
+                    .init(color: .sgmDBlg2, location: 0.34),
+                    .init(color: .sgmDBlg3, location: 1.0)
+                ]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+        case .notMeasuring:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .black, location: 0.0),
+                    .init(color: .black, location: 0.34),
+                    .init(color: .black, location: 1.0)
+                ]),
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+        }
+    }
+    
+    var noiseBorderGradientColor: LinearGradient {
+        switch self {
+        case .low:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .sgmDBs1, location: 0.0),
+                    .init(color: .sgmDBs2, location: 0.34),
+                    .init(color: .sgmDBs3, location: 1.0)
+                ]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        case .medium:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .sgmDBm1, location: 0.0),
+                    .init(color: .sgmDBm2, location: 0.34),
+                    .init(color: .sgmDBm3, location: 1.0)
+                ]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        case .high:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .sgmDBlg1, location: 0.0),
+                    .init(color: .sgmDBlg2, location: 0.34),
+                    .init(color: .sgmDBlg3, location: 1.0)
+                ]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        case .notMeasuring:
+            return LinearGradient(
+                gradient: Gradient(stops: [
+                    .init(color: .black, location: 0.0),
+                    .init(color: .black, location: 0.34),
+                    .init(color: .black, location: 1.0)
+                ]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
         }
     }
     
