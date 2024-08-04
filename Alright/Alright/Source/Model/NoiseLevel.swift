@@ -38,7 +38,7 @@ enum NoiseLevel: String, Codable {
             return "🔇"
         }
     }
-
+    
     var imageString: String {
         switch self {
         case .low:
@@ -75,6 +75,35 @@ enum NoiseLevel: String, Codable {
             return .sgmDBlg2
         case .notMeasuring:
             return .black
+        }
+    }
+    
+    var noiseGradientColor: LinearGradient {
+        switch self {
+        case .low:
+            return LinearGradient(
+                gradient: Gradient(colors: [.sgmDBs1, .sgmDBs3]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+        case .medium:
+            return LinearGradient(
+                gradient: Gradient(colors: [.sgmDBm1, .sgmDBm3]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+        case .high:
+            return LinearGradient(
+                gradient: Gradient(colors: [.sgmDBlg1, .sgmDBlg3]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+        case .notMeasuring:
+            return LinearGradient(
+                gradient: Gradient(colors: [.black, .black.opacity(0.6)]),
+                startPoint: .trailing,
+                endPoint: .leading
+            )
         }
     }
     
