@@ -7,7 +7,6 @@ struct DynamicIslandWidgetAttributes: ActivityAttributes {
         let decibels: Int
         let noiseLevel: NoiseLevel
         let progress: Int
-        let emoji: String
         let title: String
     }
     // Fixed non-changing properties about your activity go here!
@@ -53,7 +52,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                     .stroke(context.state.noiseLevel.noiseBorderGradientColor, lineWidth: 1)
                             )
                         HStack(spacing: 1) {
-                            Text("\(context.state.emoji)")
+                            Text("\(context.state.noiseLevel.emoji)")
                             Text("\(context.state.decibels)")
                                 .foregroundStyle(.sgmWhite)
                                 .font(.system(size: 22, weight: .semibold))
@@ -109,7 +108,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                         .stroke(context.state.noiseLevel.noiseBorderGradientColor, lineWidth: 1)
                                 )
                             HStack(spacing: 1) {
-                                Text("\(context.state.emoji)")
+                                Text("\(context.state.noiseLevel.emoji)")
                                 Text("\(context.state.decibels)")
                                     .foregroundStyle(.sgmWhite)
                                     .font(.system(size: 22, weight: .semibold))
