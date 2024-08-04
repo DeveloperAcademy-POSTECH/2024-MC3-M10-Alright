@@ -112,7 +112,8 @@ class NoiseMeter {
             let contentState = DynamicIslandWidgetAttributes.ContentState(
                 decibels: Int(self.decibels),
                 noiseLevel: noiseLevel,
-                progress: self.calculateProgress(for: decibels)
+                progress: self.calculateProgress(for: decibels),
+                emoji: noiseLevel.emoji
             )
             let content = ActivityContent(state: contentState, staleDate: nil, relevanceScore: 1)
             
@@ -163,7 +164,8 @@ class NoiseMeter {
         let contentState = DynamicIslandWidgetAttributes.ContentState(
             decibels: Int(self.decibels),
             noiseLevel: noiseLevel,
-            progress: calculateProgress(for: decibels)
+            progress: calculateProgress(for: decibels),
+            emoji: noiseLevel.emoji
         )
         await self.activity?.update(ActivityContent<DynamicIslandWidgetAttributes.ContentState>(
             state: contentState,

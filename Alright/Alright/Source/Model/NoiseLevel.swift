@@ -31,14 +31,14 @@ enum NoiseLevel: String, Codable {
         case .low:
             return "🤔"
         case .medium:
-            return "👍🏻"
+            return "👍"
         case .high:
             return "😮"
         case .notMeasuring:
             return "🔇"
         }
     }
-    
+
     var imageString: String {
         switch self {
         case .low:
