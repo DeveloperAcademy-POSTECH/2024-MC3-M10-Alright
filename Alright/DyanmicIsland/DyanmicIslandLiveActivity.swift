@@ -44,7 +44,6 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                             .fill(context.state.noiseLevel.noiseGradientColor)
                             .frame(width: CGFloat(context.state.progress) / 100 * 222, height: 48)
                     }
-                    
                     ZStack {
                         RoundedRectangle(cornerRadius: 24)
                             .fill(Color.clear)

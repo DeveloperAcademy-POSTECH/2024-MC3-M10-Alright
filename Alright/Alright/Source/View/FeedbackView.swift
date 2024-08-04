@@ -45,7 +45,7 @@ struct FeedbackView: View {
             }
             .onAppear { // FeedBackView 시작 시 소리 측정 시작
                 Task {
-                    noiseMeter.nowSituation = currentSituation
+                    noiseMeter.nowSituation = currentSituation // 사용자가 선택한 상황 LiveActivity에 전달
                     await noiseMeter.measure()
                     noiseMeter.startLiveActivity()
                 }

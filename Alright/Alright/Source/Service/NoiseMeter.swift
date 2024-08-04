@@ -31,6 +31,7 @@ class NoiseMeter {
     /// NoiseMeter - Live Activity의 Activity 객체
     var activity: Activity<DynamicIslandWidgetAttributes>?
     
+    /// NoiseMeter - LiveActivity의 LockScreen에서 사용자가 선택한 상황 title
     var nowSituation: String = ""
     
     init() {
