@@ -30,7 +30,7 @@ class NoiseMeter {
     
     /// NoiseMeter - Live Activity의 Activity 객체
     var activity: Activity<DynamicIslandWidgetAttributes>?
-
+    
     var nowSituation: String = ""
     
     init() {
@@ -83,8 +83,10 @@ class NoiseMeter {
         audioRecorder.stop()
         timer?.invalidate()
         timer = nil
-        withAnimation(.easeOut(duration: 1.0)) {
-            self.decibels = 0
+        DispatchQueue.main.async {
+            withAnimation(.easeOut(duration: 1.0)) {
+                self.decibels = 0
+            }
         }
     }
     
