@@ -533,7 +533,7 @@
 				INFOPLIST_FILE = Alright/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = alright;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자의 목소리 크기를 인식하기 위해 마이크 사용권한이 필요합니다.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -576,7 +576,7 @@
 				INFOPLIST_FILE = Alright/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = alright;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "야 너 녹음 설정 허용해라";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자의 목소리 크기를 인식하기 위해 마이크 사용권한이 필요합니다.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
