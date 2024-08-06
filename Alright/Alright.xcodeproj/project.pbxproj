@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		08332F6F2C62A1EF00F3D57A /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F6E2C62A1EF00F3D57A /* Situation.swift */; };
 		08332F702C62AA4800F3D57A /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F6E2C62A1EF00F3D57A /* Situation.swift */; };
+		08332F732C62B2D100F3D57A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 08332F722C62B2D100F3D57A /* DotLottie */; };
+		08332F752C62B32600F3D57A /* splashScreen.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 08332F742C62B32600F3D57A /* splashScreen.lottie */; };
+		08332F7C2C62B5A700F3D57A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F7B2C62B5A700F3D57A /* LottieView.swift */; };
 		08621D202C57638600E26998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08621D1F2C57638600E26998 /* Assets.xcassets */; };
 		08621D222C5763BA00E26998 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* SelectionView.swift */; };
 		08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08808F5E2C57629300A6A8FA /* SipGuManApp.swift */; };
@@ -69,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		08332F6E2C62A1EF00F3D57A /* Situation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Situation.swift; sourceTree = "<group>"; };
+		08332F742C62B32600F3D57A /* splashScreen.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = splashScreen.lottie; sourceTree = "<group>"; };
+		08332F7B2C62B5A700F3D57A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		08621D1F2C57638600E26998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08621D212C5763BA00E26998 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		08808F5E2C57629300A6A8FA /* SipGuManApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipGuManApp.swift; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08332F732C62B2D100F3D57A /* DotLottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +120,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08332F762C62B4AD00F3D57A /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
+		08332F772C62B4B200F3D57A /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		08332F782C62B4BF00F3D57A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				08332F7B2C62B5A700F3D57A /* LottieView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		088DFC702C534D0100469FD1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +162,9 @@
 		088DFC782C575B5600469FD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				08332F782C62B4BF00F3D57A /* Splash */,
+				08332F772C62B4B200F3D57A /* Feedback */,
+				08332F762C62B4AD00F3D57A /* Selection */,
 				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
 				08621D212C5763BA00E26998 /* SelectionView.swift */,
 				08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */,
@@ -162,6 +193,7 @@
 		088DFC7B2C575BD200469FD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				08332F742C62B32600F3D57A /* splashScreen.lottie */,
 				08621D1F2C57638600E26998 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -266,6 +298,9 @@
 				1FF46DF42C59DDE800FE3D90 /* PBXTargetDependency */,
 			);
 			name = Alright;
+			packageProductDependencies = (
+				08332F722C62B2D100F3D57A /* DotLottie */,
+			);
 			productName = SipGuMan;
 			productReference = 08C737DD2C51ED3000FA93A4 /* Alright.app */;
 			productType = "com.apple.product-type.application";
@@ -314,6 +349,9 @@
 				Base,
 			);
 			mainGroup = 08C737D42C51ED3000FA93A4;
+			packageReferences = (
+				08332F712C62B25A00F3D57A /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
+			);
 			productRefGroup = 08C737DE2C51ED3000FA93A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,6 +369,7 @@
 			files = (
 				08C737E82C51ED3400FA93A4 /* Preview Assets.xcassets in Resources */,
 				08621D202C57638600E26998 /* Assets.xcassets in Resources */,
+				08332F752C62B32600F3D57A /* splashScreen.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +391,7 @@
 			files = (
 				08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */,
 				1FF46DFA2C59DE1300FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */,
+				08332F7C2C62B5A700F3D57A /* LottieView.swift in Sources */,
 				088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */,
 				088DFC732C534D1A00469FD1 /* Color+.swift in Sources */,
 				08C737EF2C51F5D100FA93A4 /* VoicePitchView.swift in Sources */,
@@ -704,6 +744,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08332F712C62B25A00F3D57A /* XCRemoteSwiftPackageReference "dotlottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LottieFiles/dotlottie-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08332F722C62B2D100F3D57A /* DotLottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08332F712C62B25A00F3D57A /* XCRemoteSwiftPackageReference "dotlottie-ios" */;
+			productName = DotLottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08C737D52C51ED3000FA93A4 /* Project object */;
 }
