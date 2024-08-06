@@ -5,7 +5,7 @@ struct SelectionView: View {
     
     @State private var isNavigating = false // Navigation Bool
     
-    @State var situation: [String] = ["1:1 대화", "원탁 회의", "회의실 발표", "강당 발표"]
+    @State var situation: [String] = ["1:1 대화", "1:1 대화", "회의실 발표", "강당 발표"]
     @State private var selectedIndex: Int? = nil // 상황4개중 선택 index
     @State private var selectedSituation: String = "" // 선택한 상황
     
@@ -22,7 +22,6 @@ struct SelectionView: View {
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.white)
                         
-                        
                         Text("말하는 상황에 대해 알려주세요.")
                             .font(.system(size: 16))
                             .foregroundColor(.gray)
@@ -32,11 +31,19 @@ struct SelectionView: View {
                     HStack(spacing: 10) {
                         ZStack {
                             SelectionRectangle(selected: selectedIndex == 0)
-                            VStack(spacing: 20) {
+                            
+                            VStack {
                                 HStack {
                                     Text("\(situation[0])")
                                         .foregroundColor(.white)
                                         .font(.system(size: 22, weight: .semibold))
+                                        .padding(.leading)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text("조용한 공간에서")
+                                        .foregroundColor(.sgmGrayA)
+                                        .font(.system(size: 12, weight: .regular))
                                         .padding(.leading)
                                     Spacer()
                                 }
@@ -51,12 +58,11 @@ struct SelectionView: View {
                         }
                         .onTapGesture {
                             handleSelection(index: 0)
-                            
                         }
                         
                         ZStack {
                             SelectionRectangle(selected: selectedIndex == 1)
-                            VStack(spacing: 20) {
+                            VStack {
                                 HStack {
                                     Text("\(situation[1])")
                                         .foregroundColor(.white)
@@ -64,7 +70,14 @@ struct SelectionView: View {
                                         .padding(.leading)
                                     Spacer()
                                 }
-                                HStack{
+                                HStack {
+                                    Text("소음이 있는 공간에서")
+                                        .foregroundColor(.sgmGrayA)
+                                        .font(.system(size: 12, weight: .regular))
+                                        .padding(.leading)
+                                    Spacer()
+                                }
+                                HStack {
                                     Spacer()
                                     Image("roundTable")
                                         .resizable()
