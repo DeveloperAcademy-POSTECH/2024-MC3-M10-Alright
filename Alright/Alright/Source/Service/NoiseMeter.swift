@@ -10,7 +10,10 @@ import AVFoundation
 import ActivityKit
 
 @Observable
-class NoiseMeter {
+class NoiseMeter{
+    
+    /// 싱글톤 인스턴스
+    static let shared = NoiseMeter()
     
     let audioRecorder: AVAudioRecorder
     

@@ -14,6 +14,7 @@ struct DynamicIslandWidgetAttributes: ActivityAttributes {
 }
 
 struct DynamicIslandWidgetLiveActivity: Widget {
+    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: DynamicIslandWidgetAttributes.self) { context in
             // Lock Screen 혹은 Banner에서 사용하는 View
@@ -70,12 +71,20 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                 // Expanded Mode에서 나타날 View 구현
                 // Dynamice Island 우측에 표시되는 영역
                 DynamicIslandExpandedRegion(.leading) {
-                    VStack(alignment: .trailing) {
-                        Text("Alright")
-                            .foregroundStyle(.sgmWhite)
-                            .font(.system(size: 12, weight: .semibold))
+                        VStack(alignment: .trailing) {
+                            Button(intent: EndLiveActivityIntent()) {
+                                Image(systemName: "xmark")
+                                    .resizable()
+                                    .frame(width: 16, height: 16)
+                                    .padding(10)
+                            }
                             .padding(.leading)
-                    }
+                            //                        Text("Alright")
+                            //                            .foregroundStyle(.sgmWhite)
+                            //                            .font(.system(size: 12, weight: .semibold))
+                            //                            .padding(.leading)
+                        }
+                    
                 }
                 
                 // Dynamic Island 좌측에 표시되는 영역
@@ -120,16 +129,18 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     }
                 }
             } compactLeading: { // compact Mode에서 좌측에 나타나는 View
-                Image(context.state.noiseLevel.imageString)
-            } compactTrailing: { // compact Mode에서 우측에 나타나는 View
                 HStack(alignment: .bottom, spacing: 1) {
                     Text("\(context.state.decibels)")
                         .foregroundStyle(.sgmWhite)
                         .font(.system(size: 16, weight: .semibold))
+                        .frame(width: 25)
                     Text("dB")
                         .foregroundStyle(.sgmWhite)
                         .font(.system(size: 10, weight: .regular))
+                        .padding(.bottom, 2)
                 }
+            } compactTrailing: { // compact Mode에서 우측에 나타나는 View
+                Image(context.state.noiseLevel.imageString)
             } minimal: { // compact Mode에서 여러 앱이 떠야 할 때 좌측 작은 원으로 나타날 시의 View
                 HStack(alignment: .bottom, spacing: 1) {
                     Text("\(context.state.decibels)")
