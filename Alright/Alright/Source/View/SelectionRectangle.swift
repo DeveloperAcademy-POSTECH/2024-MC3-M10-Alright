@@ -10,12 +10,18 @@ import SwiftUI
 /// 상황 선택 버튼
 struct SelectionRectangle: View {
     
-    var selected: Bool
+    var situation: Situation
+    var currentSituation: Situation?
+    
+    var isSelected: Bool {
+        self.situation == currentSituation
+    }
     
     var body: some View {
+        
         ZStack {
             Rectangle()
-                .fill(selected 
+                .fill(isSelected
                       ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]),
                                                               startPoint: .topTrailing,
                                                               endPoint: .bottomLeading))
@@ -25,7 +31,7 @@ struct SelectionRectangle: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 24)
                         .strokeBorder(
-                            selected 
+                            isSelected
                             ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]),
                                                                     startPoint: .bottomLeading,
                                                                     endPoint: .topTrailing))
@@ -33,10 +39,35 @@ struct SelectionRectangle: View {
                             lineWidth: 1
                         )
                 )
+            
+            VStack {
+                HStack {
+                    Text(situation.title)
+                        .foregroundColor(.white)
+                        .font(.system(size: 22, weight: .semibold))
+                        .padding(.leading)
+                    Spacer()
+                }
+                HStack {
+                    Text(situation.subtitle ?? "")
+                        .foregroundColor(.sgmGrayA)
+                        .font(.system(size: 12, weight: .regular))
+                        .padding(.leading)
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    situation.image
+                        .resizable()
+                        .frame(width: 64, height: 64)
+                        .padding(.trailing)
+                }
+            }
         }
     }
 }
 
 #Preview {
-    SelectionRectangle(selected: true)
+    SelectionRectangle(situation: .auditorium,
+                       currentSituation: .auditorium)
 }
