@@ -35,7 +35,7 @@ class NoiseMeter{
     var activity: Activity<DynamicIslandWidgetAttributes>?
     
     /// NoiseMeter - LiveActivity의 LockScreen에서 사용자가 선택한 상황 title
-    var nowSituation: String = ""
+    var nowSituation: Situation?
     
     var cancellation: Task<(), Never>?
     
@@ -123,7 +123,7 @@ class NoiseMeter{
                 decibels: Int(self.decibels),
                 noiseLevel: noiseLevel,
                 progress: self.calculateProgress(for: decibels),
-                title: self.nowSituation
+                title: self.nowSituation?.title ?? ""
             )
             let content = ActivityContent(state: contentState, staleDate: nil, relevanceScore: 1)
             
@@ -174,7 +174,7 @@ class NoiseMeter{
             decibels: Int(self.decibels),
             noiseLevel: noiseLevel,
             progress: calculateProgress(for: decibels),
-            title: self.nowSituation
+            title: self.nowSituation?.title ?? ""
         )
         await self.activity?.update(ActivityContent<DynamicIslandWidgetAttributes.ContentState>(
             state: contentState,
