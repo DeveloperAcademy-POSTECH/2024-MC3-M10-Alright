@@ -6,7 +6,7 @@ struct FeedbackView: View {
     
     @Environment(\.dismiss) private var dismiss
     
-    @State private var noiseMeter = NoiseMeter()
+    @State private var noiseMeter = NoiseMeter.shared
     @State private var activity: Activity<DynamicIslandWidgetAttributes>?
     
     // 선택한 상황에 따라서 currentIndex(0~3)에 맞춰서 데시벨 다르게
