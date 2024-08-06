@@ -41,9 +41,22 @@ struct VoicePitchView: View {
                 
                 Spacer()
                 
-                Text("\(String(format: "%.2f", noiseMeter.decibels))dB")
-                    .foregroundStyle(.white)
+                HStack(alignment: .bottom, spacing: 0) {
+                    Text("\(String(format: "%.0f", noiseMeter.decibels))")
+                        .font(.system(size: 24, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(width: 40)
+                    
+                    Text("dB")
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundStyle(.white)
+                        .padding(.bottom, 2)
+                }
+                Spacer()
+                
                 VoicePitchButton(noiseMeter: $noiseMeter)
+                
+                Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
