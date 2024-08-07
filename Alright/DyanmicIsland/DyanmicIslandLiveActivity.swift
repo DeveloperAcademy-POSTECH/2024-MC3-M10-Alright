@@ -104,22 +104,16 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                 // Dynamic Island 우측에 표시되는 영역
                 DynamicIslandExpandedRegion(.trailing) {
                     
-                    ZStack {
-                        Circle()
-                            .fill(.sgmGray2)
-                            .frame(width: 40, height: 40)
-                        
-                        Button(intent: EndLiveActivityIntent()) {
-                            Image(systemName: "xmark")
-                                .resizable()
-                                .frame(width: 12, height: 12)
-                                .foregroundColor(.sgmGrayA)
-                                .bold()
-                                .padding(14)
-                        }
-                        .frame(width: 40, height: 40)
+                    
+                    Button(intent: EndLiveActivityIntent()) {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .frame(width: 12, height: 12)
+                            .bold()
+                            .padding(8)
                     }
-                    .padding(.trailing, 8)
+                    .frame(width: 40, height: 40)
+                    .padding(.trailing, 18)
                 }
                 
                 // Dynamic Island 바로 하단에 표시되는 영역
