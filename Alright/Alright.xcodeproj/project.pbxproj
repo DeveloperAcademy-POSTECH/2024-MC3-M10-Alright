@@ -12,7 +12,6 @@
 		08332F732C62B2D100F3D57A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 08332F722C62B2D100F3D57A /* DotLottie */; };
 		08332F752C62B32600F3D57A /* splashScreen.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 08332F742C62B32600F3D57A /* splashScreen.lottie */; };
 		08332F7C2C62B5A700F3D57A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F7B2C62B5A700F3D57A /* LottieView.swift */; };
-		085710EF2C62F8EA00A8D0DC /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085710EE2C62F8EA00A8D0DC /* BottomSheetView.swift */; };
 		08621D202C57638600E26998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08621D1F2C57638600E26998 /* Assets.xcassets */; };
 		08621D222C5763BA00E26998 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* SelectionView.swift */; };
 		08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08808F5E2C57629300A6A8FA /* SipGuManApp.swift */; };
@@ -401,7 +400,6 @@
 				08FE6DE82C5D1C2E00A2E52B /* SelectionRectangle.swift in Sources */,
 				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
 				1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */,
-				085710EF2C62F8EA00A8D0DC /* BottomSheetView.swift in Sources */,
 				08F4F1D82C5D1A2100F89B2C /* NoiseLevel.swift in Sources */,
 				08621D222C5763BA00E26998 /* SelectionView.swift in Sources */,
 				08332F6F2C62A1EF00F3D57A /* Situation.swift in Sources */,
