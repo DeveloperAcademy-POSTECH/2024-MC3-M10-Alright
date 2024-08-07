@@ -35,7 +35,9 @@ class NoiseMeter{
     var activity: Activity<DynamicIslandWidgetAttributes>?
     
     /// NoiseMeter - LiveActivity의 LockScreen에서 사용자가 선택한 상황 title
-    var nowSituation: String = ""
+    var nowSituation: Situation?
+    
+    var cancellation: Task<(), Never>?
     
     init() {
         let audioFileURL = FileManager.default.urls(
@@ -121,7 +123,7 @@ class NoiseMeter{
                 decibels: Int(self.decibels),
                 noiseLevel: noiseLevel,
                 progress: self.calculateProgress(for: decibels),
-                title: self.nowSituation
+                title: self.nowSituation?.title ?? ""
             )
             let content = ActivityContent(state: contentState, staleDate: nil, relevanceScore: 1)
             
@@ -137,15 +139,14 @@ class NoiseMeter{
         }
         
         updateTimer?.invalidate()
-        var cancellation: Task<(), Never>?
         
         // TODO: - update 주기를 정확도와 연관지어 조절 기능 구현 및 timeInterval 픽스 필요.
         updateTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
-            if cancellation != nil {
-                cancellation?.cancel()
-                cancellation = nil
+            if self.cancellation != nil {
+                self.cancellation?.cancel()
+                self.cancellation = nil
             }
-            cancellation = Task {
+            self.cancellation = Task {
                 await self.updateLiveActivity()
             }
         }
@@ -159,7 +160,7 @@ class NoiseMeter{
             print("Ending the Live Activity: \(currentActivity.id)")
             self.activity = nil
         }
-        
+        cancellation?.cancel()
         updateTimer?.invalidate()
         updateTimer = nil
     }
@@ -173,7 +174,7 @@ class NoiseMeter{
             decibels: Int(self.decibels),
             noiseLevel: noiseLevel,
             progress: calculateProgress(for: decibels),
-            title: self.nowSituation
+            title: self.nowSituation?.title ?? ""
         )
         await self.activity?.update(ActivityContent<DynamicIslandWidgetAttributes.ContentState>(
             state: contentState,
