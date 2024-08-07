@@ -10,16 +10,18 @@ import SwiftUI
 enum NoiseLevel: String, Codable {
     case low, medium, high, notMeasuring
     
-    static func level(for decibels: Float, isMeasuring: Bool) -> NoiseLevel {
+    static func level(for decibels: Float,
+                      isMeasuring: Bool,
+                      standard: (Int, Int)) -> NoiseLevel {
         guard isMeasuring else {
             return .notMeasuring
         }
         let level = decibels / 120.0
         
         switch level {
-        case _ where level > 7.0 / 12.0:
+        case _ where level > Float(standard.1) / 120.0:
             return .high
-        case _ where level > 5.0 / 12.0:
+        case _ where level > Float(standard.0) / 120.0:
             return .medium
         default:
             return .low
