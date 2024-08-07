@@ -16,7 +16,8 @@ struct VoicePitchView: View {
     
     var noiseLevel: NoiseLevel {
         NoiseLevel.level(for: noiseMeter.decibels,
-                         isMeasuring: noiseMeter.isMeasuring)
+                         isMeasuring: noiseMeter.isMeasuring,
+                         standard: noiseMeter.nowSituation?.decibels ?? (0, 0))
     }
     
     var body: some View {

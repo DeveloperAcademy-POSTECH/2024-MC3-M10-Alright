@@ -115,7 +115,9 @@ class NoiseMeter{
     func startLiveActivity() {
         print(#function)
         if self.activity == nil {
-            let noiseLevel = NoiseLevel.level(for: self.decibels, isMeasuring: self.isMeasuring)
+            let noiseLevel = NoiseLevel.level(for: self.decibels, 
+                                              isMeasuring: self.isMeasuring,
+                                              standard: self.nowSituation?.decibels ?? (0, 0))
             
             let attributes = DynamicIslandWidgetAttributes(name: "Alright")
             print(self.calculateProgress(for: decibels))
@@ -168,7 +170,9 @@ class NoiseMeter{
     /// Live Activity를 업데이트하는 함수
     func updateLiveActivity() async {
         print(#function)
-        let noiseLevel = NoiseLevel.level(for: self.decibels, isMeasuring: self.isMeasuring)
+        let noiseLevel = NoiseLevel.level(for: self.decibels, 
+                                          isMeasuring: self.isMeasuring,
+                                          standard: self.nowSituation?.decibels ?? (0, 0))
         print(self.calculateProgress(for: decibels))
         let contentState = DynamicIslandWidgetAttributes.ContentState(
             decibels: Int(self.decibels),
