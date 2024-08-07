@@ -12,6 +12,7 @@ import ActivityKit
 struct VoicePitchView: View {
     
     @Binding var noiseMeter: NoiseMeter
+    @Binding var currentSituation: Situation?
     
     var noiseLevel: NoiseLevel {
         NoiseLevel.level(for: noiseMeter.decibels,
@@ -37,7 +38,8 @@ struct VoicePitchView: View {
                     }
                 Spacer()
                 
-                GaugeView(noiseMeter: $noiseMeter)
+                GaugeView(noiseMeter: $noiseMeter,
+                          currentSituation: $currentSituation)
                 
                 Spacer()
                 

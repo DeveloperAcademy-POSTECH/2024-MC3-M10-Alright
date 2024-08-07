@@ -6,12 +6,11 @@ struct FeedbackView: View {
     
     @Environment(\.dismiss) private var dismiss
     
-    @State private var noiseMeter = NoiseMeter()
+    @State private var noiseMeter = NoiseMeter.shared
     @State private var activity: Activity<DynamicIslandWidgetAttributes>?
     
     // 선택한 상황에 따라서 currentIndex(0~3)에 맞춰서 데시벨 다르게
-    @Binding var currentIndex: Int? // 현재 선택한 상황 index
-    @Binding var currentSituation: String // 현재 선택한 상황
+    @Binding var currentSituation: Situation? // 현재 선택한 상황
     
     var body: some View {
         NavigationStack {
@@ -19,12 +18,13 @@ struct FeedbackView: View {
                 Color.sgmGray2
                     .ignoresSafeArea()
                 
-                VoicePitchView(noiseMeter: $noiseMeter)
+                VoicePitchView(noiseMeter: $noiseMeter,
+                               currentSituation: $currentSituation)
                     .navigationBarBackButtonHidden()
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .principal) {
-                            Text(currentSituation)
+                            Text(currentSituation?.title ?? "")
                                 .font(.headline)
                                 .foregroundColor(.white)
                         }
@@ -50,6 +50,9 @@ struct FeedbackView: View {
                     noiseMeter.startLiveActivity()
                 }
             }
+            .onDisappear {
+                currentSituation = nil
+            }
         }
     }
 }
@@ -57,7 +60,6 @@ struct FeedbackView: View {
 
 #Preview {
     FeedbackView(
-        currentIndex: .constant(0),
-        currentSituation: .constant("원탁 회의")
+        currentSituation: .constant(Situation.auditorium)
     )
 }

@@ -15,14 +15,24 @@ enum GaugeColorLevel: String {
 
 struct GaugeView: View {
     
-    @State private var gaugeHeight: Int = 444
+    var gaugeHeight: Int = 444
+    
     @Binding var noiseMeter: NoiseMeter
+    @Binding var currentSituation: Situation?
+    
+    var dBHighStandard: Int {
+        self.currentSituation?.decibels.1 ?? 50
+    }
+
+    var dBLowStandard: Int {
+        self.currentSituation?.decibels.0 ?? 70
+    }
     
     private func getColor(decibels: Float, level: GaugeColorLevel) -> Color {
         let gaugeValue = gaugeHeight * Int(decibels) / 120
         
-        let topStandard = gaugeHeight * 7 / 12
-        let bottomStandard = gaugeHeight * 5 / 12
+        let topStandard = gaugeHeight * dBHighStandard / 120
+        let bottomStandard = gaugeHeight * dBLowStandard / 120
         
         switch level {
         case .top:
@@ -54,7 +64,7 @@ struct GaugeView: View {
     
     var body: some View {
         VStack {
-            ZStack {
+            ZStack(alignment: .bottom) {
                 ZStack(alignment: .bottom){
                     Color.white
                         .clipShape(RoundedCorner(radius: 0,
@@ -100,8 +110,9 @@ struct GaugeView: View {
                 }
                 Rectangle()
                     .stroke(lineWidth: 1)
-                    .frame(height: 444/6)
+                    .frame(height: CGFloat(444 * (dBHighStandard - dBLowStandard) / 120))
                     .padding(.horizontal, -1)
+                    .padding(.bottom, CGFloat(444 * dBLowStandard) / 120)
             }
             .frame(width: 213, height: 444)
             .background(Color.black)
@@ -115,5 +126,6 @@ struct GaugeView: View {
 }
 
 #Preview {
-    GaugeView(noiseMeter: .constant(NoiseMeter()))
+    GaugeView(noiseMeter: .constant(NoiseMeter()),
+              currentSituation: .constant(Situation.auditorium))
 }
