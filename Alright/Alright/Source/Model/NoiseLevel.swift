@@ -57,11 +57,11 @@ enum NoiseLevel: String, Codable {
     var message: String {
         switch self {
         case .low:
-            return "목소리를 조금 더 크게 내보세요!"
+            return "조금 더 크게 말해볼까요?"
         case .medium:
-            return "적정한 목소리 크기로 말하고 계시네요!"
+            return "좋아요. 적절해요!"
         case .high:
-            return "목소리를 조금 더 작게 내보는게 어떨까요?"
+            return "조금 더 작게 말하는게 어떨까요?"
         case .notMeasuring:
             return "다시 시작하려면 버튼을 탭하세요!"
         }

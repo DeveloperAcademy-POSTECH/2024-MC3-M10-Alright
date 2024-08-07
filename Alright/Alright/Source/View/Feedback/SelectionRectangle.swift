@@ -19,55 +19,58 @@ struct SelectionRectangle: View {
     
     var body: some View {
         
-        ZStack {
-            Rectangle()
-                .fill(isSelected
-                      ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]),
-                                                              startPoint: .topTrailing,
-                                                              endPoint: .bottomLeading))
-                      : AnyShapeStyle(.sgmGray2))
-                .frame(maxWidth: .infinity, maxHeight: 160)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .strokeBorder(
-                            isSelected
-                            ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]),
-                                                                    startPoint: .bottomLeading,
-                                                                    endPoint: .topTrailing))
-                            : AnyShapeStyle(Color.white),
-                            lineWidth: 1
-                        )
-                )
-            
-            VStack {
-                HStack {
-                    Text(situation.title)
-                        .foregroundColor(.white)
-                        .font(.system(size: 22, weight: .semibold))
-                        .padding(.leading)
-                    Spacer()
-                }
-                HStack {
-                    Text(situation.subtitle ?? "")
-                        .foregroundColor(.sgmGrayA)
-                        .font(.system(size: 12, weight: .regular))
-                        .padding(.leading)
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    situation.image
-                        .resizable()
-                        .frame(width: 64, height: 64)
-                        .padding(.trailing)
-                }
+        GeometryReader { geometry in
+            ZStack {
+                Rectangle()
+                    .fill(isSelected
+                          ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]),
+                                                         startPoint: .topTrailing,
+                                                         endPoint: .bottomLeading))
+                          : AnyShapeStyle(.sgmGray2))
+                    .cornerRadius(24)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .strokeBorder(
+                                isSelected
+                                ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmBlue2, .sgmBlue1]),
+                                                               startPoint: .bottomLeading,
+                                                               endPoint: .topTrailing))
+                                : AnyShapeStyle(Color.white),
+                                lineWidth: 1
+                            )
+                    )
+                    .overlay {
+                        VStack(spacing: 6) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text(situation.title)
+                                        .font(.Pretendard.SemiBold.size22)
+                                        .foregroundColor(.white)
+                                    Text(situation.subtitle ?? "")
+                                        .font(.Pretendard.Regular.size12)
+                                        .foregroundColor(.sgmGrayA)
+                                }
+                                Spacer()
+                            }
+                            HStack {
+                                Spacer()
+                                situation.image
+                                    .resizable()
+                                    .frame(width: 64, height: 64)
+                            }
+                        }
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 24)
+                    }
             }
+            .frame(width: geometry.size.width, height: geometry.size.width) // 1:1 비율 유지
         }
+        .aspectRatio(1, contentMode: .fit)
+        
     }
 }
 
 #Preview {
-    SelectionRectangle(situation: .auditorium,
-                       currentSituation: .auditorium)
+    SelectionRectangle(situation: .quietTalking,
+                       currentSituation: .quietTalking)
 }
