@@ -25,7 +25,8 @@ struct FeedbackView: View {
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text(currentSituation?.title ?? "")
-                            .font(.headline)
+                            .font(.Pretendard.SemiBold.size17)
+                            .kerning(-0.43)
                             .foregroundColor(.white)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -38,6 +39,8 @@ struct FeedbackView: View {
                             dismiss()
                         } label: {
                             Text("종료")
+                                .font(.Pretendard.Regular.size17)
+                                .kerning(-0.43)
                                 .foregroundColor(.sgmBlue1)
                         }
                     }

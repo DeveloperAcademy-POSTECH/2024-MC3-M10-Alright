@@ -118,7 +118,7 @@ struct GaugeView: View {
             .background(Color.black)
             .clipShape(RoundedCorner(radius: 32,
                                      corners: .allCorners))
-            .shadow(color: .white.opacity(0.25), radius: 8, x: 0, y: 0)
+            .shadow(color: .sgmWhite.opacity(0.25), radius: 24, x: 0, y: 0)
         }
         .shadow(color: .white.opacity(0.25), radius: 8, x: 0, y: 0)
     }
