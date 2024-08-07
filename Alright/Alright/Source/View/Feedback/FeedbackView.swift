@@ -8,9 +8,6 @@ struct FeedbackView: View {
     
     @State private var noiseMeter = NoiseMeter.shared
     @State private var activity: Activity<DynamicIslandWidgetAttributes>?
-//    @State private var isSheetOpen = true
-//    @State private var bottomSheetHeight: CGFloat = 0
-//    private var maxHeightBottomSheet = (UIScreen.main.bounds.height * 0.8)
     
     // 선택한 상황에 따라서 currentIndex(0~3)에 맞춰서 데시벨 다르게
     @Binding var currentSituation: Situation? // 현재 선택한 상황
@@ -46,11 +43,6 @@ struct FeedbackView: View {
                     }
                 }
             }
-//            .sheet(isPresented: $isSheetOpen) {
-//                BottomSheetView(height: $bottomSheetHeight)
-//                    .presentationDetents([.height(min(bottomSheetHeight, maxHeightBottomSheet))])
-//                    .shadow(color: .black, radius: 5)
-//            }
             .onAppear { // FeedBackView 시작 시 소리 측정 시작
                 Task {
                     noiseMeter.nowSituation = currentSituation // 사용자가 선택한 상황 LiveActivity에 전달
