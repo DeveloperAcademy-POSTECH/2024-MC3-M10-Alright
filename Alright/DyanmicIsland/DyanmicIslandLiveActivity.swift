@@ -110,12 +110,13 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     
                     
                     Button(intent: EndLiveActivityIntent()) {
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .frame(width: 12, height: 12)
-                            .bold()
-                            .padding(8)
+                        ZStack {
+                            Color.clear
+                                .frame(width: 50, height: 50)
+                            Image("endLiveActivityButton")
+                        }
                     }
+                    .buttonStyle(.plain)
                     .frame(width: 40, height: 40)
                     .padding(.trailing, 18)
                 }
