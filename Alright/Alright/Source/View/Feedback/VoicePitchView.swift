@@ -22,43 +22,49 @@ struct VoicePitchView: View {
     
     var body: some View {
         ZStack {
-            Color.black
+            Color.sgmGray2
                 .ignoresSafeArea()
             VStack {
                 Spacer()
-                Text("\(noiseLevel.emoji) \(noiseLevel.message)")
-                    .foregroundStyle(.sgmWhite)
-                    .fontWeight(.bold)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .background(noiseLevel.textBackgroundColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 30))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 30)
-                            .strokeBorder(.sgmWhite, lineWidth: 1)
-                    }
+                    .frame(height: 45)
+                HStack(spacing: 8) {
+                    Text("\(noiseLevel.emoji)")
+                    Text("\(noiseLevel.message)")
+                        .font(.Pretendard.SemiBold.size20)
+                        .kerning(-0.4)
+                        .foregroundStyle(.sgmWhite)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(noiseLevel.textBackgroundColor)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 30)
+                        .strokeBorder(.sgmWhite, lineWidth: 1)
+                }
                 Spacer()
-                
+                    .frame(height: 40)
                 GaugeView(noiseMeter: $noiseMeter,
                           currentSituation: $currentSituation)
                 
                 Spacer()
-                
+                    .frame(height: 32)
                 HStack(alignment: .bottom, spacing: 0) {
                     Text("\(String(format: "%.0f", noiseMeter.decibels))")
-                        .font(.system(size: 24, weight: .semibold))
+                        .font(.Pretendard.SemiBold.size24)
                         .foregroundStyle(.white)
-                        .frame(width: 40)
+                        .frame(width: 35)
+                        .kerning(-0.4)
                     
                     Text("dB")
-                        .font(.system(size: 16, weight: .regular))
+                        .font(.Pretendard.Regular.size16)
                         .foregroundStyle(.white)
                         .padding(.bottom, 2)
+                        .kerning(-0.4)
                 }
                 Spacer()
-                
+                    .frame(height: 32)
                 VoicePitchButton(noiseMeter: $noiseMeter)
-                
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

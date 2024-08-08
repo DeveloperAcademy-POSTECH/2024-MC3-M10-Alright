@@ -20,16 +20,16 @@ struct DynamicIslandWidgetLiveActivity: Widget {
             // Lock Screen 혹은 Banner에서 사용하는 View
             VStack {
                 HStack {
-                    Text("Alight")
+                    Text("Alright")
+                        .font(.Pretendard.SemiBold.size24)
                         .foregroundStyle(.sgmWhite)
-                        .font(.system(size: 24, weight: .semibold))
                         .padding(.leading)
                     
                     Spacer()
                     
                     Text("\(context.state.title)")
+                        .font(.Pretendard.Regular.size16)
                         .foregroundStyle(.sgmGrayA)
-                        .font(.system(size: 16, weight: .regular))
                         .padding(.trailing)
                 }
                 .padding([.top, .horizontal])
@@ -44,16 +44,19 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                 RoundedRectangle(cornerRadius: 24)
                                     .stroke(context.state.noiseLevel.noiseBorderGradientColor, lineWidth: 1)
                             )
-                        HStack(alignment: .bottom, spacing: 1) {
+                        HStack(spacing: 1) {
                             Text("\(context.state.noiseLevel.emoji)")
-                                .padding(.bottom, 2)
+                                .font(.Pretendard.SemiBold.size22)
+                            
                             Text("\(context.state.decibels)")
+                                .font(.Pretendard.SemiBold.size22)
                                 .foregroundStyle(.sgmWhite)
-                                .font(.system(size: 22, weight: .semibold))
+                                .frame(width: 30)
+                            
                             Text("dB")
+                                .font(.Pretendard.Regular.size16)
                                 .foregroundStyle(.sgmWhite)
-                                .font(.system(size: 16, weight: .regular))
-                                .padding(.bottom, 2)
+                                .padding(.top, 3)
                         }
                     }
                     ZStack(alignment: .leading) {
@@ -85,16 +88,17 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                 )
                             HStack(alignment: .bottom, spacing: 1) {
                                 Text("\(context.state.noiseLevel.emoji)")
-                                    .fixedSize()
-                                    .padding(.bottom,2)
+                                    .font(.Pretendard.SemiBold.size22)
+                                
                                 Text("\(context.state.decibels)")
+                                    .font(.Pretendard.SemiBold.size22)
                                     .foregroundStyle(.sgmWhite)
-                                    .font(.system(size: 22, weight: .semibold))
-                                    .frame(width: 30)
+                                    .frame(width: 35)
+                                
                                 Text("dB")
+                                    .font(.Pretendard.Regular.size16)
                                     .foregroundStyle(.sgmWhite)
-                                    .font(.system(size: 16, weight: .regular))
-                                    .padding(.bottom, 2)
+                                    .padding(.top, 3)
                             }
                         }
                         .padding(.leading, 8)
@@ -106,14 +110,15 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     
                     
                     Button(intent: EndLiveActivityIntent()) {
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .frame(width: 12, height: 12)
-                            .bold()
-                            .padding(8)
+                        ZStack {
+                            Color.clear
+                                .frame(width: 50, height: 50)
+                            Image("endLiveActivityButton")
+                        }
                     }
+                    .buttonStyle(.plain)
                     .frame(width: 40, height: 40)
-                    .padding(.trailing, 18)
+                    .padding(.trailing, 11)
                 }
                 
                 // Dynamic Island 바로 하단에 표시되는 영역
@@ -139,12 +144,12 @@ struct DynamicIslandWidgetLiveActivity: Widget {
             } compactLeading: { // compact Mode에서 좌측에 나타나는 View
                 HStack(alignment: .bottom, spacing: 1) {
                     Text("\(context.state.decibels)")
+                        .font(.Pretendard.SemiBold.size16)
                         .foregroundStyle(.sgmWhite)
-                        .font(.system(size: 16, weight: .semibold))
                         .frame(width: 22)
                     Text("dB")
+                        .font(.Pretendard.Regular.size10)
                         .foregroundStyle(.sgmWhite)
-                        .font(.system(size: 10, weight: .regular))
                         .padding(.bottom, 2)
                 }
             } compactTrailing: { // compact Mode에서 우측에 나타나는 View
@@ -152,12 +157,12 @@ struct DynamicIslandWidgetLiveActivity: Widget {
             } minimal: { // compact Mode에서 여러 앱이 떠야 할 때 좌측 작은 원으로 나타날 시의 View
                 HStack(alignment: .bottom, spacing: 1) {
                     Text("\(context.state.decibels)")
+                        .font(.Pretendard.SemiBold.size16)
                         .foregroundStyle(.sgmWhite)
-                        .font(.system(size: 16, weight: .semibold))
                         .fixedSize()
                     Text("dB")
+                        .font(.Pretendard.Regular.size10)
                         .foregroundStyle(.sgmWhite)
-                        .font(.system(size: 10, weight: .regular))
                         .fixedSize()
                 }
             }

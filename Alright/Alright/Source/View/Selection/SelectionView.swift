@@ -15,46 +15,46 @@ struct SelectionView: View {
                 VStack {
                     Spacer()
                         .frame(height: 101)
-                    VStack(spacing: 10) {
+                    VStack(spacing: 12) {
                         Text("지금 어떤 상황에 있나요?")
-                            .font(.system(size: 24, weight: .bold))
+                            .font(.Pretendard.Bold.size24)
                             .foregroundColor(.white)
                         
                         Text("말하는 상황에 대해 알려주세요.")
-                            .font(.system(size: 16))
+                            .font(.Pretendard.Medium.size16)
                             .foregroundColor(.gray)
                     }
                     Spacer()
-                    
-                    HStack(spacing: 10) {
-                        SelectionRectangle(situation: .quietTalking,
-                                           currentSituation: selectedSituation)
-                        .onTapGesture {
-                            handleSelection(situation: .quietTalking)
+                        .frame(height: 104)
+                    VStack(spacing: 9) {
+                        HStack(spacing: 9) {
+                            SelectionRectangle(situation: .quietTalking,
+                                               currentSituation: selectedSituation)
+                            .onTapGesture {
+                                handleSelection(situation: .quietTalking)
+                            }
+                            
+                            SelectionRectangle(situation: .loudTalking,
+                                               currentSituation: selectedSituation)
+                            .onTapGesture {
+                                handleSelection(situation: .loudTalking)
+                            }
                         }
                         
-                        SelectionRectangle(situation: .loudTalking,
-                                           currentSituation: selectedSituation)
-                        .onTapGesture {
-                            handleSelection(situation: .loudTalking)
+                        HStack {
+                            SelectionRectangle(situation: .meetingRoom,
+                                               currentSituation: selectedSituation)
+                            .onTapGesture {
+                                handleSelection(situation: .meetingRoom)
+                            }
+                            
+                            SelectionRectangle(situation: .auditorium,
+                                               currentSituation: selectedSituation)
+                            .onTapGesture {
+                                handleSelection(situation: .auditorium)
+                            }
                         }
                     }
-                    .padding(.horizontal, 20)
-                    
-                    HStack(spacing: 10) {
-                        SelectionRectangle(situation: .meetingRoom,
-                                           currentSituation: selectedSituation)
-                        .onTapGesture {
-                            handleSelection(situation: .meetingRoom)
-                        }
-                        
-                        SelectionRectangle(situation: .auditorium,
-                                           currentSituation: selectedSituation)
-                        .onTapGesture {
-                            handleSelection(situation: .auditorium)
-                        }
-                    }
-                    .padding(.horizontal, 20)
                     Spacer()
                     
                     Button {
@@ -62,17 +62,18 @@ struct SelectionView: View {
                         print("피드백 시각화화면으로 이동")
                     } label: {
                         Text("말하기 시작")
-                            .font(.system(size: 17, weight: .semibold))
+                            .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
                                 LinearGradient(
-                                    gradient: .init(colors: [.sgmBlue2, .sgmBlue1]),
+                                    gradient: .init(colors: [Color(hex: "#394999"),
+                                                             Color(hex: "#4C61CC"),
+                                                             Color(hex: "#6079FF")]),
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 ))
                             .foregroundColor(.white)
                             .cornerRadius(12)
-                            .padding(.horizontal, 20)
                     }
                     .opacity(selectedSituation != nil ? 1 : 0) // 상황 고르면 실제로 보이도록
                     .navigationDestination(isPresented: $isNavigating) {
@@ -80,6 +81,7 @@ struct SelectionView: View {
                     }
                     Spacer()
                 }
+                .padding(.horizontal, 20)
             }
         }
         .onAppear {

@@ -61,4 +61,13 @@ enum Situation {
             (65, 75)
         }
     }
+    
+    var infoMessage: String {
+        switch self {
+        case .quietTalking, .loudTalking:
+            "팔을 앞으로 쭉 편 후\n손이 위치하는 거리에 스마트폰을 놓아주세요."
+        case .meetingRoom, .auditorium:
+            "스크립트를 볼 수 있는 정도로\n자연스럽게 스마트폰을 들어주세요."
+        }
+    }
 }
