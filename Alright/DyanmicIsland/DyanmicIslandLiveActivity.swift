@@ -93,7 +93,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                 Text("\(context.state.decibels)")
                                     .font(.Pretendard.SemiBold.size22)
                                     .foregroundStyle(.sgmWhite)
-                                    .frame(width: 30)
+                                    .frame(width: 35)
                                 
                                 Text("dB")
                                     .font(.Pretendard.Regular.size16)
