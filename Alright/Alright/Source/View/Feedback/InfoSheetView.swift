@@ -17,7 +17,6 @@ struct InfoSheetView: View {
             if isShowing {
                 Color.black
                     .opacity(0.6)
-                    .ignoresSafeArea()
                     .onTapGesture {
                         withAnimation {
                             isShowing = false
