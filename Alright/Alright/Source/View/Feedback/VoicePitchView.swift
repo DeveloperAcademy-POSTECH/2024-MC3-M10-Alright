@@ -53,7 +53,7 @@ struct VoicePitchView: View {
                     Text("\(String(format: "%.0f", noiseMeter.decibels))")
                         .font(.Pretendard.SemiBold.size24)
                         .foregroundStyle(.white)
-                        .frame(width: 32)
+                        .frame(width: 35)
                         .kerning(-0.4)
                     
                     Text("dB")

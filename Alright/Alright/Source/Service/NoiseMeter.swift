@@ -165,6 +165,7 @@ class NoiseMeter{
         cancellation?.cancel()
         updateTimer?.invalidate()
         updateTimer = nil
+        await self.stopMetering()
     }
     
     /// Live Activity를 업데이트하는 함수

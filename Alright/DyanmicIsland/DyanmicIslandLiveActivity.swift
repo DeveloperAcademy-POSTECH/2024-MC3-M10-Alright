@@ -93,7 +93,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                                 Text("\(context.state.decibels)")
                                     .font(.Pretendard.SemiBold.size22)
                                     .foregroundStyle(.sgmWhite)
-                                    .frame(width: 30)
+                                    .frame(width: 35)
                                 
                                 Text("dB")
                                     .font(.Pretendard.Regular.size16)
@@ -110,14 +110,15 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     
                     
                     Button(intent: EndLiveActivityIntent()) {
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .frame(width: 12, height: 12)
-                            .bold()
-                            .padding(8)
+                        ZStack {
+                            Color.clear
+                                .frame(width: 50, height: 50)
+                            Image("endLiveActivityButton")
+                        }
                     }
+                    .buttonStyle(.plain)
                     .frame(width: 40, height: 40)
-                    .padding(.trailing, 18)
+                    .padding(.trailing, 11)
                 }
                 
                 // Dynamic Island 바로 하단에 표시되는 영역

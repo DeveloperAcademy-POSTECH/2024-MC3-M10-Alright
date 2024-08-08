@@ -44,7 +44,6 @@ struct FeedbackView: View {
                         // 종료 버튼
                         Button {
                             Task {
-                                await noiseMeter.stopMetering()
                                 await noiseMeter.endLiveActivity()
                             }
                             dismiss()
