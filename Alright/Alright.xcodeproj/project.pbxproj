@@ -47,6 +47,8 @@
 		08FE6DE62C5D1AB400A2E52B /* NoiseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4F1D72C5D1A2100F89B2C /* NoiseLevel.swift */; };
 		08FE6DE82C5D1C2E00A2E52B /* SelectionRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */; };
 		08FE6DE92C5D1D1E00A2E52B /* SelectionRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */; };
+		1F44B1252C63D394006B06BC /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44B1242C63D394006B06BC /* InfoSheetView.swift */; };
+		1F44B1262C63D3C7006B06BC /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44B1242C63D394006B06BC /* InfoSheetView.swift */; };
 		1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77AA0B2C52241300402A2E /* FeedbackView.swift */; };
 		1F857FBC2C59E4810043F012 /* NoiseMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */; };
 		1FB5A4C02C59E1370029B181 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* SelectionView.swift */; };
@@ -119,6 +121,7 @@
 		08F4F1D72C5D1A2100F89B2C /* NoiseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseLevel.swift; sourceTree = "<group>"; };
 		08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRectangle.swift; sourceTree = "<group>"; };
 		1D9231C22C57ED0C00819BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1F44B1242C63D394006B06BC /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
 		1F77AA0B2C52241300402A2E /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		1FF46DE12C59DDE700FE3D90 /* DyanmicIslandExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DyanmicIslandExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF46DE32C59DDE700FE3D90 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -163,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1F77AA0B2C52241300402A2E /* FeedbackView.swift */,
+				1F44B1242C63D394006B06BC /* InfoSheetView.swift */,
 				08C737EE2C51F5D100FA93A4 /* VoicePitchView.swift */,
 				088DFC6E2C534AA800469FD1 /* GaugeView.swift */,
 				08FE6DE72C5D1C2E00A2E52B /* SelectionRectangle.swift */,
@@ -468,6 +472,7 @@
 				1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */,
 				08F4F1D82C5D1A2100F89B2C /* NoiseLevel.swift in Sources */,
 				08621D222C5763BA00E26998 /* SelectionView.swift in Sources */,
+				1F44B1252C63D394006B06BC /* InfoSheetView.swift in Sources */,
 				08332F6F2C62A1EF00F3D57A /* Situation.swift in Sources */,
 				088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */,
 				088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */,
@@ -493,6 +498,7 @@
 				1FF46DE92C59DDE700FE3D90 /* DyanmicIslandBundle.swift in Sources */,
 				1FD39F382C59E53D005067DF /* GaugeView.swift in Sources */,
 				1F857FBC2C59E4810043F012 /* NoiseMeter.swift in Sources */,
+				1F44B1262C63D3C7006B06BC /* InfoSheetView.swift in Sources */,
 				1FF46DEB2C59DDE700FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

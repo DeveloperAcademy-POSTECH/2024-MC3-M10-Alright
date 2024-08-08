@@ -5,6 +5,7 @@ import ActivityKit
 struct FeedbackView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @State private var isInfoSheetPresented = false
     
     @State private var noiseMeter = NoiseMeter.shared
     @State private var activity: Activity<DynamicIslandWidgetAttributes>?
@@ -23,12 +24,22 @@ struct FeedbackView: View {
                 .navigationBarBackButtonHidden()
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            isInfoSheetPresented = true
+                        } label: {
+                            Image(systemName: "questionmark.circle")
+                                .foregroundColor(.sgmBlue1)
+                        }
+                    }
+                    
                     ToolbarItem(placement: .principal) {
                         Text(currentSituation?.title ?? "")
                             .font(.Pretendard.SemiBold.size17)
                             .kerning(-0.43)
                             .foregroundColor(.white)
                     }
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         // 종료 버튼
                         Button {
@@ -45,6 +56,7 @@ struct FeedbackView: View {
                         }
                     }
                 }
+                InfoSheetView(isShowing: $isInfoSheetPresented, nowSituation: $currentSituation)
             }
             .onAppear { // FeedBackView 시작 시 소리 측정 시작
                 Task {
@@ -56,13 +68,13 @@ struct FeedbackView: View {
             .onDisappear {
                 currentSituation = nil
             }
+            
         }
     }
 }
 
-
-//#Preview {
-//    FeedbackView(
-//        currentSituation: .constant(Situation.auditorium)
-//    )
-//}
+#Preview {
+    FeedbackView(
+        currentSituation: .constant(Situation.auditorium)
+    )
+}
