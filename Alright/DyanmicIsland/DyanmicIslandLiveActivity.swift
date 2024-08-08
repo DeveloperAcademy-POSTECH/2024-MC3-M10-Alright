@@ -118,7 +118,7 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                     }
                     .buttonStyle(.plain)
                     .frame(width: 40, height: 40)
-                    .padding(.trailing, 18)
+                    .padding(.trailing, 11)
                 }
                 
                 // Dynamic Island 바로 하단에 표시되는 영역
