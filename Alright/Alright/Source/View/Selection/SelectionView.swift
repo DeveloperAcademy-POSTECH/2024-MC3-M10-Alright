@@ -81,7 +81,7 @@ struct SelectionView: View {
                     }
                     Spacer()
                 }
-                .padding(.horizontal, 32)
+                .padding(.horizontal, 20)
             }
         }
         .onAppear {
