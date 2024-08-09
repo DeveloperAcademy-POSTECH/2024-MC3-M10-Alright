@@ -87,8 +87,18 @@ struct SelectionView: View {
                     .padding(.horizontal, 20)
                 }
                 
+                .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                         isFirstLaunching = true
+                    } label: {
+                        Text("도움말")
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundColor(.sgmGrayA)
+                    }
+                }
             }
-        
+            }
             .onAppear {
                 let recordingSession = AVAudioSession.sharedInstance()
                 do {

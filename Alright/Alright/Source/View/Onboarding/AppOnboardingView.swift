@@ -28,7 +28,7 @@ struct AppOnboardingView: View {
                         isFirstLaunching = true
                         dismiss()
                     } label: {
-                        Text("SKIP")
+                        Text("Skip")
                             .font(.Pretendard.Light.size17)
                             .foregroundColor(.sgmGrayA)
                     }
@@ -37,7 +37,6 @@ struct AppOnboardingView: View {
                 }
                 
                 TabView(selection: $selectedPage) {
-                    
                     FirstOnboardingPageView()
                         .tag(0)
                     
@@ -49,15 +48,12 @@ struct AppOnboardingView: View {
                     
                     FourthOnboardingPageView(isFirstLaunching: $isFirstLaunching)
                         .tag(3)
-                    
-                    
                 }
                 .ignoresSafeArea()
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                
             }
             
-            /// Indicator
+            // Indicator
             VStack {
                 Spacer()
                 
@@ -69,15 +65,11 @@ struct AppOnboardingView: View {
                             .opacity(selectedPage == 3 ? 0 : 1)
                     }
                 }
-                .padding(.bottom, 40) // 하단 여백 추가
+                .padding(.bottom, 40)
             }
         }
         .onAppear {
-                isFirstLaunching = true
+            isFirstLaunching = true
         }
     }
 }
-
-//#Preview {
-//    AppOnboardingView(hasSeenOnboarding: <#Binding<Bool>#>)
-//}

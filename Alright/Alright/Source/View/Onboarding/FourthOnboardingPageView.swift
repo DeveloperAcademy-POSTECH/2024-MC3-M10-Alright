@@ -44,7 +44,7 @@ struct FourthOnboardingPageView: View {
                     Button {
                         isFirstLaunching.toggle()
                     } label: {
-                        Text("Alright 시작하기")
+                        Text(isFirstLaunching == true ? "확인했어요" : "Alright 시작하기")
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
@@ -59,13 +59,12 @@ struct FourthOnboardingPageView: View {
                             .cornerRadius(12)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
-                            
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: 316)
                 .background(.sgmBlack)
             }
-            .ignoresSafeArea(edges: .bottom) // 하단 여백을 무시하여 하단에 붙도록 설정
+            .ignoresSafeArea(edges: .bottom)
         }
     }
 }

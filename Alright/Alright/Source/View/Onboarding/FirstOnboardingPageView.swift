@@ -36,14 +36,12 @@ struct FirstOnboardingPageView: View {
                             .lineSpacing(4)
                         Spacer()
                     }
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: 316)
                 .background(.sgmBlack)
-                
             }
-            .ignoresSafeArea(edges: .bottom) // 하단 여백을 무시하여 하단에 붙도록 설정
+            .ignoresSafeArea(edges: .bottom)
         }
     }
 }
