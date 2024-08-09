@@ -33,6 +33,7 @@ struct AppOnboardingView: View {
                 }
                 
                 TabView(selection: $selectedPage) {
+                    
                     FirstOnboardingPageView()
                         .tag(0)
                     
@@ -44,9 +45,27 @@ struct AppOnboardingView: View {
                     
                     FourthOnboardingPageView()
                         .tag(3)
+                    
+                    
                 }
                 .ignoresSafeArea()
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                
+            }
+            
+            /// Indicator
+            VStack {
+                Spacer()
+                
+                HStack(spacing: 8) {
+                    ForEach(0..<totalPages, id: \.self) { index in
+                        Circle()
+                            .frame(width: 8, height: 8)
+                            .foregroundColor(index == selectedPage ? .sgmBlue1 : .sgmBlue1.opacity(0.3))
+                            .opacity(selectedPage == 3 ? 0 : 1)
+                    }
+                }
+                .padding(.bottom, 40) // 하단 여백 추가
             }
         }
     }

@@ -55,7 +55,7 @@ struct FourthOnboardingPageView: View {
                             .foregroundColor(.white)
                             .cornerRadius(12)
                             .padding(.horizontal, 20)
-                            .padding(.bottom, 30)
+                            .padding(.bottom, 40)
                             
                     }
                 }
