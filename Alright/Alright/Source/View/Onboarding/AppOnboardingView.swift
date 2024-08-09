@@ -9,6 +9,9 @@ import SwiftUI
 
 struct AppOnboardingView: View {
     
+    @Environment(\.dismiss) private var dismiss
+    @Binding var isFirstLaunching: Bool
+    
     private let totalPages = 4
     @State private var selectedPage = 0
     
@@ -22,7 +25,8 @@ struct AppOnboardingView: View {
                     Spacer()
                     
                     Button {
-                        // action method
+                        isFirstLaunching = true
+                        dismiss()
                     } label: {
                         Text("SKIP")
                             .font(.Pretendard.Light.size17)
@@ -43,7 +47,7 @@ struct AppOnboardingView: View {
                     ThirdOnboardingPageView()
                         .tag(2)
                     
-                    FourthOnboardingPageView()
+                    FourthOnboardingPageView(isFirstLaunching: $isFirstLaunching)
                         .tag(3)
                     
                     
@@ -68,9 +72,12 @@ struct AppOnboardingView: View {
                 .padding(.bottom, 40) // 하단 여백 추가
             }
         }
+        .onAppear {
+                isFirstLaunching = true
+        }
     }
 }
 
-#Preview {
-    AppOnboardingView()
-}
+//#Preview {
+//    AppOnboardingView(hasSeenOnboarding: <#Binding<Bool>#>)
+//}

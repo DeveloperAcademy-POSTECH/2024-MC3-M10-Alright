@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FourthOnboardingPageView: View {
+    
+    @Binding var isFirstLaunching: Bool
+    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -39,7 +42,7 @@ struct FourthOnboardingPageView: View {
                     Spacer()
                     
                     Button {
-                        // action method
+                        isFirstLaunching.toggle()
                     } label: {
                         Text("Alright 시작하기")
                             .font(.Pretendard.SemiBold.size17)
@@ -61,13 +64,12 @@ struct FourthOnboardingPageView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: 316)
                 .background(.sgmBlack)
-                
             }
             .ignoresSafeArea(edges: .bottom) // 하단 여백을 무시하여 하단에 붙도록 설정
         }
     }
 }
 
-#Preview {
-    FourthOnboardingPageView()
-}
+//#Preview {
+//    FourthOnboardingPageView()
+//}
