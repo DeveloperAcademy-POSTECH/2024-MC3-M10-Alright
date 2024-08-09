@@ -24,7 +24,7 @@ struct FirstOnboardingPageView: View {
                         Text("Alright")
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .padding(.top, 30)
                         Spacer()
                     }
@@ -32,7 +32,7 @@ struct FirstOnboardingPageView: View {
                         Text("청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요.")
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .lineSpacing(4)
                         Spacer()
                     }

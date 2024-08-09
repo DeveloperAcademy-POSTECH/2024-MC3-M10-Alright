@@ -21,18 +21,18 @@ struct SecondOnboardingPageView: View {
             
                 VStack(spacing: 30) {
                     HStack {
-                        Text("Alright")
+                        Text("상황 선택")
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .padding(.top, 30)
                         Spacer()
                     }
                     HStack {
-                        Text("청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요.")
+                        Text("대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!")
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .lineSpacing(4)
                         Spacer()
                     }

@@ -21,18 +21,18 @@ struct ThirdOnboardingPageView: View {
             
                 VStack(spacing: 30) {
                     HStack {
-                        Text("Alright")
+                        Text("실시간 피드백")
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .padding(.top, 30)
                         Spacer()
                     }
                     HStack {
-                        Text("청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요.")
+                        Text("애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!")
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .lineSpacing(4)
                         Spacer()
                     }

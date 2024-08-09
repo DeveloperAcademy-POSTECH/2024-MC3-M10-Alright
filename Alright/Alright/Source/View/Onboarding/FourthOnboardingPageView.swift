@@ -21,7 +21,7 @@ struct FourthOnboardingPageView: View {
             
                 VStack(spacing: 30) {
                     HStack {
-                        Text("Alright")
+                        Text("백그라운드")
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -29,7 +29,7 @@ struct FourthOnboardingPageView: View {
                         Spacer()
                     }
                     HStack {
-                        Text("청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요.")
+                        Text("Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!")
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -54,10 +54,10 @@ struct FourthOnboardingPageView: View {
                                 ))
                             .foregroundColor(.white)
                             .cornerRadius(12)
-                            .padding([.horizontal, .bottom])
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 30)
                             
                     }
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: 316)
                 .background(.sgmBlack)
