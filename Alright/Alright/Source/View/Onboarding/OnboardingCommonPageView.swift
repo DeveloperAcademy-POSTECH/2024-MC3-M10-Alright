@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct SecondOnboardingPageView: View {
+struct OnboardingCommonPageView: View {
+    
+    let title: String
+    let subtitle: String
+    let imageName: String
+    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
-                        Image("OnboardingImage2")
+                        Image(imageName)
                             .resizable()
                     }
                     .frame(maxWidth: .infinity)
@@ -21,7 +26,7 @@ struct SecondOnboardingPageView: View {
             
                 VStack(spacing: 30) {
                     HStack {
-                        Text("상황 선택")
+                        Text(title)
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading, 20)
@@ -29,7 +34,7 @@ struct SecondOnboardingPageView: View {
                         Spacer()
                     }
                     HStack {
-                        Text("대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!")
+                        Text(subtitle)
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading, 20)
@@ -47,5 +52,5 @@ struct SecondOnboardingPageView: View {
 }
 
 #Preview {
-    SecondOnboardingPageView()
+    OnboardingCommonPageView(title: "Alright", subtitle: "설명", imageName: "OnboardingImage1")
 }

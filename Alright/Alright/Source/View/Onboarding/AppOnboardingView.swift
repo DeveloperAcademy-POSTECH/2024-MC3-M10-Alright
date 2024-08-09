@@ -37,16 +37,33 @@ struct AppOnboardingView: View {
                 }
                 
                 TabView(selection: $selectedPage) {
-                    FirstOnboardingPageView()
-                        .tag(0)
+                    OnboardingCommonPageView(
+                        title: "Alright",
+                        subtitle: "청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요." ,
+                        imageName: "OnboardingImage1"
+                    )
+                     .tag(0)
                     
-                    SecondOnboardingPageView()
-                        .tag(1)
+                    OnboardingCommonPageView(
+                        title: "상황 선택",
+                        subtitle: "대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!" ,
+                        imageName: "OnboardingImage2"
+                    )
+                     .tag(1)
                     
-                    ThirdOnboardingPageView()
-                        .tag(2)
-                    
-                    FourthOnboardingPageView(isFirstLaunching: $isFirstLaunching)
+                    OnboardingCommonPageView(
+                        title: "실시간 피드백",
+                        subtitle: "애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!" ,
+                        imageName: "OnboardingImage3"
+                    )
+                    .tag(2)
+                   
+                    OnboardingLastPageView(
+                        title: "백그라운드",
+                        subtitle: "Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!" ,
+                        imageName: "OnboardingImage4",
+                        isFirstLaunching: $isFirstLaunching
+                    )
                         .tag(3)
                 }
                 .ignoresSafeArea()

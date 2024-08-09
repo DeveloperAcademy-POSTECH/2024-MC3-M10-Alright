@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct FourthOnboardingPageView: View {
+struct OnboardingLastPageView: View {
+    
+    let title: String
+    let subtitle: String
+    let imageName: String
     
     @Binding var isFirstLaunching: Bool
     
@@ -16,7 +20,7 @@ struct FourthOnboardingPageView: View {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
-                        Image("OnboardingImage4")
+                        Image(imageName)
                             .resizable()
                     }
                     .frame(maxWidth: .infinity)
@@ -24,7 +28,7 @@ struct FourthOnboardingPageView: View {
             
                 VStack(spacing: 30) {
                     HStack {
-                        Text("백그라운드")
+                        Text(title)
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -32,7 +36,7 @@ struct FourthOnboardingPageView: View {
                         Spacer()
                     }
                     HStack {
-                        Text("Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!")
+                        Text(subtitle)
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -70,5 +74,5 @@ struct FourthOnboardingPageView: View {
 }
 
 //#Preview {
-//    FourthOnboardingPageView()
+//    OnboardingLastPageView
 //}
