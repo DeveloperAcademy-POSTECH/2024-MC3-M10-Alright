@@ -13,7 +13,8 @@ struct OnboardingLastPageView: View {
     let subtitle: String
     let imageName: String
     
-    @Binding var isFirstLaunching: Bool
+    @Binding var isFirstOnboarding: Bool
+    @Binding var isCompletedOnboarding: Bool
     
     var body: some View {
         ZStack {
@@ -46,9 +47,9 @@ struct OnboardingLastPageView: View {
                     Spacer()
                     
                     Button {
-                        isFirstLaunching.toggle()
+                        isFirstOnboarding = false
                     } label: {
-                        Text(isFirstLaunching == true ? "확인했어요" : "Alright 시작하기")
+                        Text(isFirstOnboarding == true && isCompletedOnboarding == true ? "Alright 시작하기" : "확인했어요")
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(

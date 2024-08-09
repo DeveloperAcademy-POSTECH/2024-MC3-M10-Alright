@@ -10,7 +10,8 @@ import SwiftUI
 struct AppOnboardingView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @Binding var isFirstLaunching: Bool
+    @Binding var isFirstOnboarding: Bool // 앱 Onboarding
+    @Binding var isCompletedOnboarding: Bool // 도움말 Onboarding
     
     private let totalPages = 4
     @State private var selectedPage = 0
@@ -25,7 +26,7 @@ struct AppOnboardingView: View {
                     Spacer()
                     
                     Button {
-                        isFirstLaunching = true
+                        isFirstOnboarding = false
                         dismiss()
                     } label: {
                         Text("Skip")
@@ -62,7 +63,8 @@ struct AppOnboardingView: View {
                         title: "백그라운드",
                         subtitle: "Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!" ,
                         imageName: "OnboardingImage4",
-                        isFirstLaunching: $isFirstLaunching
+                        isFirstOnboarding: $isFirstOnboarding,
+                        isCompletedOnboarding: $isCompletedOnboarding
                     )
                     .tag(3)
                 }
@@ -84,9 +86,6 @@ struct AppOnboardingView: View {
                 }
                 .padding(.bottom, 40)
             }
-        }
-        .onAppear {
-            isFirstLaunching = true
         }
     }
 }
