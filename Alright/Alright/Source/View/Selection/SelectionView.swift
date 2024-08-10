@@ -4,8 +4,7 @@ import AVFoundation
 struct SelectionView: View {
     
     @AppStorage("isFirstOnboarding") var isFirstOnboarding: Bool = true // App Onboarding
-    @State private var isOnboardingSheetShown = false
-    @State private var isPresented  = true
+    @State private var isOnboardingSheetShown = false // 도움말 Onboarding
     
     @State private var isNavigating = false // Navigation Bool
     @State private var selectedSituation: Situation?
@@ -90,7 +89,7 @@ struct SelectionView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        // action
+                        isOnboardingSheetShown.toggle()
                     } label: {
                         Text("도움말")
                             .font(.Pretendard.Regular.size17)
@@ -110,11 +109,12 @@ struct SelectionView: View {
             } catch {
                 print("Cannot setup the Recording")
             }
-            
-            isOnboardingSheetShown = isFirstOnboarding ? false : true
         }
-        .fullScreenCover(isPresented: $isPresented) {
-            AppOnboardingView(isFirstOnboarding: isFirstOnboarding)
+        .fullScreenCover(isPresented: $isFirstOnboarding) {
+            AppOnboardingView()
+        }
+        .fullScreenCover(isPresented: $isOnboardingSheetShown) {
+            AppOnboardingView()
         }
     }
     

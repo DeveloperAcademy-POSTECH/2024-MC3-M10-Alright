@@ -10,10 +10,9 @@ import SwiftUI
 struct OnboardingPageView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @AppStorage("isFirstOnboarding") private var isFirstOnboarding: Bool = true // App Onboarding
+    @AppStorage("isFirstOnboarding") var isFirstOnboarding: Bool?
     
     var nowOnboard: Onboarding
-    var nowPage: Int // 현재 페이지
     
     var body: some View {
         ZStack {
@@ -46,10 +45,10 @@ struct OnboardingPageView: View {
                     Spacer()
                     
                     Button {
-                        dismiss()
                         isFirstOnboarding = false
+                        dismiss()
                     } label: {
-                        Text(isFirstOnboarding ? "Alrigt 시작하기" : "확인했어요")
+                        Text(isFirstOnboarding ?? true ? "Alrigt 시작하기" : "확인했어요")
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
@@ -64,8 +63,8 @@ struct OnboardingPageView: View {
                             .cornerRadius(12)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
-                            .opacity(nowPage == 3 ? 1 : 0)
-                            .disabled(nowPage != 3)
+                            .opacity(nowOnboard == .fourth ? 1 : 0)
+                            .disabled(nowOnboard != .fourth)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: 316)

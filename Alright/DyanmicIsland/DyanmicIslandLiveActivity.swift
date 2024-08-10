@@ -107,8 +107,6 @@ struct DynamicIslandWidgetLiveActivity: Widget {
                 
                 // Dynamic Island 우측에 표시되는 영역
                 DynamicIslandExpandedRegion(.trailing) {
-                    
-                    
                     Button(intent: EndLiveActivityIntent()) {
                         ZStack {
                             Color.clear

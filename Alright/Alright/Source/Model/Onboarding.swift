@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Onboarding {
+enum Onboarding: CaseIterable {
     case first, second, third, fourth
     
     var onboardingTitle: String {
