@@ -7,21 +7,20 @@
 
 import SwiftUI
 
-struct OnboardingLastPageView: View {
+struct OnboardingPageView: View {
     
-    let title: String
-    let subtitle: String
-    let imageName: String
+    @Environment(\.dismiss) private var dismiss
+    @AppStorage("isFirstOnboarding") private var isFirstOnboarding: Bool = true // App Onboarding
     
-    @Binding var isFirstOnboarding: Bool
-    @Binding var isCompletedOnboarding: Bool
+    var nowOnboard: Onboarding
+    var nowPage: Int // 현재 페이지
     
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
-                        Image(imageName)
+                        nowOnboard.onboardingImage
                             .resizable()
                     }
                     .frame(maxWidth: .infinity)
@@ -29,7 +28,7 @@ struct OnboardingLastPageView: View {
             
                 VStack(spacing: 30) {
                     HStack {
-                        Text(title)
+                        Text("\(nowOnboard.onboardingTitle)")
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -37,7 +36,7 @@ struct OnboardingLastPageView: View {
                         Spacer()
                     }
                     HStack {
-                        Text(subtitle)
+                        Text("\(nowOnboard.onboardingConstants)")
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -47,9 +46,10 @@ struct OnboardingLastPageView: View {
                     Spacer()
                     
                     Button {
+                        dismiss()
                         isFirstOnboarding = false
                     } label: {
-                        Text(isFirstOnboarding == true && isCompletedOnboarding == true ? "Alright 시작하기" : "확인했어요")
+                        Text(isFirstOnboarding ? "Alrigt 시작하기" : "확인했어요")
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
@@ -64,6 +64,8 @@ struct OnboardingLastPageView: View {
                             .cornerRadius(12)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
+                            .opacity(nowPage == 3 ? 1 : 0)
+                            .disabled(nowPage != 3)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: 316)
@@ -73,7 +75,3 @@ struct OnboardingLastPageView: View {
         }
     }
 }
-
-//#Preview {
-//    OnboardingLastPageView
-//}

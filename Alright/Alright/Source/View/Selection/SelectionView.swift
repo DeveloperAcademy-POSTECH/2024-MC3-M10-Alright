@@ -3,8 +3,9 @@ import AVFoundation
 
 struct SelectionView: View {
     
-    @AppStorage("isFirstOnboarding") var isFirstOnboarding: Bool = true // 앱 Onboarding
-    @AppStorage("isCompletedOnboarding") var isCompletedOnboarding: Bool = true // 도움말 Onboarding
+    @AppStorage("isFirstOnboarding") var isFirstOnboarding: Bool = true // App Onboarding
+    @State private var isOnboardingSheetShown = false
+    @State private var isPresented  = true
     
     @State private var isNavigating = false // Navigation Bool
     @State private var selectedSituation: Situation?
@@ -89,11 +90,10 @@ struct SelectionView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        isFirstOnboarding = true // 온보딩은 띄우면서, isCompletedOnboarding은 false로
-                        isCompletedOnboarding = false
+                        // action
                     } label: {
                         Text("도움말")
-                            .font(.system(size: 17, weight: .regular))
+                            .font(.Pretendard.Regular.size17)
                             .foregroundColor(.sgmGrayA)
                     }
                 }
@@ -110,9 +110,11 @@ struct SelectionView: View {
             } catch {
                 print("Cannot setup the Recording")
             }
+            
+            isOnboardingSheetShown = isFirstOnboarding ? false : true
         }
-        .fullScreenCover(isPresented: $isFirstOnboarding) {
-            AppOnboardingView(isFirstOnboarding: $isFirstOnboarding, isCompletedOnboarding: $isCompletedOnboarding)
+        .fullScreenCover(isPresented: $isPresented) {
+            AppOnboardingView(isFirstOnboarding: isFirstOnboarding)
         }
     }
     
@@ -123,8 +125,4 @@ struct SelectionView: View {
             selectedSituation = situation
         }
     }
-}
-
-#Preview {
-    SelectionView()
 }
