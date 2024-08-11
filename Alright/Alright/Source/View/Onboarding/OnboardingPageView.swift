@@ -12,7 +12,10 @@ struct OnboardingPageView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage("isFirstOnboarding") var isFirstOnboarding: Bool?
     
+    @State private var opacity = 0.0
+    
     var nowOnboard: Onboarding
+    var selectedOnboarding: Onboarding
     
     var body: some View {
         ZStack {
@@ -23,8 +26,18 @@ struct OnboardingPageView: View {
                             .resizable()
                     }
                     .frame(maxWidth: .infinity)
+                    .opacity(opacity)
+                    .onChange(of: selectedOnboarding) { _, newValue in
+                        if newValue == nowOnboard {
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                opacity = 1.0
+                            }
+                        } else {
+                            opacity = 0.0
+                        }
+                    }
                 }
-            
+                
                 VStack(spacing: 30) {
                     HStack {
                         Text("\(nowOnboard.onboardingTitle)")
@@ -71,6 +84,13 @@ struct OnboardingPageView: View {
                 .background(.sgmBlack)
             }
             .ignoresSafeArea(edges: .bottom)
+        }
+        .onAppear {
+            if selectedOnboarding == nowOnboard {
+                withAnimation(.easeInOut(duration: 0.5)) {
+                    opacity = 1.0
+                }
+            }
         }
     }
 }
