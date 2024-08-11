@@ -27,6 +27,7 @@ struct ContentView: View {
                 SelectionView()
             }
         }
+        .background(.sgmGray2)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
     }
