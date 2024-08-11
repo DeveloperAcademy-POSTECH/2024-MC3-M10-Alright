@@ -46,7 +46,6 @@ struct AppOnboardingView: View {
                 }
                 .ignoresSafeArea()
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-
             }
             
             // Indicator
