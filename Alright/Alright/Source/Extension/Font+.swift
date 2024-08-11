@@ -70,6 +70,7 @@ extension Font {
             static let size24: Font = .custom("Pretendard-SemiBold", size: 24)
             static let size26: Font = .custom("Pretendard-SemiBold", size: 26)
             static let size28: Font = .custom("Pretendard-SemiBold", size: 28)
+            static let size40: Font = .custom("Pretendard-SemiBold", size: 40)
         }
         
         /// font-wight : 500
@@ -110,6 +111,7 @@ extension Font {
             static let size12: Font = .custom("Pretendard-Light", size: 12)
             static let size14: Font = .custom("Pretendard-Light", size: 14)
             static let size16: Font = .custom("Pretendard-Light", size: 16)
+            static let size17: Font = .custom("Pretendard-Light", size: 17)
             static let size18: Font = .custom("Pretendard-Light", size: 18)
             static let size20: Font = .custom("Pretendard-Light", size: 20)
             static let size22: Font = .custom("Pretendard-Light", size: 22)

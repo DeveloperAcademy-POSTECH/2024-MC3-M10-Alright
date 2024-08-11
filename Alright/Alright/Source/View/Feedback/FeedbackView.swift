@@ -28,7 +28,7 @@ struct FeedbackView: View {
                         Button {
                             isInfoSheetPresented = true
                         } label: {
-                            Image(systemName: "questionmark.circle")
+                            Image(systemName: "exclamationmark.circle")
                                 .foregroundColor(.sgmBlue1)
                         }
                     }

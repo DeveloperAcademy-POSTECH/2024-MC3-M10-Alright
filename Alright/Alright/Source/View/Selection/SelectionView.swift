@@ -3,6 +3,9 @@ import AVFoundation
 
 struct SelectionView: View {
     
+    @AppStorage("isFirstOnboarding") var isFirstOnboarding: Bool = true // App Onboarding
+    @State var isPresented = false
+    
     @State private var isNavigating = false // Navigation Bool
     @State private var selectedSituation: Situation?
     
@@ -83,6 +86,17 @@ struct SelectionView: View {
                 }
                 .padding(.horizontal, 20)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        isPresented = true
+                    } label: {
+                        Text("도움말")
+                            .font(.Pretendard.Regular.size17)
+                            .foregroundColor(.sgmGrayA)
+                    }
+                }
+            }
         }
         .onAppear {
             let recordingSession = AVAudioSession.sharedInstance()
@@ -95,6 +109,11 @@ struct SelectionView: View {
             } catch {
                 print("Cannot setup the Recording")
             }
+            
+            isPresented = isFirstOnboarding ? true : false
+        }
+        .fullScreenCover(isPresented: $isPresented) {
+            AppOnboardingView()
         }
     }
     
@@ -105,8 +124,4 @@ struct SelectionView: View {
             selectedSituation = situation
         }
     }
-}
-
-#Preview {
-    SelectionView()
 }
