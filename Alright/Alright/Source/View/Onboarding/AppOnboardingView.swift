@@ -12,9 +12,7 @@ struct AppOnboardingView: View {
     @Environment(\.dismiss) private var dismiss // Onboarding dismiss
     @AppStorage("isFirstOnboarding") private var isFirstOnboarding: Bool?
     
-    @State private var selectedPage = 0
-    
-    private let onboardingPages: [Onboarding] = [.first, .second, .third, .fourth]
+    @State private var selectedOnboarding: Onboarding = .first
     
     var body: some View {
         ZStack {
@@ -34,16 +32,16 @@ struct AppOnboardingView: View {
                             .foregroundColor(.sgmGrayA)
                     }
                     .padding(.trailing)
-                    .opacity(selectedPage == onboardingPages.count - 1 ? 0 : 1)
+                    .opacity(selectedOnboarding == .fourth ? 0 : 1)
                 }
                 
-                TabView(selection: $selectedPage) {
-                    ForEach(Array(Onboarding.allCases.enumerated()), id: \.element) { index, onboarding in
+                TabView(selection: $selectedOnboarding) {
+                    ForEach(Onboarding.allCases, id: \.self) { onboarding in
                         OnboardingPageView(
-                            nowOnboard: onboardingPages[index]
+                            nowOnboard: onboarding,
+                            selectedOnboarding: selectedOnboarding
                         )
-                        .id(index)
-                        .tag(index)
+                        .tag(onboarding)
                     }
                 }
                 .ignoresSafeArea()
@@ -55,11 +53,11 @@ struct AppOnboardingView: View {
                 Spacer()
                 
                 HStack(spacing: 8) {
-                    ForEach(onboardingPages.indices, id: \.self) { index in
+                    ForEach(Onboarding.allCases, id: \.self) { onboarding in
                         Circle()
                             .frame(width: 8, height: 8)
-                            .foregroundColor(index == selectedPage ? .sgmBlue1 : .sgmBlue1.opacity(0.3))
-                            .opacity(selectedPage == onboardingPages.count - 1 ? 0 : 1)
+                            .foregroundColor(selectedOnboarding == onboarding ? .sgmBlue1 : .sgmBlue1.opacity(0.3))
+                            .opacity(selectedOnboarding == .fourth ? 0 : 1)
                     }
                 }
                 .padding(.bottom, 40)

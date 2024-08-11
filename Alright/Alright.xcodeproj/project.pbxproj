@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08328DE32C68A1DC007D32A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08328DE22C68A1DC007D32A3 /* ContentView.swift */; };
 		08332F6F2C62A1EF00F3D57A /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F6E2C62A1EF00F3D57A /* Situation.swift */; };
 		08332F702C62AA4800F3D57A /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F6E2C62A1EF00F3D57A /* Situation.swift */; };
 		08332F732C62B2D100F3D57A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 08332F722C62B2D100F3D57A /* DotLottie */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08328DE22C68A1DC007D32A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08332F6E2C62A1EF00F3D57A /* Situation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Situation.swift; sourceTree = "<group>"; };
 		08332F742C62B32600F3D57A /* splashScreen.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = splashScreen.lottie; sourceTree = "<group>"; };
 		08332F7B2C62B5A700F3D57A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				08808F5E2C57629300A6A8FA /* SipGuManApp.swift */,
+				08328DE22C68A1DC007D32A3 /* ContentView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			files = (
 				08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */,
 				1F0B71C02C65BC09006DEECD /* AppOnboardingView.swift in Sources */,
+				08328DE32C68A1DC007D32A3 /* ContentView.swift in Sources */,
 				1FF46DFA2C59DE1300FE3D90 /* DyanmicIslandLiveActivity.swift in Sources */,
 				08332F7C2C62B5A700F3D57A /* LottieView.swift in Sources */,
 				088DFC752C5394BC00469FD1 /* RoundedCorner.swift in Sources */,
