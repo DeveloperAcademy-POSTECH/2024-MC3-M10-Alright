@@ -35,8 +35,6 @@ struct InfoSheetView: View {
                         Text("스마트폰의 위치를 설정해주세요!")
                             .font(.Pretendard.SemiBold.size22)
                             .foregroundColor(.white)
-                            .padding(.leading)
-                        Spacer()
                     }
                     .padding(.top, 5)
                     .padding(.bottom)
@@ -46,10 +44,8 @@ struct InfoSheetView: View {
                             .font(.Pretendard.Medium.size18)
                             .foregroundColor(.white)
                             .lineSpacing(4)
-                            .padding(.leading)
-                        Spacer()
+                            .multilineTextAlignment(.center)
                     }
-                    
                     Spacer()
                     
                     Group {
