@@ -49,7 +49,9 @@ struct InfoSheetView: View {
                             .padding(.leading)
                         Spacer()
                     }
-                    Spacer()
+                    
+                    SheetLottieView()
+                        .padding(.top, 10)
                     
                     Button {
                         isShowing = false
@@ -70,7 +72,7 @@ struct InfoSheetView: View {
                     }
                     .padding()
                 }
-                .frame(maxWidth: .infinity, maxHeight: 222)
+                .frame(maxWidth: .infinity, maxHeight: 386)
                 .background(.sgmGray3)
                 .cornerRadius(16)
                 .transition(.opacity.combined(with: .move(edge: .bottom)))
