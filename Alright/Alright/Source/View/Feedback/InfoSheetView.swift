@@ -50,8 +50,20 @@ struct InfoSheetView: View {
                         Spacer()
                     }
                     
-                    SheetLottieView()
-                        .padding(.top, 10)
+                    Spacer()
+                    
+                    Group {
+                        if nowSituation == .quietTalking || nowSituation == .loudTalking {
+                            SheetLottieView()
+                        } else {
+                            Image("PresentaionSheet")
+                                .resizable()
+                                .frame(width: 126, height: 123)
+                        }
+                    }
+                    .padding(.top, 10)
+                    
+                    Spacer()
                     
                     Button {
                         isShowing = false
