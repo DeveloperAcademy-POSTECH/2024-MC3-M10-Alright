@@ -35,8 +35,6 @@ struct InfoSheetView: View {
                         Text("스마트폰의 위치를 설정해주세요!")
                             .font(.Pretendard.SemiBold.size22)
                             .foregroundColor(.white)
-                            .padding(.leading)
-                        Spacer()
                     }
                     .padding(.top, 5)
                     .padding(.bottom)
@@ -46,9 +44,21 @@ struct InfoSheetView: View {
                             .font(.Pretendard.Medium.size18)
                             .foregroundColor(.white)
                             .lineSpacing(4)
-                            .padding(.leading)
-                        Spacer()
+                            .multilineTextAlignment(.center)
                     }
+                    Spacer()
+                    
+                    Group {
+                        if nowSituation == .quietTalking || nowSituation == .loudTalking {
+                            SheetLottieView()
+                        } else {
+                            Image("PresentaionSheet")
+                                .resizable()
+                                .frame(width: 126, height: 123)
+                        }
+                    }
+                    .padding(.top, 10)
+                    
                     Spacer()
                     
                     Button {
@@ -70,7 +80,7 @@ struct InfoSheetView: View {
                     }
                     .padding()
                 }
-                .frame(maxWidth: .infinity, maxHeight: 222)
+                .frame(maxWidth: .infinity, maxHeight: 386)
                 .background(.sgmGray3)
                 .cornerRadius(16)
                 .transition(.opacity.combined(with: .move(edge: .bottom)))

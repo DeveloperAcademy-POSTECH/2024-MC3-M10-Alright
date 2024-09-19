@@ -32,13 +32,16 @@ struct SelectionView: View {
                     VStack(spacing: 9) {
                         HStack(spacing: 9) {
                             SelectionRectangle(situation: .quietTalking,
-                                               currentSituation: selectedSituation)
+                                               currentSituation: selectedSituation,
+                                               isAnySelected: selectedSituation != nil)
+                            
                             .onTapGesture {
                                 handleSelection(situation: .quietTalking)
                             }
                             
                             SelectionRectangle(situation: .loudTalking,
-                                               currentSituation: selectedSituation)
+                                               currentSituation: selectedSituation,
+                                               isAnySelected: selectedSituation != nil)
                             .onTapGesture {
                                 handleSelection(situation: .loudTalking)
                             }
@@ -46,13 +49,15 @@ struct SelectionView: View {
                         
                         HStack {
                             SelectionRectangle(situation: .meetingRoom,
-                                               currentSituation: selectedSituation)
+                                               currentSituation: selectedSituation,
+                                               isAnySelected: selectedSituation != nil)
                             .onTapGesture {
                                 handleSelection(situation: .meetingRoom)
                             }
                             
                             SelectionRectangle(situation: .auditorium,
-                                               currentSituation: selectedSituation)
+                                               currentSituation: selectedSituation,
+                                               isAnySelected: selectedSituation != nil)
                             .onTapGesture {
                                 handleSelection(situation: .auditorium)
                             }
