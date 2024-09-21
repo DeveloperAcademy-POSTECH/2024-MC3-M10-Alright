@@ -42,7 +42,7 @@ struct InfoSheetView: View {
                     .padding(.bottom)
                     
                     HStack {
-                        Text("\(nowSituation?.infoMessage ?? "")")
+                        Text(LocalizedStringResource(stringLiteral: nowSituation?.infoMessage ?? ""))
                             .font(.Pretendard.Medium.size18)
                             .foregroundColor(.white)
                             .lineSpacing(4)

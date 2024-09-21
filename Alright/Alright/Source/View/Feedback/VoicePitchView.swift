@@ -29,7 +29,7 @@ struct VoicePitchView: View {
                     .frame(height: 45)
                 HStack(spacing: 8) {
                     Text("\(noiseLevel.emoji)")
-                    Text("\(noiseLevel.message)")
+                    Text(LocalizedStringResource(stringLiteral: noiseLevel.message))
                         .font(.Pretendard.SemiBold.size20)
                         .kerning(-0.4)
                         .foregroundStyle(.sgmWhite)

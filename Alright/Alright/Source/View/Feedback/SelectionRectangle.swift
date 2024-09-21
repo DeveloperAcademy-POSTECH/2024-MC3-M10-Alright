@@ -43,10 +43,10 @@ struct SelectionRectangle: View {
                         VStack(spacing: 6) {
                             HStack {
                                 VStack(alignment: .leading, spacing: 8) {
-                                    Text(situation.title)
+                                    Text(LocalizedStringResource(stringLiteral: situation.title))
                                         .font(.Pretendard.SemiBold.size22)
                                         .foregroundColor(.white)
-                                    Text(situation.subtitle ?? "")
+                                    Text(LocalizedStringResource(stringLiteral: situation.subtitle ?? ""))
                                         .font(.Pretendard.Regular.size12)
                                         .foregroundColor(.sgmGrayA)
                                 }

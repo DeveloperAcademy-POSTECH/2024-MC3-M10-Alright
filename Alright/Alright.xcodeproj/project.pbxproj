@@ -36,6 +36,8 @@
 		085C3FEC2C639D7C008FBC8A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC722C534D1A00469FD1 /* Color+.swift */; };
 		08621D202C57638600E26998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08621D1F2C57638600E26998 /* Assets.xcassets */; };
 		08621D222C5763BA00E26998 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08621D212C5763BA00E26998 /* SelectionView.swift */; };
+		086468AD2C9EAF56003DEB17 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 086468AC2C9EAF56003DEB17 /* Localizable.xcstrings */; };
+		086468AE2C9EAF56003DEB17 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 086468AC2C9EAF56003DEB17 /* Localizable.xcstrings */; };
 		08808F5F2C57629300A6A8FA /* SipGuManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08808F5E2C57629300A6A8FA /* SipGuManApp.swift */; };
 		088DFC6D2C53346C00469FD1 /* NoiseMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */; };
 		088DFC6F2C534AA800469FD1 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFC6E2C534AA800469FD1 /* GaugeView.swift */; };
@@ -117,6 +119,7 @@
 		08416C052C63992400EABC2A /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		08621D1F2C57638600E26998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08621D212C5763BA00E26998 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		086468AC2C9EAF56003DEB17 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		08808F5E2C57629300A6A8FA /* SipGuManApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SipGuManApp.swift; sourceTree = "<group>"; };
 		088DFC6C2C53346C00469FD1 /* NoiseMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseMeter.swift; sourceTree = "<group>"; };
 		088DFC6E2C534AA800469FD1 /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
@@ -209,6 +212,14 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		088498C02C69B87B007DEEA6 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				086468AC2C9EAF56003DEB17 /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		088DFC702C534D0100469FD1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +269,7 @@
 		088DFC7B2C575BD200469FD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				088498C02C69B87B007DEEA6 /* Localization */,
 				08416BE92C6398AD00EABC2A /* Font */,
 				08332F742C62B32600F3D57A /* splashScreen.lottie */,
 				08621D1F2C57638600E26998 /* Assets.xcassets */,
@@ -423,6 +435,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 08C737D42C51ED3000FA93A4;
 			packageReferences = (
@@ -449,6 +462,7 @@
 				08416BFD2C6398BF00EABC2A /* Pretendard-ExtraBold.otf in Resources */,
 				08416BF52C6398BF00EABC2A /* Pretendard-Thin.otf in Resources */,
 				08621D202C57638600E26998 /* Assets.xcassets in Resources */,
+				086468AE2C9EAF56003DEB17 /* Localizable.xcstrings in Resources */,
 				08416BF92C6398BF00EABC2A /* Pretendard-Light.otf in Resources */,
 				08416BFB2C6398BF00EABC2A /* Pretendard-Regular.otf in Resources */,
 				08416BFF2C6398BF00EABC2A /* Pretendard-SemiBold.otf in Resources */,
@@ -464,6 +478,7 @@
 			files = (
 				1FD39F372C59E537005067DF /* Assets.xcassets in Resources */,
 				08416C022C6398BF00EABC2A /* Pretendard-Bold.otf in Resources */,
+				086468AD2C9EAF56003DEB17 /* Localizable.xcstrings in Resources */,
 				1FF46DF12C59DDE800FE3D90 /* Assets.xcassets in Resources */,
 				08416BFE2C6398BF00EABC2A /* Pretendard-ExtraBold.otf in Resources */,
 				08416BF82C6398BF00EABC2A /* Pretendard-ExtraLight.otf in Resources */,
@@ -603,6 +618,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -659,6 +675,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -669,12 +686,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Q4V2LFG28;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
@@ -697,7 +712,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Alright_DEV;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -714,12 +728,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
 				DEVELOPMENT_TEAM = 2Q4V2LFG28;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
@@ -742,7 +754,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Alright_DEV;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -759,11 +770,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DyanmicIsland/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DyanmicIsland;
@@ -778,7 +787,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright.DyanmicIsland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AlrightDynamic_DEV;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -792,11 +800,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = 2Q4V2LFG28;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DyanmicIsland/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DyanmicIsland;
@@ -811,7 +817,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright.DyanmicIsland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AlrightDynamic_DEV;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

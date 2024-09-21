@@ -40,7 +40,7 @@ struct OnboardingPageView: View {
                 
                 VStack(spacing: 30) {
                     HStack {
-                        Text("\(nowOnboard.onboardingTitle)")
+                        Text(LocalizedStringResource(stringLiteral: nowOnboard.onboardingTitle))
                             .font(.Pretendard.SemiBold.size40)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -48,7 +48,7 @@ struct OnboardingPageView: View {
                         Spacer()
                     }
                     HStack {
-                        Text("\(nowOnboard.onboardingConstants)")
+                        Text(LocalizedStringResource(stringLiteral: nowOnboard.onboardingConstants))
                             .font(.Pretendard.Medium.size20)
                             .foregroundColor(.sgmWhite)
                             .padding(.leading)
@@ -61,7 +61,7 @@ struct OnboardingPageView: View {
                         isFirstOnboarding = false
                         dismiss()
                     } label: {
-                        Text(isFirstOnboarding ?? true ? "Alrigt 시작하기" : "확인했어요")
+                        Text(isFirstOnboarding ?? true ? "Alright 시작하기" : "확인했어요")
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
