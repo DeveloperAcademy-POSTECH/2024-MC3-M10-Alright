@@ -12,6 +12,7 @@ struct SelectionRectangle: View {
     
     var situation: Situation
     var currentSituation: Situation?
+    var isAnySelected: Bool // 상황cell Color 조절해주는 Selected 여부 변수
     
     var isSelected: Bool {
         self.situation == currentSituation
@@ -26,7 +27,7 @@ struct SelectionRectangle: View {
                           ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.sgmGray4, .sgmGray2]),
                                                          startPoint: .topTrailing,
                                                          endPoint: .bottomLeading))
-                          : AnyShapeStyle(.sgmGray2))
+                          : isAnySelected ? AnyShapeStyle(.sgmGray1) : AnyShapeStyle(.sgmGray2))
                     .cornerRadius(24)
                     .overlay(
                         RoundedRectangle(cornerRadius: 24)
@@ -66,11 +67,11 @@ struct SelectionRectangle: View {
             .frame(width: geometry.size.width, height: geometry.size.width) // 1:1 비율 유지
         }
         .aspectRatio(1, contentMode: .fit)
-        
     }
 }
 
 #Preview {
     SelectionRectangle(situation: .quietTalking,
-                       currentSituation: .quietTalking)
+                       currentSituation: .quietTalking,
+                       isAnySelected: true)
 }
