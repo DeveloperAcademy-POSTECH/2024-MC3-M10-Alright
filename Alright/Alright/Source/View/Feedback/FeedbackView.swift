@@ -34,7 +34,7 @@ struct FeedbackView: View {
                     }
                     
                     ToolbarItem(placement: .principal) {
-                        Text(currentSituation?.title ?? "")
+                        Text(LocalizedStringResource(stringLiteral: currentSituation?.title ?? ""))
                             .font(.Pretendard.SemiBold.size17)
                             .kerning(-0.43)
                             .foregroundColor(.white)
