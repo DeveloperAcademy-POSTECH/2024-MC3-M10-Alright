@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07BCDEEB2CCF7D6500E512F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07BCDEE92CCF7D6500E512F5 /* Localizable.strings */; };
+		07BCDEEC2CCF7D6500E512F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07BCDEE92CCF7D6500E512F5 /* Localizable.strings */; };
+		07BCDEF32CCF7DC100E512F5 /* StringLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */; };
+		07BCDEF42CCF7DC100E512F5 /* StringLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */; };
 		08328DE32C68A1DC007D32A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08328DE22C68A1DC007D32A3 /* ContentView.swift */; };
 		08332F6F2C62A1EF00F3D57A /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F6E2C62A1EF00F3D57A /* Situation.swift */; };
 		08332F702C62AA4800F3D57A /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08332F6E2C62A1EF00F3D57A /* Situation.swift */; };
@@ -101,6 +105,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07BCDEEA2CCF7D6500E512F5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07BCDEED2CCF7D7F00E512F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07BCDEEE2CCF7D8A00E512F5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07BCDEEF2CCF7D9100E512F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07BCDEF02CCF7D9700E512F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		07BCDEF12CCF7D9D00E512F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLocalization.swift; sourceTree = "<group>"; };
 		08328DE22C68A1DC007D32A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08332F6E2C62A1EF00F3D57A /* Situation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Situation.swift; sourceTree = "<group>"; };
 		08332F742C62B32600F3D57A /* splashScreen.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = splashScreen.lottie; sourceTree = "<group>"; };
@@ -223,6 +234,7 @@
 			children = (
 				08C737F22C51FE0D00FA93A4 /* VoicePitchButton.swift */,
 				088DFC742C5394BC00469FD1 /* RoundedCorner.swift */,
+				07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -274,6 +286,7 @@
 				088DFC782C575B5600469FD1 /* View */,
 				088DFC792C575B6C00469FD1 /* Service */,
 				088DFC7A2C575B9F00469FD1 /* Application */,
+				07BCDEE92CCF7D6500E512F5 /* Localizable.strings */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -423,6 +436,11 @@
 			knownRegions = (
 				ko,
 				Base,
+				en,
+				ja,
+				fr,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 08C737D42C51ED3000FA93A4;
 			packageReferences = (
@@ -452,6 +470,7 @@
 				08416BF92C6398BF00EABC2A /* Pretendard-Light.otf in Resources */,
 				08416BFB2C6398BF00EABC2A /* Pretendard-Regular.otf in Resources */,
 				08416BFF2C6398BF00EABC2A /* Pretendard-SemiBold.otf in Resources */,
+				07BCDEEB2CCF7D6500E512F5 /* Localizable.strings in Resources */,
 				08332F752C62B32600F3D57A /* splashScreen.lottie in Resources */,
 				08416C032C6398BF00EABC2A /* Pretendard-Black.otf in Resources */,
 				08416BF32C6398BF00EABC2A /* Pretendard-Medium.otf in Resources */,
@@ -463,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FD39F372C59E537005067DF /* Assets.xcassets in Resources */,
+				07BCDEEC2CCF7D6500E512F5 /* Localizable.strings in Resources */,
 				08416C022C6398BF00EABC2A /* Pretendard-Bold.otf in Resources */,
 				1FF46DF12C59DDE800FE3D90 /* Assets.xcassets in Resources */,
 				08416BFE2C6398BF00EABC2A /* Pretendard-ExtraBold.otf in Resources */,
@@ -496,6 +516,7 @@
 				1F77AA0C2C52241300402A2E /* FeedbackView.swift in Sources */,
 				08416C062C63992400EABC2A /* Font+.swift in Sources */,
 				1FB5A4C22C59E1580029B181 /* AppIntent.swift in Sources */,
+				07BCDEF32CCF7DC100E512F5 /* StringLocalization.swift in Sources */,
 				1F0B71CA2C65E500006DEECD /* OnboardingPageView.swift in Sources */,
 				08F4F1D82C5D1A2100F89B2C /* NoiseLevel.swift in Sources */,
 				08621D222C5763BA00E26998 /* SelectionView.swift in Sources */,
@@ -514,6 +535,7 @@
 				1FD39F392C59E557005067DF /* RoundedCorner.swift in Sources */,
 				085C3FEC2C639D7C008FBC8A /* Color+.swift in Sources */,
 				1F00F14A2C67796E008DEEDF /* Onboarding.swift in Sources */,
+				07BCDEF42CCF7DC100E512F5 /* StringLocalization.swift in Sources */,
 				08FE6DE62C5D1AB400A2E52B /* NoiseLevel.swift in Sources */,
 				1FD39F362C59E526005067DF /* FeedbackView.swift in Sources */,
 				08332F702C62AA4800F3D57A /* Situation.swift in Sources */,
@@ -543,12 +565,29 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		07BCDEE92CCF7D6500E512F5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07BCDEEA2CCF7D6500E512F5 /* ko */,
+				07BCDEED2CCF7D7F00E512F5 /* en */,
+				07BCDEEE2CCF7D8A00E512F5 /* ja */,
+				07BCDEEF2CCF7D9100E512F5 /* fr */,
+				07BCDEF02CCF7D9700E512F5 /* zh-Hans */,
+				07BCDEF12CCF7D9D00E512F5 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		08C737E92C51ED3400FA93A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -612,6 +651,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -669,12 +709,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
-				DEVELOPMENT_TEAM = 2Q4V2LFG28;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = MQR4AUJW5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
@@ -693,11 +731,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Alright_DEV;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -714,12 +751,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alright/Preview Content\"";
-				DEVELOPMENT_TEAM = 2Q4V2LFG28;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = MQR4AUJW5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
@@ -738,11 +773,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Alright_DEV;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -759,11 +793,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = MQR4AUJW5C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DyanmicIsland/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DyanmicIsland;
@@ -778,7 +810,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright.DyanmicIsland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AlrightDynamic_DEV;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -792,11 +823,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MQR4AUJW5C;
+				DEVELOPMENT_TEAM = MQR4AUJW5C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DyanmicIsland/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DyanmicIsland;
@@ -811,7 +840,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xerath.Alright.DyanmicIsland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AlrightDynamic_DEV;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

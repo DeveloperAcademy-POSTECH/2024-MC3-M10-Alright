@@ -15,24 +15,24 @@ enum Onboarding: CaseIterable {
         case .first:
             "Alright"
         case .second:
-            "상황 선택"
+            "상황 선택".localized()
         case .third:
-            "실시간 피드백"
+            "실시간 피드백".localized()
         case .fourth:
-            "백그라운드"
+            "백그라운드".localized()
         }
     }
     
     var onboardingConstants: String {
         switch self {
         case .first:
-            "청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요."
+            "청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요.".localized()
         case .second:
-            "대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!"
+            "대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!".localized()
         case .third:
-            "애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!"
+            "애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!".localized()
         case .fourth:
-            "Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!"
+            "Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!".localized()
         }
     }
     

@@ -48,7 +48,7 @@ struct FeedbackView: View {
                             }
                             dismiss()
                         } label: {
-                            Text("종료")
+                            Text("종료".localized())
                                 .font(.Pretendard.Regular.size17)
                                 .kerning(-0.43)
                                 .foregroundColor(.sgmBlue1)

@@ -19,11 +19,11 @@ struct SelectionView: View {
                     Spacer()
                         .frame(height: 101)
                     VStack(spacing: 12) {
-                        Text("지금 어떤 상황에 있나요?")
+                        Text("지금 어떤 상황에 있나요?".localized())
                             .font(.Pretendard.Bold.size24)
                             .foregroundColor(.white)
                         
-                        Text("말하는 상황에 대해 알려주세요.")
+                        Text("말하는 상황에 대해 알려주세요.".localized())
                             .font(.Pretendard.Medium.size16)
                             .foregroundColor(.gray)
                     }
@@ -62,9 +62,9 @@ struct SelectionView: View {
                     
                     Button {
                         isNavigating.toggle()
-                        print("피드백 시각화화면으로 이동")
+                        print("피드백 시각화화면으로 이동".localized())
                     } label: {
-                        Text("말하기 시작")
+                        Text("말하기 시작".localized())
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
@@ -91,7 +91,7 @@ struct SelectionView: View {
                     Button {
                         isPresented = true
                     } label: {
-                        Text("도움말")
+                        Text("도움말".localized())
                             .font(.Pretendard.Regular.size17)
                             .foregroundColor(.sgmGrayA)
                     }

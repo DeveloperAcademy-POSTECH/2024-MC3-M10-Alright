@@ -32,7 +32,7 @@ struct InfoSheetView: View {
                     Spacer()
                     
                     HStack {
-                        Text("스마트폰의 위치를 설정해주세요!")
+                        Text("스마트폰의 위치를 설정해주세요!".localized())
                             .font(.Pretendard.SemiBold.size22)
                             .foregroundColor(.white)
                             .padding(.leading)
@@ -54,7 +54,7 @@ struct InfoSheetView: View {
                     Button {
                         isShowing = false
                     } label: {
-                        Text("확인")
+                        Text("확인".localized())
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(

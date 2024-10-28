@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  Alright
+
+  Created by 김상준 on 10/28/24.
+  
+*/
+
+"Alrigt 시작하기" = "Alright, let's get started";
+"확인했어요" = "Got it";
+"종료" = "Exit";
+"스마트폰의 위치를 설정해주세요!" = "Please set up your smartphone's position!";
+"확인" = "Confirm";
+"지금 어떤 상황에 있나요?" = "What's the current environment?";
+"말하는 상황에 대해 알려주세요." = "Tell us about the speaking environment.";
+"피드백 시각화화면으로 이동" = "Go to Feedback Visualization";
+"말하기 시작" = "Start Speaking";
+"도움말" = "Help";
+
+"조금 더 크게 말해볼까요?" = "Could you speak a bit louder?";
+"좋아요. 적절해요!" = "Great, that's perfect!";
+"조금 더 작게 말하는게 어떨까요?" = "Try speaking a bit softer?";
+"다시 시작하려면 버튼을 탭하세요!" = "Tap the button to start again!";
+
+"1:1 대화" = "1 : 1 talk";
+"회의실 발표" = "Meeting";
+"강당 발표" = "Auditorium";
+
+"조용한 공간에서" = "In a quiet space";
+"소음이 있는 공간에서" = "In a noisy space";
+
+"팔을 앞으로 쭉 편 후\n손이 위치하는 거리에 스마트폰을 놓아주세요." = "Extend your arm and place the smartphone at arm's length.";
+"스크립트를 볼 수 있는 정도로\n자연스럽게 스마트폰을 들어주세요." = "Hold your smartphone naturally so you can view the script comfortably.";
+
+"상황 선택" = "Choose Environment";
+"실시간 피드백" = "Real-Time Feedback";
+"백그라운드" = "Background";
+
+"청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요." = "Allright helps the hearing-impaired manage their voice volume.";
+"대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!" = "Helps you control voice volume for various situations!";
+"애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!" = "Get clear visual feedback on voice volume with animations and colors!";
+"Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!" = "Monitor your voice on other screens with Dynamic Island and Live Activity!";
+
+
+//"Alrigt 시작하기" =
+//"확인했어요" =
+//"종료"
+//"스마트폰의 위치를 설정해주세요!"
+//"확인" =
+//"지금 어떤 상황에 있나요?"
+//"말하는 상황에 대해 알려주세요."
+//"피드백 시각화화면으로 이동"
+//"말하기 시작"
+//"도움말"
+//
+//"조금 더 크게 말해볼까요?"
+//"좋아요. 적절해요!"
+//"조금 더 작게 말하는게 어떨까요?"
+//"다시 시작하려면 버튼을 탭하세요!"
+//
+//"1:1 대화"
+//"1:1 대화"
+//"회의실 발표"
+//"강당 발표"
+//
+//"조용한 공간에서"
+//"소음이 있는 공간에서"
+//
+//"팔을 앞으로 쭉 편 후\n손이 위치하는 거리에 스마트폰을 놓아주세요."
+//"스크립트를 볼 수 있는 정도로\n자연스럽게 스마트폰을 들어주세요."
+//
+//"상황 선택"
+//"실시간 피드백"
+//"백그라운드"
+//
+//"청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요."
+//"대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!"
+//"애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!"
+//"Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!"

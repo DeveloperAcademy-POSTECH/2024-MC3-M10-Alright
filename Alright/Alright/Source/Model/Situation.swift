@@ -13,22 +13,22 @@ enum Situation {
     var title: String {
         switch self {
         case .quietTalking:
-            "1:1 대화"
+            "1:1 대화".localized()
         case .loudTalking:
-            "1:1 대화"
+            "1:1 대화".localized()
         case .meetingRoom:
-            "회의실 발표"
+            "회의실 발표".localized()
         case .auditorium:
-            "강당 발표"
+            "강당 발표".localized()
         }
     }
     
     var subtitle: String? {
         switch self {
         case .quietTalking:
-            "조용한 공간에서"
+            "조용한 공간에서".localized()
         case .loudTalking:
-            "소음이 있는 공간에서"
+            "소음이 있는 공간에서".localized()
         case .meetingRoom:
             nil
         case .auditorium:
@@ -65,9 +65,9 @@ enum Situation {
     var infoMessage: String {
         switch self {
         case .quietTalking, .loudTalking:
-            "팔을 앞으로 쭉 편 후\n손이 위치하는 거리에 스마트폰을 놓아주세요."
+            "팔을 앞으로 쭉 편 후\n손이 위치하는 거리에 스마트폰을 놓아주세요.".localized()
         case .meetingRoom, .auditorium:
-            "스크립트를 볼 수 있는 정도로\n자연스럽게 스마트폰을 들어주세요."
+            "스크립트를 볼 수 있는 정도로\n자연스럽게 스마트폰을 들어주세요.".localized()
         }
     }
 }

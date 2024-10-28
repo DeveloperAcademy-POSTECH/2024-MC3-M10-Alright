@@ -61,7 +61,7 @@ struct OnboardingPageView: View {
                         isFirstOnboarding = false
                         dismiss()
                     } label: {
-                        Text(isFirstOnboarding ?? true ? "Alrigt 시작하기" : "확인했어요")
+                        Text(isFirstOnboarding ?? true ? "Alrigt 시작하기".localized() : "확인했어요".localized())
                             .font(.Pretendard.SemiBold.size17)
                             .frame(maxWidth: .infinity, maxHeight: 50)
                             .background(
