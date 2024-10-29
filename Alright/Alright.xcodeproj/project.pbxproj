@@ -700,7 +700,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Alright;
+				INFOPLIST_KEY_CFBundleDisplayName = "올라잇";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자의 목소리 크기를 인식하기 위해 마이크 사용권한이 필요합니다.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
@@ -742,7 +742,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Alright;
+				INFOPLIST_KEY_CFBundleDisplayName = "올라잇";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자의 목소리 크기를 인식하기 위해 마이크 사용권한이 필요합니다.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
