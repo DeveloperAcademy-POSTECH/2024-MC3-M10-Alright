@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  Alright
+
+  Created by 김상준 on 10/28/24.
+  
+*/
+
+"Alright 시작하기" = "Alright, commençons";
+"확인했어요" = "J'ai compris";
+"종료" = "Quitter";
+"스마트폰의 위치를 설정해주세요!" = "Veuillez configurer la position de votre smartphone!";
+"확인" = "Confirmer";
+"지금 어떤 상황에 있나요?" = "Quelle est la situation actuelle?";
+"말하는 상황에 대해 알려주세요." = "Parlez-nous de l'environnement de discussion.";
+"피드백 시각화화면으로 이동" = "Accéder à l'écran de visualisation des retours";
+"말하기 시작" = "Commencer à parler";
+"도움말" = "Aide";
+
+"조금 더 크게 말해볼까요?" = "Pourriez-vous parler un peu plus fort?";
+"좋아요. 적절해요!" = "Parfait, c'est parfait!";
+"조금 더 작게 말하는게 어떨까요?" = "Essayez de parler un peu plus doucement?";
+"다시 시작하려면 버튼을 탭하세요!" = "Appuyez sur le bouton pour recommencer!";
+
+"1:1 대화" = "Conversation 1:1";
+"회의실 발표" = "Présentation en réunion";
+"강당 발표" = "Présentation en amphithéâtre";
+
+"조용한 공간에서" = "Dans un espace calme";
+"소음이 있는 공간에서" = "Dans un espace bruyant";
+
+"팔을 앞으로 쭉 편 후\n손이 위치하는 거리에 스마트폰을 놓아주세요." = "Tendez le bras et placez le smartphone à la distance de votre main.";
+"스크립트를 볼 수 있는 정도로\n자연스럽게 스마트폰을 들어주세요." = "Tenez le smartphone de manière à lire facilement le script.";
+
+"상황 선택" = "Choisir l'environnement";
+"실시간 피드백" = "Retour en temps réel";
+"백그라운드" = "Arrière-plan";
+
+"청각장애인의 목소리 크기 조절을\n도와드리는 앱 올라잇이에요." = "Allright aide les malentendants à gérer le volume de leur voix.";
+"대화, 발표 등 다양한 상황에 맞추어\n목소리 크기 조절을 도와드려요!" = "Aide à contrôler le volume de la voix pour différentes situations!";
+"애니메이션, 색상 등 시각적 피드백을 통해\n목소리 크기를 한 눈에 확인해요!" = "Obtenez un retour visuel clair sur le volume de la voix avec des animations et des couleurs!";
+"Dynamic Island, Live Activity로\n다른 화면을 보며 모니터링 할 수 있어요!" = "Surveillez votre voix sur d'autres écrans avec Dynamic Island et Live Activity!";

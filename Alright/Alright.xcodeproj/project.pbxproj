@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07BCDEEB2CCF7D6500E512F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07BCDEE92CCF7D6500E512F5 /* Localizable.strings */; };
-		07BCDEEC2CCF7D6500E512F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07BCDEE92CCF7D6500E512F5 /* Localizable.strings */; };
 		07BCDEF32CCF7DC100E512F5 /* StringLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */; };
 		07BCDEF42CCF7DC100E512F5 /* StringLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */; };
 		08328DE32C68A1DC007D32A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08328DE22C68A1DC007D32A3 /* ContentView.swift */; };
@@ -105,12 +103,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07BCDEEA2CCF7D6500E512F5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
-		07BCDEED2CCF7D7F00E512F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		07BCDEEE2CCF7D8A00E512F5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		07BCDEEF2CCF7D9100E512F5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		07BCDEF02CCF7D9700E512F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		07BCDEF12CCF7D9D00E512F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		07BCDEF22CCF7DC100E512F5 /* StringLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLocalization.swift; sourceTree = "<group>"; };
 		08328DE22C68A1DC007D32A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		08332F6E2C62A1EF00F3D57A /* Situation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Situation.swift; sourceTree = "<group>"; };
@@ -154,6 +146,10 @@
 		1FF46DF02C59DDE800FE3D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FF46DF22C59DDE800FE3D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07BCDF972CD0714B00E512F5 /* Localization */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localization; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		08C737DA2C51ED3000FA93A4 /* Frameworks */ = {
@@ -280,13 +276,13 @@
 		088DFC7C2C575BDF00469FD1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				07BCDF972CD0714B00E512F5 /* Localization */,
 				08F4F1D62C5D1A1800F89B2C /* Model */,
 				088DFC702C534D0100469FD1 /* Extension */,
 				088DFC762C575B3D00469FD1 /* Helper */,
 				088DFC782C575B5600469FD1 /* View */,
 				088DFC792C575B6C00469FD1 /* Service */,
 				088DFC7A2C575B9F00469FD1 /* Application */,
-				07BCDEE92CCF7D6500E512F5 /* Localizable.strings */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -386,6 +382,9 @@
 			dependencies = (
 				1FF46DF42C59DDE800FE3D90 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				07BCDF972CD0714B00E512F5 /* Localization */,
+			);
 			name = Alright;
 			packageProductDependencies = (
 				08332F722C62B2D100F3D57A /* DotLottie */,
@@ -405,6 +404,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07BCDF972CD0714B00E512F5 /* Localization */,
 			);
 			name = DyanmicIslandExtension;
 			productName = DyanmicIslandExtension;
@@ -435,12 +437,12 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				ko,
-				Base,
 				en,
 				ja,
 				fr,
 				"zh-Hans",
 				"zh-Hant",
+				Base,
 			);
 			mainGroup = 08C737D42C51ED3000FA93A4;
 			packageReferences = (
@@ -470,7 +472,6 @@
 				08416BF92C6398BF00EABC2A /* Pretendard-Light.otf in Resources */,
 				08416BFB2C6398BF00EABC2A /* Pretendard-Regular.otf in Resources */,
 				08416BFF2C6398BF00EABC2A /* Pretendard-SemiBold.otf in Resources */,
-				07BCDEEB2CCF7D6500E512F5 /* Localizable.strings in Resources */,
 				08332F752C62B32600F3D57A /* splashScreen.lottie in Resources */,
 				08416C032C6398BF00EABC2A /* Pretendard-Black.otf in Resources */,
 				08416BF32C6398BF00EABC2A /* Pretendard-Medium.otf in Resources */,
@@ -482,7 +483,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FD39F372C59E537005067DF /* Assets.xcassets in Resources */,
-				07BCDEEC2CCF7D6500E512F5 /* Localizable.strings in Resources */,
 				08416C022C6398BF00EABC2A /* Pretendard-Bold.otf in Resources */,
 				1FF46DF12C59DDE800FE3D90 /* Assets.xcassets in Resources */,
 				08416BFE2C6398BF00EABC2A /* Pretendard-ExtraBold.otf in Resources */,
@@ -564,22 +564,6 @@
 			targetProxy = 1FF46DF32C59DDE800FE3D90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		07BCDEE92CCF7D6500E512F5 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07BCDEEA2CCF7D6500E512F5 /* ko */,
-				07BCDEED2CCF7D7F00E512F5 /* en */,
-				07BCDEEE2CCF7D8A00E512F5 /* ja */,
-				07BCDEEF2CCF7D9100E512F5 /* fr */,
-				07BCDEF02CCF7D9700E512F5 /* zh-Hans */,
-				07BCDEF12CCF7D9D00E512F5 /* zh-Hant */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		08C737E92C51ED3400FA93A4 /* Debug */ = {
@@ -716,17 +700,17 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "올라잇";
+				INFOPLIST_KEY_CFBundleDisplayName = Alright;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자의 목소리 크기를 인식하기 위해 마이크 사용권한이 필요합니다.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -758,17 +742,17 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alright/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "올라잇";
+				INFOPLIST_KEY_CFBundleDisplayName = Alright;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자의 목소리 크기를 인식하기 위해 마이크 사용권한이 필요합니다.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
