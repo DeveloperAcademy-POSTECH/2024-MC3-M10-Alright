@@ -84,7 +84,7 @@ class NoiseMeter{
     }
     
     /// 소리 측정 종료하는 함수
-    func stopMetering() async {
+    func stopMetering() {
         print(#function)
         audioRecorder.stop()
         timer?.invalidate()
@@ -101,7 +101,7 @@ class NoiseMeter{
         if self.timer == nil {
             await self.startMetering()
         } else {
-            await self.stopMetering()
+            self.stopMetering()
         }
     }
     
@@ -155,17 +155,19 @@ class NoiseMeter{
     }
     
     /// Live Activity를 종료하는 함수
-    func endLiveActivity() async {
+    func endLiveActivity() {
         print(#function)
-        if let currentActivity = activity {
-            await currentActivity.end(nil, dismissalPolicy: .immediate)
-            print("Ending the Live Activity: \(currentActivity.id)")
-            self.activity = nil
+        Task {
+            if let currentActivity = activity {
+                await currentActivity.end(nil, dismissalPolicy: .immediate)
+                print("Ending the Live Activity: \(currentActivity.id)")
+                self.activity = nil
+            }
         }
         cancellation?.cancel()
         updateTimer?.invalidate()
         updateTimer = nil
-        await self.stopMetering()
+        self.stopMetering()
     }
     
     /// Live Activity를 업데이트하는 함수
