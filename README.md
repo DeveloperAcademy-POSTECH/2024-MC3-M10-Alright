@@ -75,7 +75,7 @@
 ### 🟢 팀원소개
 <table>
     <tr>
-      <td colspan="1" align="center"><b>김성준</b></td>
+      <td colspan="1" align="center"><b>김상준</b></td>
       <td colspan="1" align="center"><b>윤동주</b></td>
       <td colspan="1" align="center"><b>이상도</b></td>
       <td colspan="1" align="center"><b>이윤지</b></td>
